@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Android快速开发框架</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+</resources>
