@@ -17,6 +17,7 @@
                 <category android:name="android.intent.category.launcher"/>
             </intent-filter>
         </activity>
+        <activity android:name="com.chinaztt.fda.test.GalleryIndicatorActivity"/>
     </application>
     <!--添加权限-->
 

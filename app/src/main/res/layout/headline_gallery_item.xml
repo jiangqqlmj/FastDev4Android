@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="170dip"
+    android:orientation="vertical" >
+    <!-- 单张头条顶部体检图片 Gallery中的图片 -->
+    <ImageView 
+        android:id="@+id/headline_gallery_imageview"
+        android:layout_width="fill_parent"
+        android:layout_height="170dip"
+        android:scaleType="fitXY"/>
+</RelativeLayout>

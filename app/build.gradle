@@ -6,7 +6,7 @@ android {
     defaultConfig {
         applicationId "com.chinaztt.fda.ui"
         minSdkVersion 15
-        targetSdkVersion 2
+        targetSdkVersion 22
         versionCode 1
         versionName "1.0"
     }

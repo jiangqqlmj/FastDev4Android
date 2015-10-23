@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:id="@+id/head_view"
+        android:layout_width="fill_parent"
+        android:layout_height="170dip"
+        android:orientation="vertical" >
+        <!-- 自动滑动gallery -->
+        <com.chinaztt.fda.widget.AutoGallery
+            android:id="@+id/headline_image_gallery"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:fadingEdge="none"
+            android:fadingEdgeLength="0dp"
+            android:soundEffectsEnabled="false" />
+        <!-- 滑动图片的指示器 -->
+        <com.chinaztt.fda.widget.FlowIndicator
+            android:id="@+id/headline_circle_indicator"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/headline_image_gallery"
+            android:layout_marginBottom="3.5dp"
+            app:radius="5dp"
+            app:space="2dp" >
+        </com.chinaztt.fda.widget.FlowIndicator>
+    </RelativeLayout>
+</LinearLayout>
