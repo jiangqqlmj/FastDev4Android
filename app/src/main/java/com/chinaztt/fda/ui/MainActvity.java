@@ -11,6 +11,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import com.chinaztt.fda.test.GalleryIndicatorActivity;
+import com.chinaztt.fda.test.PullListviewActivity;
 import com.chinaztt.fda.ui.base.BaseActivity;
 
 import java.util.List;
@@ -34,7 +35,7 @@ public class MainActvity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         mItems=this.getResources().getStringArray(R.array.main_list);
-        mClassItems=new Class[]{GalleryIndicatorActivity.class};
+        mClassItems=new Class[]{GalleryIndicatorActivity.class,PullListviewActivity.class};
 
         lv_main=(ListView)this.findViewById(R.id.lv_main);
         mInflater=getLayouInflater();

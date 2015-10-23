@@ -18,6 +18,7 @@
             </intent-filter>
         </activity>
         <activity android:name="com.chinaztt.fda.test.GalleryIndicatorActivity"/>
+        <activity android:name="com.chinaztt.fda.test.PullListviewActivity"/>
     </application>
     <!--添加权限-->
 
