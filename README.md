@@ -3,7 +3,7 @@
 预想集成工具包,ORM,网络请求(HTTPClint,Volley,OkHttps),数据解析,依赖注入,xutils,图片异步加载，二维码扫描等等
 后续会进行逐步添加
 整体项目目录如下:
-FastDev4Android
+<p>FastDev4Android</p>
 libs	一些公共jar包库<br/>
 apater        	适配器<br/>
 application   	全局application<br/>
@@ -26,7 +26,7 @@ ui            	Activity UI相关<br/>
 update        	APP自动更新相关<br/>
 utils         	项目各种工具类<br/>
 widget        	自定义控件<br/>
-V1.0_001版本功能如下:
+<p>V1.0_001版本功能如下:</p>
 一.Utils工具类加入(1.DataUtils 时间日期处理<br/>
 2.GuideUtils 是否启动引导处理标志管理<br/>
 3.IoUtils 网络请求工具类【特别注意】这边采用HTTPClient 由于Android 6.0已经删除该类，<br/>
