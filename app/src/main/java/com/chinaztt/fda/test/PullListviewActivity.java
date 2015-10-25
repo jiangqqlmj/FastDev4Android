@@ -216,5 +216,4 @@ public class PullListviewActivity extends BaseActivity{
     static class Hondler{
         TextView tv_item;
     }
-
 }

@@ -19,6 +19,7 @@
         </activity>
         <activity android:name="com.chinaztt.fda.test.GalleryIndicatorActivity"/>
         <activity android:name="com.chinaztt.fda.test.PullListviewActivity"/>
+        <activity android:name="com.chinaztt.fda.test.SPCacheActivity"/>
     </application>
     <!--添加权限-->
 

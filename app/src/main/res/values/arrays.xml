@@ -3,5 +3,6 @@
     <array name="main_list">
         <item>图片轮播实例</item>
         <item>下拉刷新实例</item>
+        <item>本地数据缓存实例(Cache)</item>
     </array>
 </resources>
