@@ -39,7 +39,7 @@ widget        	自定义控件<br/>
 三.Activity基类简单封装BaseActivity和BaseFrameActivity 暂时主要为Toast,LayoutInFlater,打开指定的Activity工具类分装<br/>
 
 最后广告一下:Android在线学习网站(项目驱动学习)网站:<a href="http://www.cniao5.com/">菜鸟窝</a>欢迎大家前往免费学习!<br>
-<img src="http://img2.xxh.cc:8080/images/mall/yaya.png"  href="http://www.cniao5.com/"/>
+<a href="http://www.cniao5.com/clazz/yaya.html"><img src="http://img2.xxh.cc:8080/images/mall/yaya.png"</a>
 
 
 后期会持续不断进行更新最新的框架功能，如果有一起合作把这个Android快速开发框架完善起来的~请联系我哦
