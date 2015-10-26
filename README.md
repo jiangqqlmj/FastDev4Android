@@ -38,7 +38,7 @@
 Android在线学习网站(项目驱动学习)网站:<a href="http://www.cniao5.com/">菜鸟窝</a>欢迎大家前往免费学习!<br><br>
 <a href="http://www.cniao5.com/clazz/yaya.html" target="_blank"><img src="http://img2.xxh.cc:8080/images/mall/yaya.png"/></a><br/>
 <p><a href="http://blog.csdn.net/developer_jiangqq" style="text-decoration: none;"  target="_blank"><span style="color:blue;">V1.0_001版本功能如下:</span></a></p>
-<b><a href="http://blog.csdn.net/developer_jiangqq" style="text-decoration: none;"  target="_blank"><span style="color:blue;">一.Utils工具类加入</span></a></b><br/><br/>
+一.Utils工具类加入<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;1.DataUtils 时间日期处理<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;2.GuideUtils 是否启动引导处理标志管理<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;3.IoUtils 网络请求工具类【特别注意】这边采用HTTPClient 由于Android 6.0已经删除该类,
@@ -50,7 +50,14 @@ Android在线学习网站(项目驱动学习)网站:<a href="http://www.cniao5.c
 二.sperferences加入SharePerferences加入封装工具可以快速使用SP进行数据保存配置文件<br/>
 三.Activity基类简单封装BaseActivity和BaseFrameActivity 暂时主要为Toast,LayoutInFlater,打开指定的Activity工具类分装<br/>
 
-<br/>
+<p><a href="http://blog.csdn.net/developer_jiangqq" style="text-decoration: none;"  target="_blank"><span style="color:blue;">V1.1_002版本功能如下:</span></a></p>
+一.新增首页图片自动无限轮播组件和指示器(AutoGallery+FlowIndicator);<br/>
+二.新增列表下拉刷新组件(PullToRefreshListView);<br/>
+三.新增本地轻量级数据缓存组件(ACache);<br/>
+四.新增应用自定义崩溃日志捕捉组件(CustomCrash);<br/>
+以上该组件全部在MainActivity中有相应的使用实例;<br/>
+<img src="http://img.blog.csdn.net/20151026214406673"/><br/>
+<br/><br/>
 后期会持续不断进行更新最新的框架功能，如果有一起合作把这个Android快速开发框架完善起来的~请联系我哦<br/>
 <a href="http://blog.csdn.net/developer_jiangqq" style="text-decoration: none;"  target="_blank"><span style="color:blue;">QQ:781931404</span></a><br/>
 <br/>
