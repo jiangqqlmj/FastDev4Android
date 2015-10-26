@@ -3,6 +3,7 @@ package com.chinaztt.fda.ui;
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
@@ -10,10 +11,14 @@ import android.widget.BaseAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import com.chinaztt.fda.test.CrashTestActivity;
 import com.chinaztt.fda.test.GalleryIndicatorActivity;
 import com.chinaztt.fda.test.PullListviewActivity;
 import com.chinaztt.fda.test.SPCacheActivity;
 import com.chinaztt.fda.ui.base.BaseActivity;
+
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.util.List;
 
@@ -26,7 +31,7 @@ import java.util.List;
  * QQ： 781931404
  * 公司：江苏中天科技软件技术有限公司
  */
-public class MainActvity extends BaseActivity {
+public class MainActvity extends BaseActivity implements View.OnTouchListener {
     private String[] mItems;
     private Class[] mClassItems;
     private LayoutInflater mInflater;
@@ -36,14 +41,22 @@ public class MainActvity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         mItems=this.getResources().getStringArray(R.array.main_list);
-        mClassItems=new Class[]{GalleryIndicatorActivity.class,PullListviewActivity.class, SPCacheActivity.class};
+        mClassItems=new Class[]{GalleryIndicatorActivity.class,PullListviewActivity.class, SPCacheActivity.class, CrashTestActivity.class};
 
         lv_main=(ListView)this.findViewById(R.id.lv_main);
         mInflater=getLayouInflater();
         lv_main.setAdapter(new MainAdapter());
         lv_main.setOnItemClickListener(new CustomOnItemClick());
 
+
     }
+
+    @Override
+    public boolean onTouch(View v, MotionEvent event) {
+        return false;
+    }
+
+
     class CustomOnItemClick implements AdapterView.OnItemClickListener{
         @Override
         public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
@@ -89,4 +102,6 @@ public class MainActvity extends BaseActivity {
     static class Hondler{
         TextView tv_item;
     }
+
+
 }

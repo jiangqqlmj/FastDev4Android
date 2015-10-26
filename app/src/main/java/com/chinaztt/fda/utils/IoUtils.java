@@ -840,6 +840,7 @@ public class IoUtils {
         try {
             encodedUri = new URI(url);
             httpGet = new HttpGet(encodedUri);
+
         } catch (URISyntaxException e) {
             // 清理一些空格
             String encodedUrl = url.replace(' ', '+');

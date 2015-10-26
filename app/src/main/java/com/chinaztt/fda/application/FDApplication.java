@@ -2,6 +2,8 @@ package com.chinaztt.fda.application;
 
 import android.app.Application;
 
+import com.chinaztt.fda.crash.CustomCrash;
+
 import java.util.HashMap;
 import java.util.Objects;
 
@@ -24,5 +26,9 @@ public class FDApplication extends Application{
     public void onCreate() {
         super.onCreate();
         this.instance=this;
+        //初始化崩溃日志收集器
+        CustomCrash mCustomCrash=CustomCrash.getInstance();
+        mCustomCrash.setCustomCrashInfo(this);
+
     }
 }

@@ -2,7 +2,7 @@
     <string name="app_name">Android快速开发框架</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
-
+    <string name="string_crash_service">crash_service</string>
 
     <!--下拉刷新组件-->
     <string name="pull_to_refresh_pull_label_it">下拉可以刷新</string>

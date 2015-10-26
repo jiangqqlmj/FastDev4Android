@@ -20,6 +20,8 @@
         <activity android:name="com.chinaztt.fda.test.GalleryIndicatorActivity"/>
         <activity android:name="com.chinaztt.fda.test.PullListviewActivity"/>
         <activity android:name="com.chinaztt.fda.test.SPCacheActivity"/>
+        <activity android:name="com.chinaztt.fda.test.CrashTestActivity"/>
+
     </application>
     <!--添加权限-->
 
