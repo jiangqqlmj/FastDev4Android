@@ -5,5 +5,6 @@
         <item>下拉刷新实例</item>
         <item>本地数据缓存实例(Cache)</item>
         <item>崩溃异常捕捉实例</item>
+        <item>沉浸式状态栏实例</item>
     </array>
 </resources>

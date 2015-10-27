@@ -1,8 +1,10 @@
 package com.chinaztt.fda.ui.base;
 
 import android.app.Activity;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.Window;
+import android.view.WindowManager;
 
 import com.chinaztt.fda.utils.Log;
 import com.chinaztt.fda.utils.ManagerActivity;
@@ -17,7 +19,6 @@ import com.chinaztt.fda.utils.ManagerActivity;
  * 公司：江苏中天科技软件技术有限公司
  */
 public class BaseFrameActvity extends Activity{
-
     private static final String TAG="lifescycle";
     @Override
     protected void onCreate(Bundle savedInstanceState) {

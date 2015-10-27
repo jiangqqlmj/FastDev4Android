@@ -28,7 +28,7 @@ public class FDApplication extends Application{
         this.instance=this;
         //初始化崩溃日志收集器
         CustomCrash mCustomCrash=CustomCrash.getInstance();
-        mCustomCrash.setCustomCrashInfo(this);
+        //mCustomCrash.setCustomCrashInfo(this);
 
     }
 }

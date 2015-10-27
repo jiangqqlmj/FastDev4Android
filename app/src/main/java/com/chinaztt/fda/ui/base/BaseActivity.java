@@ -30,7 +30,6 @@ public class BaseActivity extends BaseFrameActvity{
     protected void showToastMsgShort(String pMsg) {
         Toast.makeText(this, pMsg, Toast.LENGTH_SHORT).show();
     }
-
     /**
      * 弹出toase 显示时长long
      * @param pMsg
@@ -38,7 +37,6 @@ public class BaseActivity extends BaseFrameActvity{
     protected void showToastMsgLong(String pMsg) {
         Toast.makeText(this, pMsg, Toast.LENGTH_LONG).show();
     }
-
     /**
      * 根据传入的类(class)打开指定的activity
      * @param pClass
@@ -48,4 +46,9 @@ public class BaseActivity extends BaseFrameActvity{
         _Intent.setClass(this, pClass);
         startActivity(_Intent);
     }
+
+    protected void openActivityByIntent(Intent pIntent){
+        startActivity(pIntent);
+    }
+
 }

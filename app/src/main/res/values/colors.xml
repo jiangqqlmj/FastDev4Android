@@ -5,5 +5,7 @@
     <color name="blue">#0066FF</color>
     <color name="red">#FF0000</color>
     <color name="black">#000000</color>
-    
+    <color name="middle_red">#e7abff</color>
+    <color name="color_nav">#FFFFD9</color>
+
 </resources>

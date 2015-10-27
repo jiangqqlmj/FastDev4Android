@@ -23,4 +23,5 @@ android {
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     compile files('libs/org.apache.http.legacy.jar')
+    compile 'com.readystatesoftware.systembartint:systembartint:1.0.3'
 }

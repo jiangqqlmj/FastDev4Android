@@ -1,6 +1,8 @@
 package com.chinaztt.fda.ui;
 
-import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
@@ -15,12 +17,8 @@ import com.chinaztt.fda.test.CrashTestActivity;
 import com.chinaztt.fda.test.GalleryIndicatorActivity;
 import com.chinaztt.fda.test.PullListviewActivity;
 import com.chinaztt.fda.test.SPCacheActivity;
+import com.chinaztt.fda.test.TranslucentActivity;
 import com.chinaztt.fda.ui.base.BaseActivity;
-
-import org.json.JSONException;
-import org.json.JSONObject;
-
-import java.util.List;
 
 /**
  * 当前类注释:
@@ -40,27 +38,36 @@ public class MainActvity extends BaseActivity implements View.OnTouchListener {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        mItems=this.getResources().getStringArray(R.array.main_list);
-        mClassItems=new Class[]{GalleryIndicatorActivity.class,PullListviewActivity.class, SPCacheActivity.class, CrashTestActivity.class};
+        mItems = this.getResources().getStringArray(R.array.main_list);
+        mClassItems = new Class[]{GalleryIndicatorActivity.class, PullListviewActivity.class, SPCacheActivity.class, CrashTestActivity.class
+                , TranslucentActivity.class};
 
-        lv_main=(ListView)this.findViewById(R.id.lv_main);
-        mInflater=getLayouInflater();
+        lv_main = (ListView) this.findViewById(R.id.lv_main);
+        mInflater = getLayouInflater();
         lv_main.setAdapter(new MainAdapter());
         lv_main.setOnItemClickListener(new CustomOnItemClick());
-
-
     }
-
     @Override
     public boolean onTouch(View v, MotionEvent event) {
         return false;
     }
 
-
     class CustomOnItemClick implements AdapterView.OnItemClickListener{
         @Override
         public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-               openActivity(mClassItems[position]);
+                if(position==4){
+                    new AlertDialog.Builder(MainActvity.this).setTitle("选择操作").setSingleChoiceItems(new String[]{"系统方法","第三方库"},0,new DialogInterface.OnClickListener(){
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                           Intent mIntent=new Intent(MainActvity.this,TranslucentActivity.class);
+                            mIntent.putExtra("mode",which);
+                            openActivityByIntent(mIntent);
+                            dialog.dismiss();
+                        }
+                    }).create().show();
+                }else{
+                    openActivity(mClassItems[position]);
+                }
         }
     }
     class MainAdapter extends BaseAdapter{

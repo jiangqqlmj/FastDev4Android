@@ -21,7 +21,7 @@
         <activity android:name="com.chinaztt.fda.test.PullListviewActivity"/>
         <activity android:name="com.chinaztt.fda.test.SPCacheActivity"/>
         <activity android:name="com.chinaztt.fda.test.CrashTestActivity"/>
-
+        <activity android:name="com.chinaztt.fda.test.TranslucentActivity"/>
     </application>
     <!--添加权限-->
 

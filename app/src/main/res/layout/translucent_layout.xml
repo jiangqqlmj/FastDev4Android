@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical"
+    >
+    <LinearLayout
+        android:id="@+id/linear_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:orientation="vertical"
+        android:background="#e7abff"
+        android:visibility="gone"
+        >
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="49dp"
+        android:background="#e7abff"
+        android:gravity="center"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="沉浸式状态栏实例"
+            android:id="@+id/tv"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            />
+    </LinearLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:text="New Button"
+        android:id="@+id/btn"
+        android:background="#ffb6ab" />
+
+</LinearLayout>
