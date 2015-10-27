@@ -7,11 +7,14 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import com.chinaztt.fda.ui.R;
 import com.chinaztt.fda.ui.base.BaseActivity;
 import com.chinaztt.fda.utils.Log;
 import com.readystatesoftware.systembartint.SystemBarTintManager;
+
+import org.w3c.dom.Text;
 
 import java.lang.reflect.Field;
 
@@ -32,10 +35,12 @@ public class TranslucentActivity extends BaseActivity {
     //当人们采用第三方库的时候(mode=1)，需要上面两句加上即可
     //+++++++++++++++++++++++++++++++++++++++++++++
     private static final  String TAG="TranslucentActivity";
+    private TextView tv;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.translucent_layout);
+        tv=(TextView)this.findViewById(R.id.tv);
         int mode=getIntent().getIntExtra("mode",0);
         Log.d(TAG,"MODE:"+mode);
         //当系统版本为4.4或者4.4以上时可以使用沉浸式状态栏
@@ -51,6 +56,7 @@ public class TranslucentActivity extends BaseActivity {
                  android.widget.LinearLayout.LayoutParams params=(android.widget.LinearLayout.LayoutParams )linear_bar.getLayoutParams();
                  params.height=statusHeight;
                  linear_bar.setLayoutParams(params);
+                 tv.setText("系统方法沉浸式实现");
             } else if (mode == 1) {
                 // create our manager instance after the content view is set
                 SystemBarTintManager tintManager = new SystemBarTintManager(this);
@@ -64,6 +70,7 @@ public class TranslucentActivity extends BaseActivity {
                 tintManager.setStatusBarTintResource(R.color.middle_red);
                 // 设置导航栏设置资源
                 tintManager.setNavigationBarTintResource(R.color.color_nav);
+                tv.setText("第三方库沉浸式实现");
             }
         }
     }
