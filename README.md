@@ -56,7 +56,13 @@ Android在线学习网站(项目驱动学习)网站:<a href="http://www.cniao5.c
 三.新增本地轻量级数据缓存组件(ACache);<br/>
 四.新增应用自定义崩溃日志捕捉组件(CustomCrash);<br/>
 以上该组件全部在MainActivity中有相应的使用实例;<br/>
-<img src="http://img.blog.csdn.net/20151026214406673"/><br/>
+
+<p><a href="http://blog.csdn.net/developer_jiangqq" style="text-decoration: none;"  target="_blank"><span style="color:blue;">V1.1.1_003版本功能如下:</span></a></p>
+一.新增沉浸式状态栏功能实现;<br/>
+二.新增MVP开发模式功能Demo;<br/>
+以上该组件全部在MainActivity中有相应的使用实例;<br/>
+
+<img src="http://img.blog.csdn.net/20151027203315049"/><br/>
 <br/><br/>
 后期会持续不断进行更新最新的框架功能，如果有一起合作把这个Android快速开发框架完善起来的~请联系我哦<br/>
 <a href="http://blog.csdn.net/developer_jiangqq" style="text-decoration: none;"  target="_blank"><span style="color:blue;">QQ:781931404</span></a><br/>
