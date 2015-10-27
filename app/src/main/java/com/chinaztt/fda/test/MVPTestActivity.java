@@ -67,12 +67,14 @@ public class MVPTestActivity extends BaseActivity implements ILoginView{
     @Override
     public void showSuccessInfo(PersonBean personBean) {
         Log.d(TAG,"showSuccessInfo:"+personBean.toString());
+        showToastMsgShort("登录成功:"+personBean.toString());
     }
     /**
      * 登录失败 回调
      */
     @Override
     public void showFailedInfo() {
-       Log.d(TAG,"showFailedInfo...");
+        Log.d(TAG,"showFailedInfo...");
+        showToastMsgShort("登录失败...");
     }
 }

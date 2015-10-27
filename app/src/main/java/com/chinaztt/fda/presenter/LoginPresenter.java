@@ -1,5 +1,7 @@
 package com.chinaztt.fda.presenter;
 
+import android.os.Handler;
+
 import com.chinaztt.fda.biz.IPersonBiz;
 import com.chinaztt.fda.biz.LoginRequestCallBack;
 import com.chinaztt.fda.biz.imp.PersonBizImp;
@@ -20,6 +22,9 @@ public class LoginPresenter {
     private static final  String TAG="LoginPresenter";
     private ILoginView mLoginView;
     private IPersonBiz mPersonBiz;
+
+    private Handler mHandler=new Handler();
+
     public LoginPresenter(ILoginView view) {
         mLoginView = view;
         mPersonBiz = new PersonBizImp();
@@ -32,18 +37,27 @@ public class LoginPresenter {
             * @param personBean
             */
            @Override
-           public void loginSuccess(PersonBean personBean) {
-               Log.d(TAG,"登录成功:"+personBean.toString());
-               mLoginView.showSuccessInfo(personBean);
+           public void loginSuccess(final PersonBean personBean) {
+               Log.d(TAG, "登录成功:" + personBean.toString());
+               mHandler.post(new Runnable() {
+                   @Override
+                   public void run() {
+                       mLoginView.showSuccessInfo(personBean);
+                   }
+               });
            }
-
            /**
             * 登录失败
             */
            @Override
            public void loginFailed() {
                Log.d(TAG,"登录失败...");
-               mLoginView.showFailedInfo();;
+               mHandler.post(new Runnable() {
+                   @Override
+                   public void run() {
+                       mLoginView.showFailedInfo();;
+                   }
+               });
            }
        });
     }
