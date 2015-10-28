@@ -23,6 +23,7 @@
         <activity android:name="com.chinaztt.fda.test.CrashTestActivity"/>
         <activity android:name="com.chinaztt.fda.test.TranslucentActivity"/>
         <activity android:name="com.chinaztt.fda.test.MVPTestActivity"/>
+        <activity android:name="com.chinaztt.fda.test.DraggerInjectActivity"/>
     </application>
     <!--添加权限-->
 

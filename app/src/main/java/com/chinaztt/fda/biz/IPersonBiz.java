@@ -10,6 +10,5 @@ package com.chinaztt.fda.biz;
  * 公司：江苏中天科技软件技术有限公司
  */
 public interface IPersonBiz {
-
     void login(String username,String password,LoginRequestCallBack valueCallBack);
 }

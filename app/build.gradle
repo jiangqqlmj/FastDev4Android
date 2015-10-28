@@ -1,5 +1,6 @@
 apply plugin: 'com.android.application'
-
+apply plugin: 'android-apt'
+def AAVersion = '3.3.2'
 android {
     compileSdkVersion 23
     buildToolsVersion "23.0.1"
@@ -24,4 +25,20 @@ dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     compile files('libs/org.apache.http.legacy.jar')
     compile 'com.readystatesoftware.systembartint:systembartint:1.0.3'
+    apt "org.androidannotations:androidannotations:$AAVersion"
+    compile "org.androidannotations:androidannotations-api:$AAVersion"
+}
+
+apt {
+    arguments {
+        androidManifestFile variant.outputs[0].processResources.manifestFile
+        // if you have multiple outputs (when using splits), you may want to have other index than 0
+
+        // you should set your package name here if you are using different application IDs
+        // resourcePackageName "your.package.name"
+
+        // You can set optional annotation processing options here, like these commented options:
+        // logLevel 'INFO'
+        // logFile '/var/log/aa.log'
+    }
 }

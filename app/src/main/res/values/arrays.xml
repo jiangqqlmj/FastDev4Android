@@ -7,5 +7,6 @@
         <item>崩溃异常捕捉实例</item>
         <item>沉浸式状态栏实例</item>
         <item>MVP开始模式实例</item>
+        <item>Dragger注入管理器实例</item>
     </array>
 </resources>

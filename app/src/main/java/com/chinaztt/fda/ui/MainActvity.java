@@ -14,6 +14,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import com.chinaztt.fda.test.CrashTestActivity;
+import com.chinaztt.fda.test.DraggerInjectActivity;
 import com.chinaztt.fda.test.GalleryIndicatorActivity;
 import com.chinaztt.fda.test.MVPTestActivity;
 import com.chinaztt.fda.test.PullListviewActivity;
@@ -41,7 +42,7 @@ public class MainActvity extends BaseActivity implements View.OnTouchListener {
         setContentView(R.layout.activity_main);
         mItems = this.getResources().getStringArray(R.array.main_list);
         mClassItems = new Class[]{GalleryIndicatorActivity.class, PullListviewActivity.class, SPCacheActivity.class, CrashTestActivity.class
-                , TranslucentActivity.class,MVPTestActivity.class};
+                , TranslucentActivity.class,MVPTestActivity.class, DraggerInjectActivity.class};
 
         lv_main = (ListView) this.findViewById(R.id.lv_main);
         mInflater = getLayouInflater();
