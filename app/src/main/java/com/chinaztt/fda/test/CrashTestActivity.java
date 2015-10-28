@@ -8,6 +8,8 @@ import android.widget.TextView;
 import com.chinaztt.fda.ui.R;
 import com.chinaztt.fda.ui.base.BaseActivity;
 
+import org.androidannotations.annotations.EActivity;
+
 /**
  * 当前类注释:
  * 项目名：FastDev4Android
@@ -17,6 +19,7 @@ import com.chinaztt.fda.ui.base.BaseActivity;
  * QQ： 781931404
  * 公司：江苏中天科技软件技术有限公司
  */
+@EActivity
 public class CrashTestActivity extends BaseActivity {
     private Button crash_btn;
     private TextView crash_tv;

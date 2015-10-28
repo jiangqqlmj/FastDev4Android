@@ -12,6 +12,8 @@ import com.chinaztt.fda.ui.base.BaseActivity;
 import com.chinaztt.fda.ui.view.ILoginView;
 import com.chinaztt.fda.utils.Log;
 
+import org.androidannotations.annotations.EActivity;
+
 /**
  * 当前类注释:MVP开发模式实例
  * 项目名：FastDev4Android
@@ -21,6 +23,7 @@ import com.chinaztt.fda.utils.Log;
  * QQ： 781931404
  * 公司：江苏中天科技软件技术有限公司
  */
+@EActivity
 public class MVPTestActivity extends BaseActivity implements ILoginView{
     private static  final  String TAG="MVPTestActivity";
 

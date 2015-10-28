@@ -11,6 +11,8 @@ import com.chinaztt.fda.cache.CacheConsts;
 import com.chinaztt.fda.ui.R;
 import com.chinaztt.fda.ui.base.BaseActivity;
 
+import org.androidannotations.annotations.EActivity;
+
 /**
  * 当前类注释:采用本地文件进行做数据缓存Cache实例
  * 项目名：FastDev4Android
@@ -20,6 +22,7 @@ import com.chinaztt.fda.ui.base.BaseActivity;
  * QQ： 781931404
  * 公司：江苏中天科技软件技术有限公司
  */
+@EActivity
 public class SPCacheActivity extends BaseActivity{
     private Button save_cache;
     private Button query_cache;

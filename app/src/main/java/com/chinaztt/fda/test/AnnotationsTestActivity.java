@@ -7,9 +7,11 @@ import android.widget.TextView;
 import com.chinaztt.fda.ui.R;
 import com.chinaztt.fda.ui.base.BaseActivity;
 
+import org.androidannotations.annotations.EActivity;
+
 
 /**
- * 当前类注释:依赖注入管理器Dragger使用实例
+ * 当前类注释:依赖注入管理器AndroidAnnotations使用实例
  * 项目名：FastDev4Android
  * 包名：com.chinaztt.fda.test
  * 作者：江清清 on 15/10/28 08:36
@@ -17,7 +19,9 @@ import com.chinaztt.fda.ui.base.BaseActivity;
  * QQ： 781931404
  * 公司：江苏中天科技软件技术有限公司
  */
-public class DraggerInjectActivity extends BaseActivity {
+
+@EActivity(R.layout.dragger_inject_layout)
+public class AnnotationsTestActivity extends BaseActivity {
     private Button btn_show;
     private TextView tv_show;
     @Override
@@ -29,6 +33,7 @@ public class DraggerInjectActivity extends BaseActivity {
         btn_show.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
             }
         });
     }

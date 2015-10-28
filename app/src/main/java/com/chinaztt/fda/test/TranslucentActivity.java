@@ -14,6 +14,7 @@ import com.chinaztt.fda.ui.base.BaseActivity;
 import com.chinaztt.fda.utils.Log;
 import com.readystatesoftware.systembartint.SystemBarTintManager;
 
+import org.androidannotations.annotations.EActivity;
 import org.w3c.dom.Text;
 
 import java.lang.reflect.Field;
@@ -27,6 +28,7 @@ import java.lang.reflect.Field;
  * QQ： 781931404
  * 公司：江苏中天科技软件技术有限公司
  */
+@EActivity
 public class TranslucentActivity extends BaseActivity {
     //++++++++++++++++使用注意事项++++++++++++++++++
     //这边采用第一种模式(mode=0)所以在布局文件translucent_layout.xml中跟界面linearlayout去除了

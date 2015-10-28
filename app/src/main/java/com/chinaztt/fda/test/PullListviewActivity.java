@@ -19,6 +19,8 @@ import com.chinaztt.fda.ui.base.BaseActivity;
 import com.chinaztt.fda.utils.UIUtils;
 import com.chinaztt.fda.widget.PullToRefreshListView;
 
+import org.androidannotations.annotations.EActivity;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -32,6 +34,7 @@ import java.util.List;
  * QQ： 781931404
  * 公司：江苏中天科技软件技术有限公司
  */
+@EActivity
 public class PullListviewActivity extends BaseActivity{
     private PullToRefreshListView lv_pull_item;
     private PullAdapter mPullAdapter;

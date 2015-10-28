@@ -13,14 +13,16 @@ import android.widget.BaseAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import com.chinaztt.fda.test.CrashTestActivity;
-import com.chinaztt.fda.test.DraggerInjectActivity;
-import com.chinaztt.fda.test.GalleryIndicatorActivity;
-import com.chinaztt.fda.test.MVPTestActivity;
-import com.chinaztt.fda.test.PullListviewActivity;
-import com.chinaztt.fda.test.SPCacheActivity;
-import com.chinaztt.fda.test.TranslucentActivity;
+import com.chinaztt.fda.test.AnnotationsTestActivity_;
+import com.chinaztt.fda.test.CrashTestActivity_;
+import com.chinaztt.fda.test.GalleryIndicatorActivity_;
+import com.chinaztt.fda.test.MVPTestActivity_;
+import com.chinaztt.fda.test.PullListviewActivity_;
+import com.chinaztt.fda.test.SPCacheActivity_;
+import com.chinaztt.fda.test.TranslucentActivity_;
 import com.chinaztt.fda.ui.base.BaseActivity;
+
+import org.androidannotations.annotations.EActivity;
 
 /**
  * 当前类注释:
@@ -31,6 +33,8 @@ import com.chinaztt.fda.ui.base.BaseActivity;
  * QQ： 781931404
  * 公司：江苏中天科技软件技术有限公司
  */
+
+@EActivity
 public class MainActvity extends BaseActivity implements View.OnTouchListener {
     private String[] mItems;
     private Class[] mClassItems;
@@ -41,8 +45,9 @@ public class MainActvity extends BaseActivity implements View.OnTouchListener {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         mItems = this.getResources().getStringArray(R.array.main_list);
-        mClassItems = new Class[]{GalleryIndicatorActivity.class, PullListviewActivity.class, SPCacheActivity.class, CrashTestActivity.class
-                , TranslucentActivity.class,MVPTestActivity.class, DraggerInjectActivity.class};
+        mClassItems = new Class[]{GalleryIndicatorActivity_.class, PullListviewActivity_.class,
+                SPCacheActivity_.class, CrashTestActivity_.class
+                , TranslucentActivity_.class,MVPTestActivity_.class, AnnotationsTestActivity_.class};
 
         lv_main = (ListView) this.findViewById(R.id.lv_main);
         mInflater = getLayouInflater();
@@ -61,7 +66,7 @@ public class MainActvity extends BaseActivity implements View.OnTouchListener {
                     new AlertDialog.Builder(MainActvity.this).setTitle("选择操作").setSingleChoiceItems(new String[]{"系统方法","第三方库"},0,new DialogInterface.OnClickListener(){
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
-                           Intent mIntent=new Intent(MainActvity.this,TranslucentActivity.class);
+                           Intent mIntent=new Intent(MainActvity.this,TranslucentActivity_.class);
                             mIntent.putExtra("mode",which);
                             openActivityByIntent(mIntent);
                             dialog.dismiss();

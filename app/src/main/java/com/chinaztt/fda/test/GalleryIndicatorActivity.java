@@ -13,6 +13,9 @@ import com.chinaztt.fda.ui.R;
 import com.chinaztt.fda.ui.base.BaseActivity;
 import com.chinaztt.fda.widget.AutoGallery;
 import com.chinaztt.fda.widget.FlowIndicator;
+
+import org.androidannotations.annotations.EActivity;
+
 /**
  * 当前类注释: 图片轮播封装类的简单使用
  * 项目名：FastDev4Android
@@ -22,6 +25,7 @@ import com.chinaztt.fda.widget.FlowIndicator;
  * QQ： 781931404
  * 公司：江苏中天科技软件技术有限公司
  */
+@EActivity
 public class GalleryIndicatorActivity extends BaseActivity{
     private LayoutInflater mInflater;
     private int[] mImages;
