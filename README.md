@@ -65,7 +65,7 @@ Android在线学习网站(项目驱动学习)网站:<a href="http://www.cniao5.c
 <img src="http://img.blog.csdn.net/20151027203315049"/><br/><br/>
 
 <p><a href="http://blog.csdn.net/developer_jiangqq" style="text-decoration: none;"  target="_blank"><span style="color:blue;">20151029注入框架更新:</span></a></p>
-更新了AndroidAnnotations注入框架的使用详解:
+更新了AndroidAnnotations注入框架的使用详解:</br>
 <a href="http://blog.csdn.net/developer_jiangqq/article/details/49468923">AndroidAnnnotations注入框架介绍和Android Studios基本配置(一)</a></br>
 <a href="http://blog.csdn.net/developer_jiangqq/article/details/49471543">AndroidAnnnotations注入框架的工作原理(二)</a></br>
 <a href="http://blog.csdn.net/developer_jiangqq/article/details/49490083">AndroidAnnnotations注入框架使用之注入组件Components(三)</a></br>
