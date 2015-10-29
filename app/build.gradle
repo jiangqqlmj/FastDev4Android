@@ -8,7 +8,7 @@ android {
         applicationId "com.chinaztt.fda.ui"
         minSdkVersion 15
         targetSdkVersion 22
-        versionCode 3
+        versionCode 4
         versionName "1.1.1"
     }
     buildTypes {

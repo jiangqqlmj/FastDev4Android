@@ -4,6 +4,8 @@ import android.app.Application;
 
 import com.chinaztt.fda.crash.CustomCrash;
 
+import org.androidannotations.annotations.EApplication;
+
 import java.util.HashMap;
 import java.util.Objects;
 
@@ -16,6 +18,7 @@ import java.util.Objects;
  * QQ： 781931404
  * 公司：江苏中天科技软件技术有限公司
  */
+@EApplication
 public class FDApplication extends Application{
     private HashMap<String,Objects> mTemp=new HashMap<String,Objects>();
     private static FDApplication instance;
@@ -29,6 +32,5 @@ public class FDApplication extends Application{
         //初始化崩溃日志收集器
         CustomCrash mCustomCrash=CustomCrash.getInstance();
         //mCustomCrash.setCustomCrashInfo(this);
-
     }
 }

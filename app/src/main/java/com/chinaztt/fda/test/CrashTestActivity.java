@@ -5,9 +5,12 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.chinaztt.fda.application.FDApplication;
 import com.chinaztt.fda.ui.R;
 import com.chinaztt.fda.ui.base.BaseActivity;
+import com.chinaztt.fda.utils.Log;
 
+import org.androidannotations.annotations.App;
 import org.androidannotations.annotations.EActivity;
 
 /**

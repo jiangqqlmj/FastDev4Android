@@ -6,12 +6,16 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.chinaztt.fda.application.FDApplication;
 import com.chinaztt.fda.cache.ACache;
 import com.chinaztt.fda.cache.CacheConsts;
 import com.chinaztt.fda.ui.R;
 import com.chinaztt.fda.ui.base.BaseActivity;
+import com.chinaztt.fda.utils.Log;
 
+import org.androidannotations.annotations.App;
 import org.androidannotations.annotations.EActivity;
+import org.androidannotations.annotations.EApplication;
 
 /**
  * 当前类注释:采用本地文件进行做数据缓存Cache实例
