@@ -71,6 +71,7 @@ Android在线学习网站(项目驱动学习)网站:<a href="http://www.cniao5.c
 <a href="http://blog.csdn.net/developer_jiangqq/article/details/49490083">AndroidAnnnotations注入框架使用之注入组件Components(三)</a></br>
 <a href="http://blog.csdn.net/developer_jiangqq/article/details/49497955">AndroidAnnnotations注入框架使用之Injection标签详解(四)</a></br>
 <a href="http://blog.csdn.net/developer_jiangqq/article/details/49512513">AndroidAnnnotations注入框架使用之事件绑定Event Binding(五)</a></br>
+<a href="http://blog.csdn.net/developer_jiangqq/article/details/49518299">AndroidAnnnotations注入框架使用之线程处理Threading(六)</a></br>
 <br/>
 后期会持续不断进行更新最新的框架功能，如果有一起合作把这个Android快速开发框架完善起来的~请联系我哦<br/>
 <a href="http://blog.csdn.net/developer_jiangqq" style="text-decoration: none;"  target="_blank"><span style="color:blue;">QQ:781931404</span></a><br/>
