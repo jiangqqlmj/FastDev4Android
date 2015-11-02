@@ -76,6 +76,7 @@ Android在线学习网站(项目驱动学习)网站:<a href="http://www.cniao5.c
 <a href="http://blog.csdn.net/developer_jiangqq/article/details/49530731">AndroidAnnnotations注入框架使用之第三方框架集成Otto事件总线(八)</a></br>
 <a href="http://blog.csdn.net/developer_jiangqq/article/details/49530971">AndroidAnnnotations注入框架使用之第三方框架集成OrmLite(九)</a></br>
 <a href="http://blog.csdn.net/developer_jiangqq/article/details/49531669">AndroidAnnnotations注入框架使用之最佳实践之Adapters和lists(十)</a></br>
+<a href="http://blog.csdn.net/developer_jiangqq/article/details/49583487">AndroidAnnnotations注入框架使用之最佳实践SharedPreferences(十一)</a></br>
 <br/>
 后期会持续不断进行更新最新的框架功能，如果有一起合作把这个Android快速开发框架完善起来的~请联系我哦<br/>
 <a href="http://blog.csdn.net/developer_jiangqq" style="text-decoration: none;"  target="_blank"><span style="color:blue;">QQ:781931404</span></a><br/>
