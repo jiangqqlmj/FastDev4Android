@@ -27,6 +27,9 @@ dependencies {
     compile 'com.readystatesoftware.systembartint:systembartint:1.0.3'
     apt "org.androidannotations:androidannotations:$AAVersion"
     compile "org.androidannotations:androidannotations-api:$AAVersion"
+
+    compile 'com.wang.avi:library:1.0.0'
+    compile 'com.nineoldandroids:library:2.4.0'
 }
 
 apt {

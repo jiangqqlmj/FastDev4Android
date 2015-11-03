@@ -8,5 +8,6 @@
         <item>沉浸式状态栏实例</item>
         <item>MVP开始模式实例</item>
         <item>AndroidAnnotations注入实例</item>
+        <item>进度动画实例</item>
     </array>
 </resources>

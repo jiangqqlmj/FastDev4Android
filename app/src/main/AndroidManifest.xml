@@ -24,6 +24,7 @@
         <activity android:name="com.chinaztt.fda.test.TranslucentActivity_"/>
         <activity android:name="com.chinaztt.fda.test.MVPTestActivity_"/>
         <activity android:name="com.chinaztt.fda.test.AnnotationsTestActivity_"/>
+        <activity android:name="com.chinaztt.fda.test.AVLoadingIndicatorActivity_"/>
     </application>
     <!--添加权限-->
 
