@@ -6,12 +6,17 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="第二个Activity的按钮"
-        android:id="@+id/button_two" />
+        android:text="One Event Button"
+        android:id="@+id/button_one" />
 
-    <TextView
+    <Button
         android:layout_width="wrap_content"
-        android:layout_height="45dp"
-        android:text="当前为第二个Activity"
-        android:id="@+id/textView_two" />
+        android:layout_height="wrap_content"
+        android:text="Two Event Button"
+        android:id="@+id/button_two" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Third Event Button"
+        android:id="@+id/button_third" />
 </LinearLayout>

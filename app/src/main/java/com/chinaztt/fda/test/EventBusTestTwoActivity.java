@@ -5,6 +5,8 @@ import android.view.View;
 import android.widget.Button;
 
 import com.chinaztt.fda.event.TestEventFirst;
+import com.chinaztt.fda.event.TestEventSecond;
+import com.chinaztt.fda.event.TestEventThird;
 import com.chinaztt.fda.ui.R;
 import com.chinaztt.fda.ui.base.BaseActivity;
 
@@ -25,17 +27,33 @@ import de.greenrobot.event.EventBus;
  */
 @EActivity
 public class EventBusTestTwoActivity extends BaseActivity {
-    Button button_two;
+    Button button_one,button_two,button_third;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.event_bus_test_two_layout);
+        button_one=(Button)this.findViewById(R.id.button_one);
         button_two=(Button)this.findViewById(R.id.button_two);
+        button_third=(Button)this.findViewById(R.id.button_third);
+        button_one.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                EventBus.getDefault().post(new TestEventFirst("One Event button"));
+                //EventBusTestTwoActivity.this.finish();
+            }
+        });
         button_two.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                EventBus.getDefault().post(new TestEventFirst("我是第二个Activity回传的信息...."));
-                EventBusTestTwoActivity.this.finish();
+                EventBus.getDefault().post(new TestEventSecond("Two Event button"));
+                //EventBusTestTwoActivity.this.finish();
+            }
+        });
+        button_third.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                EventBus.getDefault().post(new TestEventThird("Third Event button"));
+                //EventBusTestTwoActivity.this.finish();
             }
         });
     }

@@ -83,6 +83,7 @@ Android在线学习网站(项目驱动学习)网站:<a href="http://www.cniao5.c
 <a href="http://blog.csdn.net/developer_jiangqq/article/details/49612399">非常漂亮的进度指示器AVLoadingIndicatorView的使用讲解(十八)</a></br>
 <a href="http://blog.csdn.net/developer_jiangqq/article/details/49613861">Android MVP开发模式详解(十九)</a></br>
 <a href="http://blog.csdn.net/developer_jiangqq/article/details/49617189">消息总线EventBus的基本使用(二十)</a></br>
+<a href="http://blog.csdn.net/developer_jiangqq/article/details/49640153">消息总线EventBus源码分析以及与Otto框架对比(二十一)</a></br>
 <a href="http://blog.csdn.net/developer_jiangqq">更多项目内容请详见CSDN博客!</a></br>
 
 后期会持续不断进行更新最新的框架功能，如果有一起合作把这个Android快速开发框架完善起来的~请联系我哦<br/>

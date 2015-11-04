@@ -14,4 +14,14 @@
         android:layout_height="45dp"
         android:text="这边显示消息内容..."
         android:id="@+id/textView_one" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:text="这边显示消息内容..."
+        android:id="@+id/textView_two" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:text="这边显示消息内容..."
+        android:id="@+id/textView_third" />
 </LinearLayout>

@@ -7,6 +7,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.chinaztt.fda.event.TestEventFirst;
+import com.chinaztt.fda.event.TestEventSecond;
+import com.chinaztt.fda.event.TestEventThird;
 import com.chinaztt.fda.ui.R;
 import com.chinaztt.fda.ui.base.BaseActivity;
 import com.chinaztt.fda.utils.Log;
@@ -30,7 +32,7 @@ import de.greenrobot.event.EventBus;
 @EActivity
 public class EventBusTestActivity  extends BaseActivity{
     Button button_one;
-    TextView textView_one;
+    TextView textView_one,textView_two,textView_third;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,6 +41,8 @@ public class EventBusTestActivity  extends BaseActivity{
         EventBus.getDefault().register(this);
         button_one=(Button)this.findViewById(R.id.button_one);
         textView_one=(TextView)this.findViewById(R.id.textView_one);
+        textView_two=(TextView)this.findViewById(R.id.textView_two);
+        textView_third=(TextView)this.findViewById(R.id.textView_third);
         button_one.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -51,9 +55,29 @@ public class EventBusTestActivity  extends BaseActivity{
      * @param event
      */
     public void onEventMainThread(TestEventFirst event) {
-
+        Log.d("zttjiangqq","onEventMainThread收到消息:"+event.getMsg());
         textView_one.setText(event.getMsg());
-        showToastMsgShort(event.getMsg());
+        //showToastMsgShort(event.getMsg());
+    }
+    /**
+     * 收到消息 进行相关处理
+     * @param event
+     */
+    public void onEventMainThread(TestEventSecond event) {
+
+        Log.d("zttjiangqq","onEventMainThread收到消息:"+event.getMsg());
+        textView_two.setText(event.getMsg());
+        //showToastMsgShort(event.getMsg());
+    }
+    /**
+     * 收到消息 进行相关处理
+     * @param event
+     */
+    public void onEventMainThread(TestEventThird event) {
+
+        Log.d("zttjiangqq","onEventMainThread收到消息:"+event.getMsg());
+        textView_third.setText(event.getMsg());
+        //showToastMsgShort(event.getMsg());
     }
         @Override
     protected void onDestroy() {
