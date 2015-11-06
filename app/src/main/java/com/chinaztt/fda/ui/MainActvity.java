@@ -21,6 +21,7 @@ import com.chinaztt.fda.test.GalleryIndicatorActivity_;
 import com.chinaztt.fda.test.MVPTestActivity_;
 import com.chinaztt.fda.test.PullListviewActivity_;
 import com.chinaztt.fda.test.SPCacheActivity_;
+import com.chinaztt.fda.test.TextDrawablesTestActivity_;
 import com.chinaztt.fda.test.TranslucentActivity_;
 import com.chinaztt.fda.ui.base.BaseActivity;
 
@@ -51,7 +52,7 @@ public class MainActvity extends BaseActivity implements View.OnTouchListener {
                 SPCacheActivity_.class, CrashTestActivity_.class
                 , TranslucentActivity_.class,MVPTestActivity_.class,
                 AnnotationsTestActivity_.class,AVLoadingIndicatorActivity_.class,
-                EventBusTestActivity_.class};
+                EventBusTestActivity_.class, TextDrawablesTestActivity_.class};
 
         lv_main = (ListView) this.findViewById(R.id.lv_main);
         mInflater = getLayouInflater();

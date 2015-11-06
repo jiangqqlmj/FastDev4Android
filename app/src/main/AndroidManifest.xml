@@ -27,6 +27,8 @@
         <activity android:name="com.chinaztt.fda.test.AVLoadingIndicatorActivity_"/>
         <activity android:name="com.chinaztt.fda.test.EventBusTestActivity_"/>
         <activity android:name="com.chinaztt.fda.test.EventBusTestTwoActivity_"/>
+        <activity android:name="com.chinaztt.fda.test.TextDrawablesTestActivity_"/>
+
     </application>
     <!--添加权限-->
 
