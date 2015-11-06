@@ -32,7 +32,6 @@ public class AnnotationsTestActivity extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.dragger_inject_layout);
     }
     @Click(R.id.btn_show)
     public void btnShowClick(){

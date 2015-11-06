@@ -13,4 +13,6 @@
     <color name="androidColorC">#99CC00</color>
     <color name="androidColorD">#FFBB33</color>
     <color name="androidColorE">#FF4444</color>
+    <color name="text_color">#434343</color>
+    <color name="tv_color">#626262</color>
 </resources>

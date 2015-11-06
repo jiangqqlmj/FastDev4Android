@@ -26,4 +26,8 @@
     <string name="tracking_mode_right">Right</string>
     <string name="tracking_mode_bottom">Bottom</string>
     <string name="tracking_mode_all">All</string>
+
+    <string name="string_tv_top_bar_back">返回</string>
+    <string name="string_tv_setting">WebView页面</string>
+
 </resources>
