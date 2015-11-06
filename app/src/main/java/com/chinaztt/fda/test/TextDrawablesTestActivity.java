@@ -25,7 +25,7 @@ import org.androidannotations.annotations.ViewById;
 import org.w3c.dom.Text;
 
 /**
- * 当前类注释:
+ * 当前类注释:TextDrawables 效果实例演示
  * 项目名：FastDev4Android
  * 包名：com.chinaztt.fda.test
  * 作者：江清清 on 15/11/5 22:13
@@ -45,9 +45,12 @@ public class TextDrawablesTestActivity extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        mTitles=new String[]{"SAMPLE_RECT","SAMPLE_ROUND_RECT","SAMPLE_ROUND"
-                ,"SAMPLE_RECT_BORDER","SAMPLE_ROUND_RECT_BORDER","SAMPLE_ROUND_BORDER"
-                ,"SAMPLE_MULTIPLE_LETTERS","SAMPLE_FONT","SAMPLE_SIZE","SAMPLE_ANIMATION","SAMPLE_MISC"
+        mTitles=new String[]{"SAMPLE_RECT"
+                ,"SAMPLE_ROUND_RECT","SAMPLE_ROUND"
+                ,"SAMPLE_RECT_BORDER","SAMPLE_ROUND_RECT_BORDER"
+                ,"SAMPLE_ROUND_BORDER"
+                ,"SAMPLE_MULTIPLE_LETTERS",
+                "SAMPLE_FONT","SAMPLE_SIZE","SAMPLE_ANIMATION","SAMPLE_MISC"
         };
         mGenerator=ColorGenerator.DEFAULT;
         mLayoutInflater=getLayouInflater();
