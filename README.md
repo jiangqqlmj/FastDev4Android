@@ -66,25 +66,25 @@ Android在线学习网站(项目驱动学习)网站:<a href="http://www.cniao5.c
 
 <p><a href="http://blog.csdn.net/developer_jiangqq" style="text-decoration: none;"  target="_blank"><span style="color:blue;">20151029注入框架更新:</span></a></p>
 更新了AndroidAnnotations注入框架的使用详解:</br>
-<a href="http://blog.csdn.net/developer_jiangqq/article/details/49468923">AndroidAnnnotations注入框架介绍和Android Studios基本配置(一)</a></br>
-<a href="http://blog.csdn.net/developer_jiangqq/article/details/49471543">AndroidAnnnotations注入框架的工作原理(二)</a></br>
-<a href="http://blog.csdn.net/developer_jiangqq/article/details/49490083">AndroidAnnnotations注入框架使用之注入组件Components(三)</a></br>
-<a href="http://blog.csdn.net/developer_jiangqq/article/details/49497955">AndroidAnnnotations注入框架使用之Injection标签详解(四)</a></br>
-<a href="http://blog.csdn.net/developer_jiangqq/article/details/49512513">AndroidAnnnotations注入框架使用之事件绑定Event Binding(五)</a></br>
-<a href="http://blog.csdn.net/developer_jiangqq/article/details/49518299">AndroidAnnnotations注入框架使用之线程处理Threading(六)</a></br>
-<a href="http://blog.csdn.net/developer_jiangqq/article/details/49530307">AndroidAnnnotations注入框架使用之第三方框架集成RoboGuice(七)</a></br>
-<a href="http://blog.csdn.net/developer_jiangqq/article/details/49530731">AndroidAnnnotations注入框架使用之第三方框架集成Otto事件总线(八)</a></br>
-<a href="http://blog.csdn.net/developer_jiangqq/article/details/49530971">AndroidAnnnotations注入框架使用之第三方框架集成OrmLite(九)</a></br>
-<a href="http://blog.csdn.net/developer_jiangqq/article/details/49531669">AndroidAnnnotations注入框架使用之最佳实践之Adapters和lists(十)</a></br>
-<a href="http://blog.csdn.net/developer_jiangqq/article/details/49583487">AndroidAnnnotations注入框架使用之最佳实践SharedPreferences(十一)</a></br>
+<a href="http://blog.csdn.net/developer_jiangqq/article/details/49468923" target="_blank">AndroidAnnnotations注入框架介绍和Android Studios基本配置(一)</a></br>
+<a href="http://blog.csdn.net/developer_jiangqq/article/details/49471543" target="_blank">AndroidAnnnotations注入框架的工作原理(二)</a></br>
+<a href="http://blog.csdn.net/developer_jiangqq/article/details/49490083" target="_blank">AndroidAnnnotations注入框架使用之注入组件Components(三)</a></br>
+<a href="http://blog.csdn.net/developer_jiangqq/article/details/49497955" target="_blank">AndroidAnnnotations注入框架使用之Injection标签详解(四)</a></br>
+<a href="http://blog.csdn.net/developer_jiangqq/article/details/49512513" target="_blank">AndroidAnnnotations注入框架使用之事件绑定Event Binding(五)</a></br>
+<a href="http://blog.csdn.net/developer_jiangqq/article/details/49518299" target="_blank">AndroidAnnnotations注入框架使用之线程处理Threading(六)</a></br>
+<a href="http://blog.csdn.net/developer_jiangqq/article/details/49530307" target="_blank">AndroidAnnnotations注入框架使用之第三方框架集成RoboGuice(七)</a></br>
+<a href="http://blog.csdn.net/developer_jiangqq/article/details/49530731" target="_blank">AndroidAnnnotations注入框架使用之第三方框架集成Otto事件总线(八)</a></br>
+<a href="http://blog.csdn.net/developer_jiangqq/article/details/49530971" target="_blank">AndroidAnnnotations注入框架使用之第三方框架集成OrmLite(九)</a></br>
+<a href="http://blog.csdn.net/developer_jiangqq/article/details/49531669" target="_blank">AndroidAnnnotations注入框架使用之最佳实践之Adapters和lists(十)</a></br>
+<a href="http://blog.csdn.net/developer_jiangqq/article/details/49583487" target="_blank">AndroidAnnnotations注入框架使用之最佳实践SharedPreferences(十一)</a></br>
 <br/>
 
 <p><a href="http://blog.csdn.net/developer_jiangqq" style="text-decoration: none;"  target="_blank"><span style="color:blue;">20151101框架更新:</span></a></p>
-<a href="http://blog.csdn.net/developer_jiangqq/article/details/49612399">非常漂亮的进度指示器AVLoadingIndicatorView的使用讲解(十八)</a></br>
-<a href="http://blog.csdn.net/developer_jiangqq/article/details/49613861">Android MVP开发模式详解(十九)</a></br>
-<a href="http://blog.csdn.net/developer_jiangqq/article/details/49617189">消息总线EventBus的基本使用(二十)</a></br>
+<a href="http://blog.csdn.net/developer_jiangqq/article/details/49612399" target="_blank">非常漂亮的进度指示器AVLoadingIndicatorView的使用讲解(十八)</a></br>
+<a href="http://blog.csdn.net/developer_jiangqq/article/details/49613861" target="_blank">Android MVP开发模式详解(十九)</a></br>
+<a href="http://blog.csdn.net/developer_jiangqq/article/details/49617189" target="_blank">消息总线EventBus的基本使用(二十)</a></br>
 <a href="http://blog.csdn.net/developer_jiangqq/article/details/49640153">消息总线EventBus源码分析以及与Otto框架对比(二十一)</a></br>
-<a href="http://blog.csdn.net/developer_jiangqq/article/details/49680415">列表头生成带文本或者字母的图片开源库TextDrawable使用和详解(二十二)</a></br>
+<a href="http://blog.csdn.net/developer_jiangqq/article/details/49680415" target="_blank">列表头生成带文本或者字母的图片开源库TextDrawable使用和详解(二十二)</a></br>
 <a href="http://blog.csdn.net/developer_jiangqq">更多项目内容请详见CSDN博客!</a></br>
 
 后期会持续不断进行更新最新的框架功能，如果有一起合作把这个Android快速开发框架完善起来的~请联系我哦<br/>
