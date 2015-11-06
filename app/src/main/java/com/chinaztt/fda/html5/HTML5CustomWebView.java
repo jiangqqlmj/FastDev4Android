@@ -186,7 +186,6 @@ public class HTML5CustomWebView extends WebView{
 
 	private class MyWebChromeClient extends WebChromeClient {
 		private Bitmap mDefaultVideoPoster;
-
 		@Override
 		public void onShowCustomView(View view,
 				CustomViewCallback callback) {

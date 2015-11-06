@@ -85,6 +85,7 @@ Android在线学习网站(项目驱动学习)网站:<a href="http://www.cniao5.c
 <a href="http://blog.csdn.net/developer_jiangqq/article/details/49617189" target="_blank">消息总线EventBus的基本使用(二十)</a></br>
 <a href="http://blog.csdn.net/developer_jiangqq/article/details/49640153">消息总线EventBus源码分析以及与Otto框架对比(二十一)</a></br>
 <a href="http://blog.csdn.net/developer_jiangqq/article/details/49680415" target="_blank">列表头生成带文本或者字母的图片开源库TextDrawable使用和详解(二十二)</a></br>
+<a href="http://blog.csdn.net/developer_jiangqq/article/details/49687613" target="_blank">重写WebView网页加载以及JavaScript注入详解(二十三)</a></br>
 <a href="http://blog.csdn.net/developer_jiangqq" target="_blank">更多项目内容请详见CSDN博客!</a></br>
 
 后期会持续不断进行更新最新的框架功能，如果有一起合作把这个Android快速开发框架完善起来的~请联系我哦<br/>
