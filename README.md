@@ -62,7 +62,7 @@ Android在线学习网站(项目驱动学习)网站:<a href="http://www.cniao5.c
 二.新增MVP开发模式功能Demo;<br/>
 以上该组件全部在MainActivity中有相应的使用实例;<br/>
 
-<img src="http://img.blog.csdn.net/20151027203315049"/><br/><br/>
+<img src="https://github.com/jiangqqlmj/FastDev4Android/blob/master/demo.gif"/><br/><br/>
 
 <p><a href="http://blog.csdn.net/developer_jiangqq" style="text-decoration: none;"  target="_blank"><span style="color:blue;">20151029注入框架更新:</span></a></p>
 更新了AndroidAnnotations注入框架的使用详解:</br>
