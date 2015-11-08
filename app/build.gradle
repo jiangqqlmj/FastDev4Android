@@ -32,6 +32,7 @@ dependencies {
     compile 'de.greenrobot:eventbus:2.4.0'
     compile 'me.imid.swipebacklayout.lib:library:1.0.0'
     compile 'com.amulyakhare:com.amulyakhare.textdrawable:1.0.1'
+    compile 'com.squareup.picasso:picasso:2.5.2'
 }
 
 apt {

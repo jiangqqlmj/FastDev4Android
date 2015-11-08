@@ -25,7 +25,7 @@ import com.chinaztt.fda.ui.base.BaseActivity;
 public class HTML5WebViewCustomAD extends BaseActivity {
 	private HTML5CustomWebView mWebView;
 	//http://www.zttmall.com/Wapshop/Topic.aspx?TopicId=18
-	private String ad_url = "http://www.baidu.com/";
+	private String ad_url = "http://www.zttmall.com/Wapshop/Topic.aspx?TopicId=18";
 	private String title="百度一下你就知道";
 	@Override
 	public void onCreate(Bundle savedInstanceState) {

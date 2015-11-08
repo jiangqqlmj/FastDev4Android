@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="fill_parent"
+    android:layout_height="120dp"
+    >
+    <ImageView
+        android:layout_marginLeft="5dp"
+        android:layout_centerVertical="true"
+        android:id="@+id/img_lv_item"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:scaleType="fitXY"/>
+    <TextView
+        android:id="@+id/text_lv_item_title"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:text="我是标题...."
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="15dp"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/img_lv_item"/>
+
+    <TextView
+        android:id="@+id/text_lv_item_description"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:text="我是简要信息...."
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="15dp"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text_lv_item_title"
+        android:layout_toRightOf="@id/img_lv_item"
+        />
+</RelativeLayout>

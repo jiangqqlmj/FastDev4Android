@@ -29,6 +29,7 @@
         <activity android:name="com.chinaztt.fda.test.EventBusTestTwoActivity_"/>
         <activity android:name="com.chinaztt.fda.test.TextDrawablesTestActivity_"/>
         <activity android:name="com.chinaztt.fda.html5.HTML5WebViewCustomAD"/>
+        <activity android:name="com.chinaztt.fda.test.BaseAdapterTestActivity_"/>
 
     </application>
     <!--添加权限-->

@@ -37,7 +37,6 @@ public class AnnotationsTestActivity extends BaseActivity {
     public void btnShowClick(){
         tv_show.setText("按钮被点击了...");
     }
-
     @AfterViews
     public void setTv_show(){
         tv_show.setText("我已经被注入啦...");
