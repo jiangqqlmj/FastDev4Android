@@ -52,6 +52,11 @@ public abstract class EnhancedQuickAdapter<T> extends QuickAdapter<T> {
         super(context, layoutResId, data);
     }
 
+    /**
+     * 进行绑定控件和数据  数据发生变化
+     * @param helper A fully initialized helper.
+     * @param item   The item that needs to be displayed.
+     */
     @Override
     protected final void convert(BaseAdapterHelper helper, T item) {
         boolean itemChanged = helper.associatedObject == null || !helper.associatedObject.equals(item);
@@ -60,6 +65,7 @@ public abstract class EnhancedQuickAdapter<T> extends QuickAdapter<T> {
     }
 
     /**
+     * 让用户来自定义
      * @param helper      The helper to use to adapt the view.
      * @param item        The item you should adapt the view to.
      * @param itemChanged Whether or not the helper was bound to another object before.

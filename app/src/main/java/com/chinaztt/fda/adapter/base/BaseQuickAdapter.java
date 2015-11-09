@@ -35,15 +35,14 @@ import java.util.List;
 public abstract class BaseQuickAdapter<T, H extends BaseAdapterHelper> extends BaseAdapter {
 
     protected static final String TAG = BaseQuickAdapter.class.getSimpleName();
-
+    //上下文引用
     protected final Context context;
-
+    //需要显示的布局id
     protected final int layoutResId;
-
+    //需要显示的数据
     protected final List<T> data;
-
+    //是否显示进度
     protected boolean displayIndeterminateProgress = false;
-
     /**
      * Create a QuickAdapter.
      * @param context     The context.
@@ -66,12 +65,21 @@ public abstract class BaseQuickAdapter<T, H extends BaseAdapterHelper> extends B
         this.layoutResId = layoutResId;
     }
 
+    /**
+     * 判断是否需要显示进度，如果显示 数量+1
+     * @return
+     */
     @Override
     public int getCount() {
         int extra = displayIndeterminateProgress ? 1 : 0;
         return data.size() + extra;
     }
 
+    /**
+     * 判断索引是否大于等于数据长度，如果等于，最后一个item应该为进度，那么返回的数据对象为null即可
+     * @param position
+     * @return
+     */
     @Override
     public T getItem(int position) {
         if (position >= data.size()) return null;
@@ -83,11 +91,21 @@ public abstract class BaseQuickAdapter<T, H extends BaseAdapterHelper> extends B
         return position;
     }
 
+    /**
+     * view类型返回2,这边还需要显示进度bar
+     * @return
+     */
     @Override
     public int getViewTypeCount() {
         return 2;
     }
 
+    /**
+     * 进行判断索引是不是已经大于等于数据的长度
+     * 如果超过或者等于数据的长度 返回1
+     * @param position
+     * @return
+     */
     @Override
     public int getItemViewType(int position) {
         return position >= data.size() ? 1 : 0;
@@ -96,16 +114,25 @@ public abstract class BaseQuickAdapter<T, H extends BaseAdapterHelper> extends B
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         if (getItemViewType(position) == 0) {
+            //获取适配器helper  --相当于获取ViewHolder-BaseAdapterHelper
             final H helper = getAdapterHelper(position, convertView, parent);
+            //获取item model 数据
             T item = getItem(position);
+            //给子类QuickAdapter来进行实现，不过QuickAdapter也是抽象类，给具体创建的类进行实现
             convert(helper, item);
             helper.setAssociatedObject(item);
             return helper.getView();
         }
-
+        //显示进度
         return createIndeterminateProgressView(convertView, parent);
     }
 
+    /**
+     * 创建进度条 显示在view的结尾
+     * @param convertView
+     * @param parent
+     * @return
+     */
     private View createIndeterminateProgressView(View convertView, ViewGroup parent) {
         if (convertView == null) {
             FrameLayout container = new FrameLayout(context);
@@ -116,12 +143,15 @@ public abstract class BaseQuickAdapter<T, H extends BaseAdapterHelper> extends B
         }
         return convertView;
     }
-
     @Override
     public boolean isEnabled(int position) {
         return position < data.size();
     }
 
+    //====================================================
+    //下面的方法基本封装了操作集合相关的
+    //主要为新增add,设置set,移除remove以及替换,是否存在判断
+    //=====================================================
     public void add(T elem) {
         data.add(elem);
         notifyDataSetChanged();
@@ -161,6 +191,9 @@ public abstract class BaseQuickAdapter<T, H extends BaseAdapterHelper> extends B
         return data.contains(elem);
     }
 
+    /**
+     * 清空数组
+     */
     /** Clear data list */
     public void clear() {
         data.clear();
@@ -174,6 +207,7 @@ public abstract class BaseQuickAdapter<T, H extends BaseAdapterHelper> extends B
     }
 
     /**
+     * 实现该方法，让用户自己绑定控件和数据
      * Implement this method and use the helper to adapt the view to the given item.
      * @param helper A fully initialized helper.
      * @param item   The item that needs to be displayed.

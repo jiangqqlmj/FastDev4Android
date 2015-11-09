@@ -52,17 +52,18 @@ import com.squareup.picasso.RequestCreator;
  *         .getView();
  * </pre>
  */
+
+/**
+ * Adapter基类，其中封装了方法
+ */
 public class BaseAdapterHelper {
-
     /** Views indexed with their IDs */
+    //进行那个存储模板中的View控件-稀疏数组
     private final SparseArray<View> views;
-
     private final Context context;
-
     private int position;
-
+    //列表item  view
     private View convertView;
-
     /** Package private field to retain the associated user object and detect a change */
     Object associatedObject;
 
@@ -70,9 +71,9 @@ public class BaseAdapterHelper {
         this.context = context;
         this.position = position;
         this.views = new SparseArray<View>();
-        convertView = LayoutInflater.from(context) //
+        convertView = LayoutInflater.from(context) //根据布局id来加载view
                 .inflate(layoutId, parent, false);
-        convertView.setTag(this);
+        convertView.setTag(this);//相当于存放ViewHolder
     }
 
     /**
@@ -87,18 +88,26 @@ public class BaseAdapterHelper {
     }
 
     /** This method is package private and should only be used by QuickAdapter. */
+    /**
+     * 进行获取类ViewHolder的BaseAdapterHelper对象
+     * @param context      上下文引用
+     * @param convertView   item view
+     * @param parent        父控件view
+     * @param layoutId       布局ID
+     * @param position      索引
+     * @return
+     */
     static BaseAdapterHelper get(Context context, View convertView, ViewGroup parent, int layoutId, int position) {
         if (convertView == null) {
             return new BaseAdapterHelper(context, parent, layoutId, position);
         }
-
         // Retrieve the existing helper and update its position
         BaseAdapterHelper existingHelper = (BaseAdapterHelper) convertView.getTag();
         existingHelper.position = position;
         return existingHelper;
     }
-
     /**
+     * 该方法public类型，可以让我们在外部自己获取相关的控件
      * This method allows you to retrieve a view and perform custom
      * operations on it, not covered by the BaseAdapterHelper.<br/>
      * If you think it's a common use case, please consider creating
@@ -147,6 +156,7 @@ public class BaseAdapterHelper {
 
     /**
      * Will set background of a view.
+     * 设置view的背景颜色
      * @param viewId        The view id.
      * @param backgroundRes A resource to use as a background.
      * @return The BaseAdapterHelper for chaining.
@@ -159,6 +169,7 @@ public class BaseAdapterHelper {
 
     /**
      * Will set text color of a TextView.
+     * 设置textview的字的颜色
      * @param viewId    The view id.
      * @param textColor The text color (not a resource id).
      * @return The BaseAdapterHelper for chaining.
@@ -210,6 +221,7 @@ public class BaseAdapterHelper {
 
     /**
      * Will download an image from a URL and put it in an ImageView.<br/>
+     * 下载图片 显示在imageView中
      * @param viewId         The view id.
      * @param requestBuilder The Picasso request builder. (e.g. Picasso.with(context).load(imageUrl))
      * @return The BaseAdapterHelper for chaining.
@@ -220,7 +232,14 @@ public class BaseAdapterHelper {
         return this;
     }
 
+
     /** Add an action to set the image of an image view. Can be called multiple times. */
+    /**
+     * 给ImageView显示bitmap
+     * @param viewId
+     * @param bitmap
+     * @return
+     */
     public BaseAdapterHelper setImageBitmap(int viewId, Bitmap bitmap) {
         ImageView view = retrieveView(viewId);
         view.setImageBitmap(bitmap);
@@ -230,6 +249,7 @@ public class BaseAdapterHelper {
     /**
      * Add an action to set the alpha of a view. Can be called multiple times.
      * Alpha between 0-1.
+     * 设置控件的显示的透明度
      */
     public BaseAdapterHelper setAlpha(int viewId, float value) {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
@@ -246,6 +266,7 @@ public class BaseAdapterHelper {
 
     /**
      * Set a view visibility to VISIBLE (true) or GONE (false).
+     * 控制view的现实和隐藏
      * @param viewId  The view id.
      * @param visible True for VISIBLE, false for GONE.
      * @return The BaseAdapterHelper for chaining.
@@ -258,6 +279,7 @@ public class BaseAdapterHelper {
 
     /**
      * Add links into a TextView.
+     * 给TextView添加超链接
      * @param viewId The id of the TextView to linkify.
      * @return The BaseAdapterHelper for chaining.
      */
@@ -268,6 +290,12 @@ public class BaseAdapterHelper {
     }
 
     /** Apply the typeface to the given viewId, and enable subpixel rendering. */
+    /**
+     * 设置字体格式
+     * @param viewId
+     * @param typeface
+     * @return
+     */
     public BaseAdapterHelper setTypeface(int viewId, Typeface typeface) {
         TextView view = retrieveView(viewId);
         view.setTypeface(typeface);
@@ -276,6 +304,12 @@ public class BaseAdapterHelper {
     }
 
     /** Apply the typeface to all the given viewIds, and enable subpixel rendering. */
+    /**
+     * 设置字体 给多个控件添加
+     * @param typeface
+     * @param viewIds
+     * @return
+     */
     public BaseAdapterHelper setTypeface(Typeface typeface, int... viewIds) {
         for (int viewId : viewIds) {
             TextView view = retrieveView(viewId);
@@ -287,6 +321,7 @@ public class BaseAdapterHelper {
 
     /**
      * Sets the progress of a ProgressBar.
+     * 设置进度
      * @param viewId   The view id.
      * @param progress The progress.
      * @return The BaseAdapterHelper for chaining.
@@ -299,6 +334,7 @@ public class BaseAdapterHelper {
 
     /**
      * Sets the progress and max of a ProgressBar.
+     * 设置进度
      * @param viewId   The view id.
      * @param progress The progress.
      * @param max      The max value of a ProgressBar.
@@ -313,6 +349,7 @@ public class BaseAdapterHelper {
 
     /**
      * Sets the range of a ProgressBar to 0...max.
+     * 设置进度bar的最大进度
      * @param viewId The view id.
      * @param max    The max value of a ProgressBar.
      * @return The BaseAdapterHelper for chaining.
@@ -325,6 +362,7 @@ public class BaseAdapterHelper {
 
     /**
      * Sets the rating (the number of stars filled) of a RatingBar.
+     * 设置评分条的分数
      * @param viewId The view id.
      * @param rating The rating.
      * @return The BaseAdapterHelper for chaining.
@@ -468,6 +506,9 @@ public class BaseAdapterHelper {
     }
 
     /** Retrieve the convertView */
+    /**
+     * 返回列表item view
+     */
     public View getView() {
         return convertView;
     }
@@ -484,7 +525,12 @@ public class BaseAdapterHelper {
     }
 
     @SuppressWarnings("unchecked")
+    /**
+     * 进行从模板view中获取相应的控件 然后放入到view控件集合中
+     */
     protected <T extends View> T retrieveView(int viewId) {
+        //从集合中获取当前viewId的view，如果集合中不存在，那么从view重findById()
+        //获取出来存放到集合中 并且返回
         View view = views.get(viewId);
         if (view == null) {
             view = convertView.findViewById(viewId);
