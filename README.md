@@ -88,6 +88,13 @@ Android在线学习网站(项目驱动学习)网站:<a href="http://www.cniao5.c
 <a href="http://blog.csdn.net/developer_jiangqq/article/details/49687613" target="_blank">重写WebView网页加载以及JavaScript注入详解(二十三)</a></br>
 <a href="http://blog.csdn.net/developer_jiangqq/article/details/49724999" target="_blank">BaseAdapterHelper的基本使用介绍,让你摆脱狂写一堆Adapter烦恼(二十四)</a></br>
 <a href="http://blog.csdn.net/developer_jiangqq/article/details/49745257" target="_blank">BaseAdapterHelper详解源码分析,让你摆脱狂写一堆Adapter烦恼(二十五)</a></br>
+<br/>
+<p><a href="http://blog.csdn.net/developer_jiangqq" style="text-decoration: none;"  target="_blank"><span style="color:blue;">20151110框架更新:</span></a></p>
+一.Volley网络框架基本使用;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;项目中我是采用库引用方式引入Volley框架,这边上传的没有包括上去，如果大家需要运行该项目，可以直接使用如下依赖Volley方式即可:
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:red">compile 'com.mcxiaoke.volley:library:1.0.19'</span><br/>
+
+
 <a href="http://blog.csdn.net/developer_jiangqq" target="_blank">更多项目内容请详见CSDN博客!</a></br>
 
 后期会持续不断进行更新最新的框架功能，如果有一起合作把这个Android快速开发框架完善起来的~请联系我哦<br/>
