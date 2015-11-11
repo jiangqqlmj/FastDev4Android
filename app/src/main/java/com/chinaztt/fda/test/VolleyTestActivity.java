@@ -54,6 +54,7 @@ public class VolleyTestActivity  extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         requestQueue=Volley.newRequestQueue(this);
+
     }
     @Click({R.id.top_bar_linear_back,R.id.btn_string,R.id.btn_json,R.id.btn_image})
     public void backLinearClick(View view){
