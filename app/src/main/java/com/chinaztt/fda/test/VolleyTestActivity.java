@@ -20,6 +20,8 @@ import com.chinaztt.fda.entity.UpdateBean;
 import com.chinaztt.fda.ui.R;
 import com.chinaztt.fda.ui.base.BaseActivity;
 import com.chinaztt.fda.utils.Log;
+import com.chinaztt.fdv.Fdv_CallBackListener;
+import com.chinaztt.fdv.Fdv_StringRequest;
 import com.google.gson.Gson;
 
 import org.androidannotations.annotations.AfterViews;
@@ -65,26 +67,24 @@ public class VolleyTestActivity  extends BaseActivity {
             case R.id.btn_string:
                 //获取字符串
                 Log.d(TAG, "点击获取字符串...");
-                StringRequest request=new StringRequest(Request.Method.GET, "http://www.baidu.com", new Response.Listener<String>() {
+                new Fdv_StringRequest(VolleyTestActivity.this).get("http://www.baidu.com", new Fdv_CallBackListener() {
                     @Override
-                    public void onResponse(String response) {
+                    public void onSuccessResponse(Object response) {
                         tv_result.setVisibility(View.VISIBLE);
                         img_result.setVisibility(View.GONE);
-                        tv_result.setText(response);
+                        tv_result.setText(response.toString());
                     }
-                }, new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError error) {
 
                     }
                 });
-                requestQueue.add(request);
                 break;
             case R.id.btn_json:
                 //获取json
                 Log.d(TAG, "点击获取json...");
                 JsonObjectRequest jsonObjectRequest=new JsonObjectRequest(Request.Method.GET
-                        , "http://interface.zttmall.com/update/mallUpdate", new Response.Listener<JSONObject>() {
+                        , "http://interface.zttmall.com/update/mallUpdate", null,new Response.Listener<JSONObject>() {
                     @Override
                     public void onResponse(JSONObject response) {
                         Gson gson=new Gson();
