@@ -83,15 +83,14 @@ public class VolleyTestActivity  extends BaseActivity {
             case R.id.btn_json:
                 //获取json
                 Log.d(TAG, "点击获取json...");
-                JsonObjectRequest jsonObjectRequest=new JsonObjectRequest(Request.Method.GET,
-                        "http://interface.zttmall.com/update/mallUpdate", null, new Response.Listener<JSONObject>() {
+                JsonObjectRequest jsonObjectRequest=new JsonObjectRequest(Request.Method.GET
+                        , "http://interface.zttmall.com/update/mallUpdate", new Response.Listener<JSONObject>() {
                     @Override
                     public void onResponse(JSONObject response) {
                         Gson gson=new Gson();
                         tv_result.setVisibility(View.VISIBLE);
                         img_result.setVisibility(View.GONE);
-                        tv_result.setText(gson.fromJson(response.toString(), UpdateBean.class).toString());
-
+                        tv_result.setText(gson.fromJson(response.toString(),UpdateBean.class).toString());
                     }
                 }, new Response.ErrorListener() {
                     @Override

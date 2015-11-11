@@ -33,11 +33,10 @@ dependencies {
     compile 'me.imid.swipebacklayout.lib:library:1.0.0'
     compile 'com.amulyakhare:com.amulyakhare.textdrawable:1.0.1'
     compile 'com.squareup.picasso:picasso:2.5.2'
-    compile files('libs/gson-2.2.4.jar')
     //由于我本地采用Volley源码库依赖的,因为需要修改Volley源代码，后期会上传Volley修改之后的代码
     //这边大家要使用Volley库的时候，直接打开下面的引入方式即可
-    //compile 'com.mcxiaoke.volley:library:1.0.19'
-    compile project(':Library:Volley')
+    compile 'com.mcxiaoke.volley:library:1.0.19'
+    compile files('libs/gson-2.2.4.jar')
 }
 
 apt {
