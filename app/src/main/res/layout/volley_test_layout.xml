@@ -38,6 +38,11 @@
             android:text="network图片"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
+        <Button
+            android:id="@+id/btn_string_post"
+            android:text="Post请求"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
     </LinearLayout>
     <ScrollView
         android:layout_width="fill_parent"

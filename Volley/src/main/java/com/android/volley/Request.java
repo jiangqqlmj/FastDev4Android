@@ -28,6 +28,7 @@ import com.android.volley.VolleyLog.MarkerLog;
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
 import java.util.Collections;
+import java.util.HashMap;
 import java.util.Map;
 
 /**
@@ -36,7 +37,13 @@ import java.util.Map;
  * @param <T> The type of parsed response this request expects.
  */
 public abstract class Request<T> implements Comparable<Request<T>> {
-
+    /**
+     * 自定义修改 新增POST请求参数map
+     */
+    protected Map<String,String> mParams=null;
+    public void setParams(Map<String, String> params) {
+        this.mParams = params;
+    }
     /**
      * Default encoding for POST or PUT parameters. See {@link #getParamsEncoding()}.
      */
@@ -387,6 +394,7 @@ public abstract class Request<T> implements Comparable<Request<T>> {
     }
 
     /**
+     * 进行获取post请求参数数据
      * Returns a Map of parameters to be used for a POST or PUT request.  Can throw
      * {@link AuthFailureError} as authentication may be required to provide these values.
      *
@@ -395,7 +403,9 @@ public abstract class Request<T> implements Comparable<Request<T>> {
      * @throws AuthFailureError in the event of auth failure
      */
     protected Map<String, String> getParams() throws AuthFailureError {
-        return null;
+        //return null;
+        //重新进行返回params
+        return mParams;
     }
 
     /**

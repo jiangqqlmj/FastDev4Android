@@ -23,6 +23,7 @@ import com.android.volley.Response.ErrorListener;
 import com.android.volley.Response.Listener;
 
 import java.io.UnsupportedEncodingException;
+import java.util.Map;
 
 /**
  * A canned request for retrieving the response body at a given URL as a String.
@@ -53,6 +54,18 @@ public class StringRequest extends Request<String> {
      */
     public StringRequest(String url, Listener<String> listener, ErrorListener errorListener) {
         this(Method.GET, url, listener, errorListener);
+    }
+    /**
+     * 扩展POST请求构造函数
+     * @param url 请求地址
+     * @param listener   数据请求加载成功监听器
+     * @param errorListener  数据请求加载失败监听器
+     * @param params  POST请求参数
+     */
+    public StringRequest(String url, Listener<String> listener, ErrorListener errorListener,Map<String,String> params) {
+        this(Method.POST, url, listener, errorListener);
+        //进行初始化Request中post 请求参数
+        setParams(params);
     }
 
     @Override

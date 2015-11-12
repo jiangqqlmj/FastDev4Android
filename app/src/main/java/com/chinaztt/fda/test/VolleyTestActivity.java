@@ -32,6 +32,7 @@ import org.androidannotations.annotations.EActivity;
 import org.androidannotations.annotations.ViewById;
 import org.json.JSONObject;
 
+import java.util.HashMap;
 import java.util.Map;
 
 /**
@@ -53,7 +54,7 @@ public class VolleyTestActivity  extends BaseActivity {
     @ViewById
     ImageView img_result;
     @ViewById
-    Button btn_string,btn_json,btn_image_request,btn_image_loader,btn_image_network;
+    Button btn_string,btn_json,btn_image_request,btn_image_loader,btn_image_network,btn_string_post;
     @ViewById
     NetworkImageView img_result_network;
     private RequestQueue requestQueue;
@@ -62,7 +63,7 @@ public class VolleyTestActivity  extends BaseActivity {
         super.onCreate(savedInstanceState);
         requestQueue=Volley.newRequestQueue(this);
     }
-    @Click({R.id.top_bar_linear_back,R.id.btn_string,R.id.btn_json,R.id.btn_image_request,R.id.btn_image_loader,R.id.btn_image_network})
+    @Click({R.id.top_bar_linear_back,R.id.btn_string,R.id.btn_json,R.id.btn_image_request,R.id.btn_image_loader,R.id.btn_image_network,R.id.btn_string_post})
     public void backLinearClick(View view){
         switch (view.getId()){
             case R.id.top_bar_linear_back:
@@ -149,6 +150,26 @@ public class VolleyTestActivity  extends BaseActivity {
                 ImageLoader network_imageLoader=new ImageLoader(requestQueue, new Fdv_ImageCache());
                 img_result_network.setVisibility(View.VISIBLE);
                 img_result_network.setImageUrl("http://interface.zttmall.com//Images//upload//image//20150325//20150325083214_8280.jpg",network_imageLoader);
+                break;
+            case R.id.btn_string_post:
+                //修改Volley源代码,扩展StringRequest支持post参数设置
+                Map<String,String> params=new HashMap<String,String>();
+                params.put("username","zhangsan");
+                params.put("password","12345");
+                StringRequest post_stringRequest=new StringRequest("http://10.18.3.123:8080/SalesWebTest/TestVolleyPost", new Response.Listener<String>() {
+                    @Override
+                    public void onResponse(String response) {
+                        tv_result.setVisibility(View.VISIBLE);
+                        img_result.setVisibility(View.GONE);
+                        tv_result.setText(response.toString());
+                    }
+                }, new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+
+                    }
+                },params);
+                requestQueue.add(post_stringRequest);
                 break;
         }
     }
