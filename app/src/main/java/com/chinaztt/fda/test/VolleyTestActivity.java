@@ -12,6 +12,7 @@ import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
+import com.android.volley.toolbox.GsonRequest;
 import com.android.volley.toolbox.ImageLoader;
 import com.android.volley.toolbox.ImageRequest;
 import com.android.volley.toolbox.JsonObjectRequest;
@@ -53,7 +54,7 @@ public class VolleyTestActivity  extends BaseActivity {
     @ViewById
     ImageView img_result;
     @ViewById
-    Button btn_string,btn_json,btn_image_request,btn_image_loader,btn_image_network,btn_string_post,btn_loader_list;
+    Button btn_string,btn_json,btn_image_request,btn_image_loader,btn_image_network,btn_string_post,btn_loader_list,btn_gson;
     @ViewById
     NetworkImageView img_result_network;
     private RequestQueue requestQueue;
@@ -62,7 +63,7 @@ public class VolleyTestActivity  extends BaseActivity {
         super.onCreate(savedInstanceState);
         requestQueue=Volley.newRequestQueue(this);
     }
-    @Click({R.id.top_bar_linear_back,R.id.btn_string,R.id.btn_json,R.id.btn_image_request,R.id.btn_image_loader,R.id.btn_image_network,R.id.btn_string_post,R.id.btn_loader_list})
+    @Click({R.id.top_bar_linear_back,R.id.btn_string,R.id.btn_json,R.id.btn_image_request,R.id.btn_image_loader,R.id.btn_image_network,R.id.btn_string_post,R.id.btn_loader_list,R.id.btn_gson})
     public void backLinearClick(View view){
         switch (view.getId()){
             case R.id.top_bar_linear_back:
@@ -173,6 +174,23 @@ public class VolleyTestActivity  extends BaseActivity {
             case R.id.btn_loader_list:
                 //进行使用ImageLoader加载图片列表
                 openActivity(VolleyLoaderActivity_.class);
+                break;
+            case R.id.btn_gson:
+                //使用扩展工具 GsonRequest进行请求
+                GsonRequest<UpdateBean> gsonRequest=new GsonRequest<UpdateBean>("http://interface.zttmall.com/update/mallUpdate", new Response.Listener<UpdateBean>() {
+                    @Override
+                    public void onResponse(UpdateBean response) {
+                        tv_result.setVisibility(View.VISIBLE);
+                        img_result.setVisibility(View.GONE);
+                        tv_result.setText(response.toString());
+                    }
+                }, new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+
+                    }
+                }, UpdateBean.class);
+                requestQueue.add(gsonRequest);
                 break;
         }
     }
