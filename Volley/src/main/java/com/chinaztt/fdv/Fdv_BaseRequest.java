@@ -15,7 +15,7 @@ import com.android.volley.toolbox.Volley;
  * QQ： 781931404
  * 公司：江苏中天科技软件技术有限公司
  */
-public class Fdv_BaseRequest {
+public class Fdv_BaseRequest{
     protected static RequestQueue requestQueue;
     private Context mContext;
     protected Fdv_BaseRequest(Context pContext){

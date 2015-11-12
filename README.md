@@ -93,6 +93,7 @@ Android在线学习网站(项目驱动学习)网站:<a href="http://www.cniao5.c
 一.Volley网络框架基本使用;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;项目中我是采用库引用方式引入Volley框架,这边Volley库也已经同步上传了,大家直接编译运行即可;<br/>
 <a href="http://blog.csdn.net/developer_jiangqq/article/details/49797945" target="_blank">Volley完全解析之基础使用(二十六)</a></br>
+<a href="http://blog.csdn.net/developer_jiangqq/article/details/49804487" target="_blank">Volley完全解析之进阶最佳实践与二次封装(二十七)</a></br>
 
 <a href="http://blog.csdn.net/developer_jiangqq" target="_blank">更多项目内容请详见CSDN博客!</a></br>
 

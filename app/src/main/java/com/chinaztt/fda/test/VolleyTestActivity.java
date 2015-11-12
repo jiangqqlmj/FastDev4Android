@@ -23,7 +23,9 @@ import com.chinaztt.fda.entity.UpdateBean;
 import com.chinaztt.fda.ui.R;
 import com.chinaztt.fda.ui.base.BaseActivity;
 import com.chinaztt.fda.utils.Log;
+import com.chinaztt.fdv.Fdv_CallBackListener;
 import com.chinaztt.fdv.Fdv_ImageCache;
+import com.chinaztt.fdv.Fdv_StringRequest;
 import com.google.gson.Gson;
 
 import org.androidannotations.annotations.AfterViews;
@@ -34,6 +36,7 @@ import org.json.JSONObject;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Objects;
 
 /**
  * 当前类注释:Volley 网络框架数据请求
@@ -72,30 +75,32 @@ public class VolleyTestActivity  extends BaseActivity {
             case R.id.btn_string:
                 //获取字符串
                 Log.d(TAG, "点击获取字符串...");
-//                new Fdv_StringRequest(VolleyTestActivity.this).get("http://www.baidu.com", new Fdv_CallBackListener() {
-//                    @Override
-//                    public void onSuccessResponse(Object response) {
-//
-//                    }
-//                    @Override
-//                    public void onErrorResponse(VolleyError error) {
-//
-//                    }
-//                });
-                StringRequest stringRequest=new StringRequest(Request.Method.GET, "http://www.baidu.com", new Response.Listener<String>() {
+                new Fdv_StringRequest<String>(VolleyTestActivity.this).get("http://www.baidu.com", new Fdv_CallBackListener<String>() {
                     @Override
-                    public void onResponse(String response) {
+                    public void onSuccessResponse(String response) {
                         tv_result.setVisibility(View.VISIBLE);
                         img_result.setVisibility(View.GONE);
                         tv_result.setText(response.toString());
                     }
-                }, new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError error) {
 
                     }
                 });
-                requestQueue.add(stringRequest);
+//                StringRequest stringRequest=new StringRequest(Request.Method.GET, "http://www.baidu.com", new Response.Listener<String>() {
+//                    @Override
+//                    public void onResponse(String response) {
+//                        tv_result.setVisibility(View.VISIBLE);
+//                        img_result.setVisibility(View.GONE);
+//                        tv_result.setText(response.toString());
+//                    }
+//                }, new Response.ErrorListener() {
+//                    @Override
+//                    public void onErrorResponse(VolleyError error) {
+//
+//                    }
+//                });
+//                requestQueue.add(stringRequest);
                 break;
             case R.id.btn_json:
                 //获取json

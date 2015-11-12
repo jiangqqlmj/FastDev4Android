@@ -16,16 +16,16 @@ import com.android.volley.toolbox.StringRequest;
  * QQ： 781931404
  * 公司：江苏中天科技软件技术有限公司
  */
-public class Fdv_StringRequest extends Fdv_BaseRequest{
+public class Fdv_StringRequest<T> extends Fdv_BaseRequest{
     public Fdv_StringRequest(Context pContext){
         super(pContext);
     }
-    public void get(String url, final Fdv_CallBackListener listener){
+    public void get(String url, final Fdv_CallBackListener<T> listener){
         StringRequest stringRequest=new StringRequest(Request.Method.GET, url, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
                 if(listener!=null){
-                    listener.onSuccessResponse(response);
+                    listener.onSuccessResponse((T) response);
                 }
             }
         }, new Response.ErrorListener() {
