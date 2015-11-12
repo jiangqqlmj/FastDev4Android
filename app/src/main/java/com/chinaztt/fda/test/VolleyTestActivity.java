@@ -8,7 +8,6 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
@@ -54,7 +53,7 @@ public class VolleyTestActivity  extends BaseActivity {
     @ViewById
     ImageView img_result;
     @ViewById
-    Button btn_string,btn_json,btn_image_request,btn_image_loader,btn_image_network,btn_string_post;
+    Button btn_string,btn_json,btn_image_request,btn_image_loader,btn_image_network,btn_string_post,btn_loader_list;
     @ViewById
     NetworkImageView img_result_network;
     private RequestQueue requestQueue;
@@ -63,7 +62,7 @@ public class VolleyTestActivity  extends BaseActivity {
         super.onCreate(savedInstanceState);
         requestQueue=Volley.newRequestQueue(this);
     }
-    @Click({R.id.top_bar_linear_back,R.id.btn_string,R.id.btn_json,R.id.btn_image_request,R.id.btn_image_loader,R.id.btn_image_network,R.id.btn_string_post})
+    @Click({R.id.top_bar_linear_back,R.id.btn_string,R.id.btn_json,R.id.btn_image_request,R.id.btn_image_loader,R.id.btn_image_network,R.id.btn_string_post,R.id.btn_loader_list})
     public void backLinearClick(View view){
         switch (view.getId()){
             case R.id.top_bar_linear_back:
@@ -170,6 +169,10 @@ public class VolleyTestActivity  extends BaseActivity {
                     }
                 },params);
                 requestQueue.add(post_stringRequest);
+                break;
+            case R.id.btn_loader_list:
+                //进行使用ImageLoader加载图片列表
+                openActivity(VolleyLoaderActivity_.class);
                 break;
         }
     }
