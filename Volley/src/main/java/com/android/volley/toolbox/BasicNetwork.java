@@ -82,6 +82,12 @@ public class BasicNetwork implements Network {
         mPool = pool;
     }
 
+    /**
+     * 执行网络请求
+     * @param request Request to process 需要处理的请求
+     * @return
+     * @throws VolleyError
+     */
     @Override
     public NetworkResponse performRequest(Request<?> request) throws VolleyError {
         long requestStart = SystemClock.elapsedRealtime();

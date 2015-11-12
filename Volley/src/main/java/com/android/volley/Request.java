@@ -433,7 +433,7 @@ public abstract class Request<T> implements Comparable<Request<T>> {
 
     /**
      * Returns the raw POST or PUT body to be sent.
-     *
+     * 如果请求是POST或者PUT方法，去获取请求参数信息，然后设置到请求中
      * <p>By default, the body consists of the request parameters in
      * application/x-www-form-urlencoded format. When overriding this method, consider overriding
      * {@link #getBodyContentType()} as well to match the new body format.
@@ -441,6 +441,7 @@ public abstract class Request<T> implements Comparable<Request<T>> {
      * @throws AuthFailureError in the event of auth failure
      */
     public byte[] getBody() throws AuthFailureError {
+        //获取请求参数信息
         Map<String, String> params = getParams();
         if (params != null && params.size() > 0) {
             return encodeParameters(params, getParamsEncoding());

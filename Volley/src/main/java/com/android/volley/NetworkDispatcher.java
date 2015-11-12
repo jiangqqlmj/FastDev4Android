@@ -109,6 +109,7 @@ public class NetworkDispatcher extends Thread {
                 addTrafficStatsTag(request);
 
                 // Perform the network request.
+                // 进行执行网络请求
                 NetworkResponse networkResponse = mNetwork.performRequest(request);
                 request.addMarker("network-http-complete");
 

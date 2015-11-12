@@ -27,8 +27,10 @@ import com.android.volley.RequestQueue;
 
 import java.io.File;
 
+/**
+ * Volley主入口类，来获取请求队列对象
+ */
 public class Volley {
-
     /** Default on-disk cache directory. */
     private static final String DEFAULT_CACHE_DIR = "volley";
 

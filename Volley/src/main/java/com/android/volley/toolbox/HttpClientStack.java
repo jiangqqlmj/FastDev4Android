@@ -71,9 +71,19 @@ public class HttpClientStack implements HttpStack {
         return result;
     }
 
+    /**
+     * 请求执行
+     * @param request the request to perform
+     * @param additionalHeaders additional headers to be sent together with
+     *         {@link Request#getHeaders()}
+     * @return
+     * @throws IOException
+     * @throws AuthFailureError
+     */
     @Override
     public HttpResponse performRequest(Request<?> request, Map<String, String> additionalHeaders)
             throws IOException, AuthFailureError {
+        //传入request 进行创建封装过后的httprequest子类 httpurlrequest
         HttpUriRequest httpRequest = createHttpRequest(request, additionalHeaders);
         addHeaders(httpRequest, additionalHeaders);
         addHeaders(httpRequest, request.getHeaders());
@@ -88,6 +98,7 @@ public class HttpClientStack implements HttpStack {
     }
 
     /**
+     * 进行创建httprequest，这边获取httprequest的子类，httpurlrequest
      * Creates the appropriate subclass of HttpUriRequest for passed in request.
      */
     @SuppressWarnings("deprecation")
@@ -117,6 +128,7 @@ public class HttpClientStack implements HttpStack {
             case Method.POST: {
                 HttpPost postRequest = new HttpPost(request.getUrl());
                 postRequest.addHeader(HEADER_CONTENT_TYPE, request.getBodyContentType());
+                //设置请求体 body信息 -如果请求体不为空
                 setEntityIfNonEmptyBody(postRequest, request);
                 return postRequest;
             }
@@ -143,6 +155,12 @@ public class HttpClientStack implements HttpStack {
         }
     }
 
+    /**
+     * 如果request的请求体不为空，进行设置请求体信息
+     * @param httpRequest
+     * @param request
+     * @throws AuthFailureError
+     */
     private static void setEntityIfNonEmptyBody(HttpEntityEnclosingRequestBase httpRequest,
             Request<?> request) throws AuthFailureError {
         byte[] body = request.getBody();
