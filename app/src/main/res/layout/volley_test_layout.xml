@@ -19,11 +19,26 @@
            android:layout_width="wrap_content"
            android:layout_height="wrap_content" />
        <Button
-           android:id="@+id/btn_image"
-           android:text="获取图片"
+           android:id="@+id/btn_image_request"
+           android:text="request图片"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content" />
+       <Button
+           android:id="@+id/btn_image_loader"
+           android:text="loader图片"
            android:layout_width="wrap_content"
            android:layout_height="wrap_content" />
    </LinearLayout>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/btn_image_network"
+            android:text="network图片"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
     <ScrollView
         android:layout_width="fill_parent"
         android:layout_height="wrap_content">
@@ -39,6 +54,12 @@
             <ImageView
                 android:visibility="gone"
                 android:id="@+id/img_result"
+                android:layout_width="300dp"
+                android:layout_height="300dp"
+                android:layout_centerHorizontal="true"/>
+            <com.android.volley.toolbox.NetworkImageView
+                android:visibility="gone"
+                android:id="@+id/img_result_network"
                 android:layout_width="300dp"
                 android:layout_height="300dp"
                 android:layout_centerHorizontal="true"/>

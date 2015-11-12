@@ -91,9 +91,8 @@ Android在线学习网站(项目驱动学习)网站:<a href="http://www.cniao5.c
 <br/>
 <p><a href="http://blog.csdn.net/developer_jiangqq" style="text-decoration: none;"  target="_blank"><span style="color:blue;">20151110框架更新:</span></a></p>
 一.Volley网络框架基本使用;<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;项目中我是采用库引用方式引入Volley框架,这边上传的没有包括上去，如果大家需要运行该项目，可以直接使用如下依赖Volley方式即可:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:red">compile 'com.mcxiaoke.volley:library:1.0.19'</span><br/>
-
+&nbsp;&nbsp;&nbsp;&nbsp;项目中我是采用库引用方式引入Volley框架,这边Volley库也已经同步上传了,大家直接编译运行即可;<br/>
+<a href="http://blog.csdn.net/developer_jiangqq/article/details/49797945" target="_blank">Volley完全解析之基础使用(二十六)</a></br>
 
 <a href="http://blog.csdn.net/developer_jiangqq" target="_blank">更多项目内容请详见CSDN博客!</a></br>
 

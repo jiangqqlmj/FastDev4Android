@@ -8,20 +8,22 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
+import com.android.volley.toolbox.ImageLoader;
 import com.android.volley.toolbox.ImageRequest;
 import com.android.volley.toolbox.JsonObjectRequest;
+import com.android.volley.toolbox.NetworkImageView;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.chinaztt.fda.entity.UpdateBean;
 import com.chinaztt.fda.ui.R;
 import com.chinaztt.fda.ui.base.BaseActivity;
 import com.chinaztt.fda.utils.Log;
-import com.chinaztt.fdv.Fdv_CallBackListener;
-import com.chinaztt.fdv.Fdv_StringRequest;
+import com.chinaztt.fdv.Fdv_ImageCache;
 import com.google.gson.Gson;
 
 import org.androidannotations.annotations.AfterViews;
@@ -29,6 +31,8 @@ import org.androidannotations.annotations.Click;
 import org.androidannotations.annotations.EActivity;
 import org.androidannotations.annotations.ViewById;
 import org.json.JSONObject;
+
+import java.util.Map;
 
 /**
  * 当前类注释:Volley 网络框架数据请求
@@ -49,16 +53,16 @@ public class VolleyTestActivity  extends BaseActivity {
     @ViewById
     ImageView img_result;
     @ViewById
-    Button btn_string,btn_json,btn_image;
-
+    Button btn_string,btn_json,btn_image_request,btn_image_loader,btn_image_network;
+    @ViewById
+    NetworkImageView img_result_network;
     private RequestQueue requestQueue;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         requestQueue=Volley.newRequestQueue(this);
-
     }
-    @Click({R.id.top_bar_linear_back,R.id.btn_string,R.id.btn_json,R.id.btn_image})
+    @Click({R.id.top_bar_linear_back,R.id.btn_string,R.id.btn_json,R.id.btn_image_request,R.id.btn_image_loader,R.id.btn_image_network})
     public void backLinearClick(View view){
         switch (view.getId()){
             case R.id.top_bar_linear_back:
@@ -67,18 +71,30 @@ public class VolleyTestActivity  extends BaseActivity {
             case R.id.btn_string:
                 //获取字符串
                 Log.d(TAG, "点击获取字符串...");
-                new Fdv_StringRequest(VolleyTestActivity.this).get("http://www.baidu.com", new Fdv_CallBackListener() {
+//                new Fdv_StringRequest(VolleyTestActivity.this).get("http://www.baidu.com", new Fdv_CallBackListener() {
+//                    @Override
+//                    public void onSuccessResponse(Object response) {
+//
+//                    }
+//                    @Override
+//                    public void onErrorResponse(VolleyError error) {
+//
+//                    }
+//                });
+                StringRequest stringRequest=new StringRequest(Request.Method.GET, "http://www.baidu.com", new Response.Listener<String>() {
                     @Override
-                    public void onSuccessResponse(Object response) {
+                    public void onResponse(String response) {
                         tv_result.setVisibility(View.VISIBLE);
                         img_result.setVisibility(View.GONE);
                         tv_result.setText(response.toString());
                     }
+                }, new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError error) {
 
                     }
                 });
+                requestQueue.add(stringRequest);
                 break;
             case R.id.btn_json:
                 //获取json
@@ -100,7 +116,7 @@ public class VolleyTestActivity  extends BaseActivity {
                 });
                 requestQueue.add(jsonObjectRequest);
                 break;
-            case R.id.btn_image:
+            case R.id.btn_image_request:
                 //获取图片
                 //http:\/\/interface.zttmall.com\/Images\/upload\/image\/20150325\/20150325083110_0898.jpg
                 Log.d(TAG, "点击获取图片...");
@@ -112,13 +128,27 @@ public class VolleyTestActivity  extends BaseActivity {
                         img_result.setVisibility(View.VISIBLE);
                         img_result.setImageBitmap(response);
                     }
-                }, 300, 300, ImageView.ScaleType.FIT_XY, Bitmap.Config.ARGB_8888, new Response.ErrorListener() {
+                }, 0, 0, ImageView.ScaleType.FIT_XY, Bitmap.Config.ARGB_8888, new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError error) {
 
                     }
                 });
                 requestQueue.add(imageRequest);
+                break;
+            case R.id.btn_image_loader:
+                //使用imageloader进行获取图片
+                ImageLoader imageLoader=new ImageLoader(requestQueue, new Fdv_ImageCache());
+                tv_result.setVisibility(View.GONE);
+                img_result.setVisibility(View.VISIBLE);
+                ImageLoader.ImageListener listener=ImageLoader.getImageListener(img_result,R.drawable.ic_loading,R.drawable.ic_loading);
+                imageLoader.get("http://interface.zttmall.com//Images//upload//image//20150328//20150328105404_2392.jpg", listener);
+                break;
+            case R.id.btn_image_network:
+                //采用NetworkImageView imageview控件
+                ImageLoader network_imageLoader=new ImageLoader(requestQueue, new Fdv_ImageCache());
+                img_result_network.setVisibility(View.VISIBLE);
+                img_result_network.setImageUrl("http://interface.zttmall.com//Images//upload//image//20150325//20150325083214_8280.jpg",network_imageLoader);
                 break;
         }
     }
