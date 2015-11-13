@@ -59,6 +59,8 @@ public class VolleyTestActivity  extends BaseActivity {
     @ViewById
     Button btn_string,btn_json,btn_image_request,btn_image_loader,btn_image_network,btn_string_post,btn_loader_list,btn_gson;
     @ViewById
+    Button btn_fdv_get_params,btn_fdv_post_params;
+    @ViewById
     NetworkImageView img_result_network;
     private RequestQueue requestQueue;
     @Override
@@ -66,7 +68,7 @@ public class VolleyTestActivity  extends BaseActivity {
         super.onCreate(savedInstanceState);
         requestQueue=Volley.newRequestQueue(this);
     }
-    @Click({R.id.top_bar_linear_back,R.id.btn_string,R.id.btn_json,R.id.btn_image_request,R.id.btn_image_loader,R.id.btn_image_network,R.id.btn_string_post,R.id.btn_loader_list,R.id.btn_gson})
+    @Click({R.id.top_bar_linear_back,R.id.btn_string,R.id.btn_json,R.id.btn_image_request,R.id.btn_image_loader,R.id.btn_image_network,R.id.btn_string_post,R.id.btn_loader_list,R.id.btn_gson,R.id.btn_fdv_get_params,R.id.btn_fdv_post_params})
     public void backLinearClick(View view){
         switch (view.getId()){
             case R.id.top_bar_linear_back:
@@ -80,6 +82,7 @@ public class VolleyTestActivity  extends BaseActivity {
                     public void onSuccessResponse(String response) {
                         tv_result.setVisibility(View.VISIBLE);
                         img_result.setVisibility(View.GONE);
+                        img_result_network.setVisibility(View.GONE);
                         tv_result.setText(response.toString());
                     }
                     @Override
@@ -112,6 +115,7 @@ public class VolleyTestActivity  extends BaseActivity {
                         Gson gson=new Gson();
                         tv_result.setVisibility(View.VISIBLE);
                         img_result.setVisibility(View.GONE);
+                        img_result_network.setVisibility(View.GONE);
                         tv_result.setText(gson.fromJson(response.toString(),UpdateBean.class).toString());
                     }
                 }, new Response.ErrorListener() {
@@ -133,6 +137,7 @@ public class VolleyTestActivity  extends BaseActivity {
                         tv_result.setVisibility(View.GONE);
                         img_result.setVisibility(View.VISIBLE);
                         img_result.setImageBitmap(response);
+                        img_result_network.setVisibility(View.GONE);
                     }
                 }, 0, 0, ImageView.ScaleType.FIT_XY, Bitmap.Config.ARGB_8888, new Response.ErrorListener() {
                     @Override
@@ -147,12 +152,15 @@ public class VolleyTestActivity  extends BaseActivity {
                 ImageLoader imageLoader=new ImageLoader(requestQueue, new Fdv_ImageCache());
                 tv_result.setVisibility(View.GONE);
                 img_result.setVisibility(View.VISIBLE);
+                img_result_network.setVisibility(View.GONE);
                 ImageLoader.ImageListener listener=ImageLoader.getImageListener(img_result,R.drawable.ic_loading,R.drawable.ic_loading);
                 imageLoader.get("http://interface.zttmall.com//Images//upload//image//20150328//20150328105404_2392.jpg", listener);
                 break;
             case R.id.btn_image_network:
                 //采用NetworkImageView imageview控件
                 ImageLoader network_imageLoader=new ImageLoader(requestQueue, new Fdv_ImageCache());
+                img_result.setVisibility(View.GONE);
+                tv_result.setVisibility(View.GONE);
                 img_result_network.setVisibility(View.VISIBLE);
                 img_result_network.setImageUrl("http://interface.zttmall.com//Images//upload//image//20150325//20150325083214_8280.jpg",network_imageLoader);
                 break;
@@ -166,6 +174,7 @@ public class VolleyTestActivity  extends BaseActivity {
                     public void onResponse(String response) {
                         tv_result.setVisibility(View.VISIBLE);
                         img_result.setVisibility(View.GONE);
+                        img_result_network.setVisibility(View.GONE);
                         tv_result.setText(response.toString());
                     }
                 }, new Response.ErrorListener() {
@@ -187,6 +196,7 @@ public class VolleyTestActivity  extends BaseActivity {
                     public void onResponse(UpdateBean response) {
                         tv_result.setVisibility(View.VISIBLE);
                         img_result.setVisibility(View.GONE);
+                        img_result_network.setVisibility(View.GONE);
                         tv_result.setText(response.toString());
                     }
                 }, new Response.ErrorListener() {
@@ -196,6 +206,43 @@ public class VolleyTestActivity  extends BaseActivity {
                     }
                 }, UpdateBean.class);
                 requestQueue.add(gsonRequest);
+                break;
+            case R.id.btn_fdv_get_params:
+                //get请求  传入请求参数
+                Map<String,String> params_get=new HashMap<String,String>();
+                params_get.put("username","zhangsan");
+                params_get.put("password","12345");
+                new Fdv_StringRequest<String>(this).get("http://10.18.3.123:8080/SalesWebTest/TestVolleyPost", new Fdv_CallBackListener<String>() {
+                    @Override
+                    public void onSuccessResponse(String response) {
+                        tv_result.setVisibility(View.VISIBLE);
+                        img_result.setVisibility(View.GONE);
+                        img_result_network.setVisibility(View.GONE);
+                        tv_result.setText(response.toString());
+                    }
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                    }
+                },params_get);
+                break;
+            case  R.id.btn_fdv_post_params:
+                //post请求  传入请求参数
+                Map<String,String> params_post=new HashMap<String,String>();
+                params_post.put("username","zhangsan");
+                params_post.put("password","12345");
+                new Fdv_StringRequest<String>(this).post("http://10.18.3.123:8080/SalesWebTest/TestVolleyPost", new Fdv_CallBackListener<String>() {
+                    @Override
+                    public void onSuccessResponse(String response) {
+                        tv_result.setVisibility(View.VISIBLE);
+                        img_result.setVisibility(View.GONE);
+                        img_result_network.setVisibility(View.GONE);
+                        tv_result.setText(response.toString());
+                    }
+
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                    }
+                },params_post);
                 break;
         }
     }
