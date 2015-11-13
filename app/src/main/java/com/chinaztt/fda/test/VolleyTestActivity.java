@@ -8,6 +8,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
@@ -166,10 +167,10 @@ public class VolleyTestActivity  extends BaseActivity {
                 break;
             case R.id.btn_string_post:
                 //修改Volley源代码,扩展StringRequest支持post参数设置
-                Map<String,String> params=new HashMap<String,String>();
-                params.put("username","zhangsan");
+                final Map<String,String> params=new HashMap<String,String>();
+                params.put("username","张三");
                 params.put("password","12345");
-                StringRequest post_stringRequest=new StringRequest("http://10.18.3.123:8080/SalesWebTest/TestVolleyPost", new Response.Listener<String>() {
+                StringRequest post_stringRequest=new StringRequest(Request.Method.POST,"http://10.18.3.123:8080/SalesWebTest/TestVolleyPost", new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
                         tv_result.setVisibility(View.VISIBLE);
@@ -182,7 +183,12 @@ public class VolleyTestActivity  extends BaseActivity {
                     public void onErrorResponse(VolleyError error) {
 
                     }
-                },params);
+                }){
+                    @Override
+                    protected Map<String, String> getParams() throws AuthFailureError {
+                        return params;
+                    }
+                };
                 requestQueue.add(post_stringRequest);
                 break;
             case R.id.btn_loader_list:
@@ -210,7 +216,7 @@ public class VolleyTestActivity  extends BaseActivity {
             case R.id.btn_fdv_get_params:
                 //get请求  传入请求参数
                 Map<String,String> params_get=new HashMap<String,String>();
-                params_get.put("username","zhangsan");
+                params_get.put("username","张三");
                 params_get.put("password","12345");
                 new Fdv_StringRequest<String>(this).get("http://10.18.3.123:8080/SalesWebTest/TestVolleyPost", new Fdv_CallBackListener<String>() {
                     @Override
@@ -228,7 +234,7 @@ public class VolleyTestActivity  extends BaseActivity {
             case  R.id.btn_fdv_post_params:
                 //post请求  传入请求参数
                 Map<String,String> params_post=new HashMap<String,String>();
-                params_post.put("username","zhangsan");
+                params_post.put("username","张三");
                 params_post.put("password","12345");
                 new Fdv_StringRequest<String>(this).post("http://10.18.3.123:8080/SalesWebTest/TestVolleyPost", new Fdv_CallBackListener<String>() {
                     @Override
@@ -238,7 +244,6 @@ public class VolleyTestActivity  extends BaseActivity {
                         img_result_network.setVisibility(View.GONE);
                         tv_result.setText(response.toString());
                     }
-
                     @Override
                     public void onErrorResponse(VolleyError error) {
                     }

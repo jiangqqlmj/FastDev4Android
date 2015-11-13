@@ -6,9 +6,7 @@ import com.android.volley.Request;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
-
 import java.util.Map;
-
 /**
  * 当前类注释:Volley 字符串、文本数据请求封装类
  * 项目名：FastDev4Android

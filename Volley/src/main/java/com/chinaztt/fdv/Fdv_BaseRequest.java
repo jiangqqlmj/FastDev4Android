@@ -4,14 +4,9 @@ import android.content.Context;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
-import com.android.volley.toolbox.Volley;
-
-import org.apache.http.protocol.HTTP;
-
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
 import java.util.Map;
-
 /**
  * 当前类注释:
  * 项目名：FastDev4Android

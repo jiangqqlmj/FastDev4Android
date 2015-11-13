@@ -42,12 +42,13 @@ public abstract class Request<T> implements Comparable<Request<T>> {
      */
     protected Map<String,String> mParams=null;
     public void setParams(Map<String, String> params) {
+        //对param map中的value进行编码
         this.mParams = params;
     }
     /**
      * Default encoding for POST or PUT parameters. See {@link #getParamsEncoding()}.
      */
-    private static final String DEFAULT_PARAMS_ENCODING = "UTF-8";
+    public static final String DEFAULT_PARAMS_ENCODING = "UTF-8";
 
     /**
      * Supported request methods.
@@ -329,6 +330,7 @@ public abstract class Request<T> implements Comparable<Request<T>> {
     public Map<String, String> getHeaders() throws AuthFailureError {
         return Collections.emptyMap();
     }
+
 
     /**
      * Returns a Map of POST parameters to be used for this request, or null if

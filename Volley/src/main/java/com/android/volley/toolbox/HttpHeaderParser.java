@@ -18,6 +18,7 @@ package com.android.volley.toolbox;
 
 import com.android.volley.Cache;
 import com.android.volley.NetworkResponse;
+import com.android.volley.Request;
 
 import org.apache.http.impl.cookie.DateParseException;
 import org.apache.http.impl.cookie.DateUtils;
@@ -159,10 +160,12 @@ public class HttpHeaderParser {
     }
 
     /**
+     * 全部转成默认UTF-8
      * Returns the charset specified in the Content-Type of this header,
      * or the HTTP default (ISO-8859-1) if none can be found.
      */
     public static String parseCharset(Map<String, String> headers) {
-        return parseCharset(headers, HTTP.DEFAULT_CONTENT_CHARSET);
+        //return parseCharset(headers, HTTP.DEFAULT_CONTENT_CHARSET);
+        return parseCharset(headers, Request.DEFAULT_PARAMS_ENCODING);
     }
 }

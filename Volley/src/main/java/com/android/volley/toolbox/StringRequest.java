@@ -62,17 +62,15 @@ public class StringRequest extends Request<String> {
      * @param errorListener  数据请求加载失败监听器
      * @param params  POST请求参数
      */
-    public StringRequest(String url, Listener<String> listener, ErrorListener errorListener,Map<String,String> params) {
-        this(Method.POST, url, listener, errorListener);
+    public StringRequest(int method,String url, Listener<String> listener, ErrorListener errorListener,Map<String,String> params) {
+        this(method, url, listener, errorListener);
         //进行初始化Request中post 请求参数
         setParams(params);
     }
-
     @Override
     protected void deliverResponse(String response) {
         mListener.onResponse(response);
     }
-
     @Override
     protected Response<String> parseNetworkResponse(NetworkResponse response) {
         String parsed;
