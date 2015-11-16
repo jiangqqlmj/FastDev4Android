@@ -16,7 +16,7 @@ import java.util.Map;
  * QQ： 781931404
  * 公司：江苏中天科技软件技术有限公司
  */
-public class Fdv_BaseRequest{
+public class Fdv_BaseRequest<T>{
     private static final String TAG=Fdv_BaseRequest.class.toString();
     private static final String DEFAULT_PARAMS_ENCODING = "UTF-8";
     protected static RequestQueue requestQueue;
