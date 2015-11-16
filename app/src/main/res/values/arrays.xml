@@ -14,5 +14,6 @@
         <item>自定义封装WebView实例</item>
         <item>BaseAdapter快速实例</item>
         <item>Volley网络框架测试实例</item>
+        <item>Fragment嵌套Fragment,ViewPager实例</item>
     </array>
 </resources>

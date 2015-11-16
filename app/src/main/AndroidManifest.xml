@@ -32,6 +32,7 @@
         <activity android:name="com.chinaztt.fda.test.BaseAdapterTestActivity_"/>
         <activity android:name="com.chinaztt.fda.test.VolleyTestActivity_"/>
         <activity android:name="com.chinaztt.fda.test.VolleyLoaderActivity_"/>
+        <activity android:name="com.chinaztt.fda.test.MainFrameActivity_"/>
 
     </application>
     <!--添加权限-->
