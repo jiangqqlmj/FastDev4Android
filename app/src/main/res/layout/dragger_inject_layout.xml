@@ -19,7 +19,7 @@
         android:id="@+id/btn_show"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="点击显示数据"/>
+        android:text="按钮点击"/>
     <TextView
         android:id="@+id/tv_show"
         android:layout_margin="5dp"

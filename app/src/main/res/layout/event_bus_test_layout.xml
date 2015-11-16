@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="点击打开第二个Activity"
+        android:id="@+id/button_one" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:text="这边显示消息内容..."
+        android:id="@+id/textView_one" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:text="这边显示消息内容..."
+        android:id="@+id/textView_two" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:text="这边显示消息内容..."
+        android:id="@+id/textView_third" />
+</LinearLayout>

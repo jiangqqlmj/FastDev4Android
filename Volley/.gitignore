@@ -1,0 +1,9 @@
+bin
+gen
+.gradle
+build
+.settings
+target
+*.iml
+.idea
+local.properties

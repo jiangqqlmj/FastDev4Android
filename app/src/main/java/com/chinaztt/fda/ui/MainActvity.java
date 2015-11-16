@@ -13,17 +13,22 @@ import android.widget.BaseAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import com.chinaztt.fda.html5.HTML5WebViewCustomAD;
+import com.chinaztt.fda.test.AVLoadingIndicatorActivity_;
 import com.chinaztt.fda.test.AnnotationsTestActivity_;
+import com.chinaztt.fda.test.BaseAdapterTestActivity_;
 import com.chinaztt.fda.test.CrashTestActivity_;
+import com.chinaztt.fda.test.EventBusTestActivity_;
 import com.chinaztt.fda.test.GalleryIndicatorActivity_;
 import com.chinaztt.fda.test.MVPTestActivity_;
+import com.chinaztt.fda.test.MainFrameActivity_;
 import com.chinaztt.fda.test.PullListviewActivity_;
 import com.chinaztt.fda.test.SPCacheActivity_;
+import com.chinaztt.fda.test.TextDrawablesTestActivity_;
 import com.chinaztt.fda.test.TranslucentActivity_;
+import com.chinaztt.fda.test.VolleyTestActivity_;
 import com.chinaztt.fda.ui.base.BaseActivity;
-
 import org.androidannotations.annotations.EActivity;
-
 /**
  * 当前类注释:
  * 项目名：FastDev4Android
@@ -47,7 +52,11 @@ public class MainActvity extends BaseActivity implements View.OnTouchListener {
         mItems = this.getResources().getStringArray(R.array.main_list);
         mClassItems = new Class[]{GalleryIndicatorActivity_.class, PullListviewActivity_.class,
                 SPCacheActivity_.class, CrashTestActivity_.class
-                , TranslucentActivity_.class,MVPTestActivity_.class, AnnotationsTestActivity_.class};
+                , TranslucentActivity_.class,MVPTestActivity_.class,
+                AnnotationsTestActivity_.class,AVLoadingIndicatorActivity_.class,
+                EventBusTestActivity_.class, TextDrawablesTestActivity_.class,
+                HTML5WebViewCustomAD.class, BaseAdapterTestActivity_.class,
+                VolleyTestActivity_.class, MainFrameActivity_.class};
 
         lv_main = (ListView) this.findViewById(R.id.lv_main);
         mInflater = getLayouInflater();

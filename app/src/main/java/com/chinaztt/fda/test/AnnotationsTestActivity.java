@@ -7,7 +7,11 @@ import android.widget.TextView;
 import com.chinaztt.fda.ui.R;
 import com.chinaztt.fda.ui.base.BaseActivity;
 
+import org.androidannotations.annotations.AfterInject;
+import org.androidannotations.annotations.AfterViews;
+import org.androidannotations.annotations.Click;
 import org.androidannotations.annotations.EActivity;
+import org.androidannotations.annotations.ViewById;
 
 
 /**
@@ -19,22 +23,22 @@ import org.androidannotations.annotations.EActivity;
  * QQ： 781931404
  * 公司：江苏中天科技软件技术有限公司
  */
-
 @EActivity(R.layout.dragger_inject_layout)
 public class AnnotationsTestActivity extends BaseActivity {
-    private Button btn_show;
-    private TextView tv_show;
+    @ViewById
+    Button btn_show;
+    @ViewById
+    TextView tv_show;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.dragger_inject_layout);
-        btn_show=(Button)this.findViewById(R.id.btn_show);
-        tv_show=(TextView)this.findViewById(R.id.tv_show);
-        btn_show.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-            }
-        });
+    }
+    @Click(R.id.btn_show)
+    public void btnShowClick(){
+        tv_show.setText("按钮被点击了...");
+    }
+    @AfterViews
+    public void setTv_show(){
+        tv_show.setText("我已经被注入啦...");
     }
 }

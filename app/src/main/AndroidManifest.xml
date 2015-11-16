@@ -24,6 +24,16 @@
         <activity android:name="com.chinaztt.fda.test.TranslucentActivity_"/>
         <activity android:name="com.chinaztt.fda.test.MVPTestActivity_"/>
         <activity android:name="com.chinaztt.fda.test.AnnotationsTestActivity_"/>
+        <activity android:name="com.chinaztt.fda.test.AVLoadingIndicatorActivity_"/>
+        <activity android:name="com.chinaztt.fda.test.EventBusTestActivity_"/>
+        <activity android:name="com.chinaztt.fda.test.EventBusTestTwoActivity_"/>
+        <activity android:name="com.chinaztt.fda.test.TextDrawablesTestActivity_"/>
+        <activity android:name="com.chinaztt.fda.html5.HTML5WebViewCustomAD"/>
+        <activity android:name="com.chinaztt.fda.test.BaseAdapterTestActivity_"/>
+        <activity android:name="com.chinaztt.fda.test.VolleyTestActivity_"/>
+        <activity android:name="com.chinaztt.fda.test.VolleyLoaderActivity_"/>
+        <activity android:name="com.chinaztt.fda.test.MainFrameActivity_"/>
+
     </application>
     <!--添加权限-->
 

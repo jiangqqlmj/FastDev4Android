@@ -7,5 +7,12 @@
     <color name="black">#000000</color>
     <color name="middle_red">#e7abff</color>
     <color name="color_nav">#FFFFD9</color>
-
+    <!-- androidColor -->
+    <color name="androidColorA">#33B5E5</color>
+    <color name="androidColorB">#AA66CC</color>
+    <color name="androidColorC">#99CC00</color>
+    <color name="androidColorD">#FFBB33</color>
+    <color name="androidColorE">#FF4444</color>
+    <color name="text_color">#434343</color>
+    <color name="tv_color">#626262</color>
 </resources>

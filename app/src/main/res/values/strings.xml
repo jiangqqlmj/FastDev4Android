@@ -20,4 +20,14 @@
     <string name="string_load_more_click">点击加载更多</string>
     <string name="string_load_more_ing">正在加载更多数据</string>
     <string name="string_load_more_net">网络错误</string>
+    <string name="action_github">Github</string>
+    <string name="key_tracking_mode">key_tracking_mode</string>
+    <string name="tracking_mode_left">Left</string>
+    <string name="tracking_mode_right">Right</string>
+    <string name="tracking_mode_bottom">Bottom</string>
+    <string name="tracking_mode_all">All</string>
+
+    <string name="string_tv_top_bar_back">返回</string>
+    <string name="string_tv_setting">WebView页面</string>
+
 </resources>

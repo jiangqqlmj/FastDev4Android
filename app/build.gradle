@@ -9,7 +9,7 @@ android {
         minSdkVersion 15
         targetSdkVersion 22
         versionCode 4
-        versionName "1.1.1"
+        versionName "1.1.2"
     }
     buildTypes {
         release {
@@ -27,6 +27,17 @@ dependencies {
     compile 'com.readystatesoftware.systembartint:systembartint:1.0.3'
     apt "org.androidannotations:androidannotations:$AAVersion"
     compile "org.androidannotations:androidannotations-api:$AAVersion"
+    compile 'com.wang.avi:library:1.0.0'
+    compile 'com.nineoldandroids:library:2.4.0'
+    compile 'de.greenrobot:eventbus:2.4.0'
+    compile 'me.imid.swipebacklayout.lib:library:1.0.0'
+    compile 'com.amulyakhare:com.amulyakhare.textdrawable:1.0.1'
+    compile 'com.squareup.picasso:picasso:2.5.2'
+    //由于我本地采用Volley源码库依赖的,因为需要修改Volley源代码，后期会上传Volley修改之后的代码
+    //这边大家要使用Volley库的时候，直接打开下面的引入方式即可
+    //compile 'com.mcxiaoke.volley:library:1.0.19'
+    compile files('libs/gson-2.2.4.jar')
+    compile project(':Volley')
 }
 
 apt {
@@ -42,3 +53,5 @@ apt {
         // logFile '/var/log/aa.log'
     }
 }
+
+
