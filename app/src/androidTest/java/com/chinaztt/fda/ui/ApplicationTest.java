@@ -10,8 +10,4 @@ public class ApplicationTest extends ApplicationTestCase<Application> {
     public ApplicationTest() {
         super(Application.class);
     }
-    public tt(){
-        Log.d("T", "tt");
-
-    }
 }
