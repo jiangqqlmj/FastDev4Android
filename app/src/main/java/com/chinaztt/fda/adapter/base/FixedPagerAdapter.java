@@ -5,6 +5,7 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 import android.view.ViewGroup;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -17,10 +18,11 @@ import java.util.List;
  * 公司：江苏中天科技软件技术有限公司
  */
 public class FixedPagerAdapter extends FragmentStatePagerAdapter{
-
+    private String[] titles;
     private List<Fragment> fragments;
     public FixedPagerAdapter(FragmentManager fm) {
         super(fm);
+        titles=new String[]{"第一个","第二个","第三个","第四个"};
     }
 
     @Override
@@ -47,6 +49,13 @@ public class FixedPagerAdapter extends FragmentStatePagerAdapter{
     public void destroyItem(ViewGroup container, int position, Object object) {
 
     }
+
+    @Override
+    public CharSequence getPageTitle(int position)
+    {
+        return titles[position % titles.length];
+    }
+
     public List<Fragment> getFragments() {
         return fragments;
     }

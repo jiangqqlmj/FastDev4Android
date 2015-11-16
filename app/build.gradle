@@ -38,6 +38,7 @@ dependencies {
     //compile 'com.mcxiaoke.volley:library:1.0.19'
     compile files('libs/gson-2.2.4.jar')
     compile project(':Volley')
+    compile project(':ViewPagerIndicator')
 }
 
 apt {
