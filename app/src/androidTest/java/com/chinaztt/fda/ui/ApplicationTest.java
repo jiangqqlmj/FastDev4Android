@@ -11,6 +11,7 @@ public class ApplicationTest extends ApplicationTestCase<Application> {
         super(Application.class);
     }
     public tt(){
+        Log.d("T", "tt");
 
     }
 }
