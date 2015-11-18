@@ -39,6 +39,7 @@ dependencies {
     compile files('libs/gson-2.2.4.jar')
     compile project(':Volley')
     compile project(':ViewPagerIndicator')
+    compile 'com.android.support:recyclerview-v7:23.1.1'
 }
 
 apt {
