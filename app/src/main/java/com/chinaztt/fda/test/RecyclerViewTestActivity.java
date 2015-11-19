@@ -1,8 +1,11 @@
 package com.chinaztt.fda.test;
 
 import android.os.Bundle;
+import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.OrientationHelper;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -45,7 +48,9 @@ public class RecyclerViewTestActivity extends BaseActivity {
         recyclerView_one=(RecyclerView)this.findViewById(R.id.recyclerView_one);
         recyclerView_one.setHasFixedSize(true);
         // use a linear layout manager
-        mLayoutManager = new LinearLayoutManager(this);
+        //mLayoutManager = new LinearLayoutManager(this);
+        //mLayoutManager=new GridLayoutManager(this,3);
+        mLayoutManager=new StaggeredGridLayoutManager(3, OrientationHelper.VERTICAL);
         recyclerView_one.setLayoutManager(mLayoutManager);
         // specify an adapter (see also next example)
         mAdapter = new TestRecyclerAdapter(this);
