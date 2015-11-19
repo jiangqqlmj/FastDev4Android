@@ -37,32 +37,28 @@
 <h3>广告一下:</h3>
 Android在线学习网站(项目驱动学习)网站:<a href="http://www.cniao5.com/">菜鸟窝</a>欢迎大家前往免费学习!<br><br>
 <a href="http://www.cniao5.com/clazz/yaya.html" target="_blank"><img src="http://img2.xxh.cc:8080/images/mall/yaya.png"/></a><br/>
-<p><a href="http://blog.csdn.net/developer_jiangqq" style="text-decoration: none;"  target="_blank"><span style="color:blue;">V1.0_001版本功能如下:</span></a></p>
-一.Utils工具类加入<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;1.DataUtils 时间日期处理<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;2.GuideUtils 是否启动引导处理标志管理<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;3.IoUtils 网络请求工具类【特别注意】这边采用HTTPClient 由于Android 6.0已经删除该类,
-这边libs目录需要加入org.apache.http.legcy.jar依赖包<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;4.JudgeNetWorker 网络状态判断工具类<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;5.Log 日志自定义管理<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;6.ManagerActivity Activity管理工具类<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;7.StrUtils 字符串相关处理工具类，系统信息获取工具类)<br/>
-二.sperferences加入SharePerferences加入封装工具可以快速使用SP进行数据保存配置文件<br/>
-三.Activity基类简单封装BaseActivity和BaseFrameActivity 暂时主要为Toast,LayoutInFlater,打开指定的Activity工具类分装<br/>
+<p><a href="http://blog.csdn.net/developer_jiangqq" style="text-decoration: none;"  target="_blank"><span style="color:blue;">20151119框架更新:</span></a></p>
+一.RecyclerView控件完全解析;<br/>
+<a href="http://blog.csdn.net/developer_jiangqq/article/details/49927631" target="_blank">RecyclerView完全解析,让你从此爱上它(二十八)</a></br>
+</br>
+<a href="http://blog.csdn.net/developer_jiangqq" target="_blank">更多项目内容请详见CSDN博客!</a></br>
 
-<p><a href="http://blog.csdn.net/developer_jiangqq" style="text-decoration: none;"  target="_blank"><span style="color:blue;">V1.1_002版本功能如下:</span></a></p>
-一.新增首页图片自动无限轮播组件和指示器(AutoGallery+FlowIndicator);<br/>
-二.新增列表下拉刷新组件(PullToRefreshListView);<br/>
-三.新增本地轻量级数据缓存组件(ACache);<br/>
-四.新增应用自定义崩溃日志捕捉组件(CustomCrash);<br/>
-以上该组件全部在MainActivity中有相应的使用实例;<br/>
+<p><a href="http://blog.csdn.net/developer_jiangqq" style="text-decoration: none;"  target="_blank"><span style="color:blue;">20151110框架更新:</span></a></p>
+一.Volley网络框架基本使用;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;项目中我是采用库引用方式引入Volley框架,这边Volley库也已经同步上传了,大家直接编译运行即可;<br/>
+<a href="http://blog.csdn.net/developer_jiangqq/article/details/49797945" target="_blank">Volley完全解析之基础使用(二十六)</a></br>
+<a href="http://blog.csdn.net/developer_jiangqq/article/details/49804487" target="_blank">Volley完全解析之进阶最佳实践与二次封装(二十七)</a></br>
 
-<p><a href="http://blog.csdn.net/developer_jiangqq" style="text-decoration: none;"  target="_blank"><span style="color:blue;">V1.1.1_003版本功能如下:</span></a></p>
-一.新增沉浸式状态栏功能实现;<br/>
-二.新增MVP开发模式功能Demo;<br/>
-以上该组件全部在MainActivity中有相应的使用实例;<br/>
-
-<img src="https://github.com/jiangqqlmj/FastDev4Android/blob/master/demo.gif"/><br/><br/>
+<p><a href="http://blog.csdn.net/developer_jiangqq" style="text-decoration: none;"  target="_blank"><span style="color:blue;">20151101框架更新:</span></a></p>
+<a href="http://blog.csdn.net/developer_jiangqq/article/details/49612399" target="_blank">非常漂亮的进度指示器AVLoadingIndicatorView的使用讲解(十八)</a></br>
+<a href="http://blog.csdn.net/developer_jiangqq/article/details/49613861" target="_blank">Android MVP开发模式详解(十九)</a></br>
+<a href="http://blog.csdn.net/developer_jiangqq/article/details/49617189" target="_blank">消息总线EventBus的基本使用(二十)</a></br>
+<a href="http://blog.csdn.net/developer_jiangqq/article/details/49640153">消息总线EventBus源码分析以及与Otto框架对比(二十一)</a></br>
+<a href="http://blog.csdn.net/developer_jiangqq/article/details/49680415" target="_blank">列表头生成带文本或者字母的图片开源库TextDrawable使用和详解(二十二)</a></br>
+<a href="http://blog.csdn.net/developer_jiangqq/article/details/49687613" target="_blank">重写WebView网页加载以及JavaScript注入详解(二十三)</a></br>
+<a href="http://blog.csdn.net/developer_jiangqq/article/details/49724999" target="_blank">BaseAdapterHelper的基本使用介绍,让你摆脱狂写一堆Adapter烦恼(二十四)</a></br>
+<a href="http://blog.csdn.net/developer_jiangqq/article/details/49745257" target="_blank">BaseAdapterHelper详解源码分析,让你摆脱狂写一堆Adapter烦恼(二十五)</a></br>
+<br/>
 
 <p><a href="http://blog.csdn.net/developer_jiangqq" style="text-decoration: none;"  target="_blank"><span style="color:blue;">20151029注入框架更新:</span></a></p>
 更新了AndroidAnnotations注入框架的使用详解:</br>
@@ -79,27 +75,32 @@ Android在线学习网站(项目驱动学习)网站:<a href="http://www.cniao5.c
 <a href="http://blog.csdn.net/developer_jiangqq/article/details/49583487" target="_blank">AndroidAnnnotations注入框架使用之最佳实践SharedPreferences(十一)</a></br>
 <br/>
 
-<p><a href="http://blog.csdn.net/developer_jiangqq" style="text-decoration: none;"  target="_blank"><span style="color:blue;">20151101框架更新:</span></a></p>
-<a href="http://blog.csdn.net/developer_jiangqq/article/details/49612399" target="_blank">非常漂亮的进度指示器AVLoadingIndicatorView的使用讲解(十八)</a></br>
-<a href="http://blog.csdn.net/developer_jiangqq/article/details/49613861" target="_blank">Android MVP开发模式详解(十九)</a></br>
-<a href="http://blog.csdn.net/developer_jiangqq/article/details/49617189" target="_blank">消息总线EventBus的基本使用(二十)</a></br>
-<a href="http://blog.csdn.net/developer_jiangqq/article/details/49640153">消息总线EventBus源码分析以及与Otto框架对比(二十一)</a></br>
-<a href="http://blog.csdn.net/developer_jiangqq/article/details/49680415" target="_blank">列表头生成带文本或者字母的图片开源库TextDrawable使用和详解(二十二)</a></br>
-<a href="http://blog.csdn.net/developer_jiangqq/article/details/49687613" target="_blank">重写WebView网页加载以及JavaScript注入详解(二十三)</a></br>
-<a href="http://blog.csdn.net/developer_jiangqq/article/details/49724999" target="_blank">BaseAdapterHelper的基本使用介绍,让你摆脱狂写一堆Adapter烦恼(二十四)</a></br>
-<a href="http://blog.csdn.net/developer_jiangqq/article/details/49745257" target="_blank">BaseAdapterHelper详解源码分析,让你摆脱狂写一堆Adapter烦恼(二十五)</a></br>
-<br/>
-<p><a href="http://blog.csdn.net/developer_jiangqq" style="text-decoration: none;"  target="_blank"><span style="color:blue;">20151110框架更新:</span></a></p>
-一.Volley网络框架基本使用;<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;项目中我是采用库引用方式引入Volley框架,这边Volley库也已经同步上传了,大家直接编译运行即可;<br/>
-<a href="http://blog.csdn.net/developer_jiangqq/article/details/49797945" target="_blank">Volley完全解析之基础使用(二十六)</a></br>
-<a href="http://blog.csdn.net/developer_jiangqq/article/details/49804487" target="_blank">Volley完全解析之进阶最佳实践与二次封装(二十七)</a></br>
+<p><a href="http://blog.csdn.net/developer_jiangqq" style="text-decoration: none;"  target="_blank"><span style="color:blue;">V1.1.1_003版本功能如下:</span></a></p>
+一.新增沉浸式状态栏功能实现;<br/>
+二.新增MVP开发模式功能Demo;<br/>
+以上该组件全部在MainActivity中有相应的使用实例;<br/>
 
-<p><a href="http://blog.csdn.net/developer_jiangqq" style="text-decoration: none;"  target="_blank"><span style="color:blue;">20151119框架更新:</span></a></p>
-一.RecyclerView控件完全解析;<br/>
-<a href="http://blog.csdn.net/developer_jiangqq/article/details/49927631" target="_blank">RecyclerView完全解析,让你从此爱上它(二十八)</a></br>
-</br>
-<a href="http://blog.csdn.net/developer_jiangqq" target="_blank">更多项目内容请详见CSDN博客!</a></br>
+<img src="https://github.com/jiangqqlmj/FastDev4Android/blob/master/demo.gif"/><br/><br/>
+
+<p><a href="http://blog.csdn.net/developer_jiangqq" style="text-decoration: none;"  target="_blank"><span style="color:blue;">V1.1_002版本功能如下:</span></a></p>
+一.新增首页图片自动无限轮播组件和指示器(AutoGallery+FlowIndicator);<br/>
+二.新增列表下拉刷新组件(PullToRefreshListView);<br/>
+三.新增本地轻量级数据缓存组件(ACache);<br/>
+四.新增应用自定义崩溃日志捕捉组件(CustomCrash);<br/>
+以上该组件全部在MainActivity中有相应的使用实例;<br/>
+
+<p><a href="http://blog.csdn.net/developer_jiangqq" style="text-decoration: none;"  target="_blank"><span style="color:blue;">V1.0_001版本功能如下:</span></a></p>
+一.Utils工具类加入<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;1.DataUtils 时间日期处理<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;2.GuideUtils 是否启动引导处理标志管理<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;3.IoUtils 网络请求工具类【特别注意】这边采用HTTPClient 由于Android 6.0已经删除该类,
+这边libs目录需要加入org.apache.http.legcy.jar依赖包<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;4.JudgeNetWorker 网络状态判断工具类<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;5.Log 日志自定义管理<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;6.ManagerActivity Activity管理工具类<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;7.StrUtils 字符串相关处理工具类，系统信息获取工具类)<br/>
+二.sperferences加入SharePerferences加入封装工具可以快速使用SP进行数据保存配置文件<br/>
+三.Activity基类简单封装BaseActivity和BaseFrameActivity 暂时主要为Toast,LayoutInFlater,打开指定的Activity工具类分装<br/>
 
 后期会持续不断进行更新最新的框架功能，如果有一起合作把这个Android快速开发框架完善起来的~请联系我哦<br/>
 <a href="http://blog.csdn.net/developer_jiangqq" style="text-decoration: none;"  target="_blank"><span style="color:blue;">QQ:781931404</span></a><br/>
