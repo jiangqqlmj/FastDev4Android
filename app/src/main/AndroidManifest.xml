@@ -35,6 +35,8 @@
 
         <activity android:name="com.chinaztt.fda.test.MainFrameActivity_" android:theme="@style/MyTheme"/>
         <activity android:name="com.chinaztt.fda.test.RecyclerViewTestActivity"/>
+        <activity android:name="com.chinaztt.fda.test.RecyclerDemoActivity_"/>
+        <activity android:name="com.chinaztt.fda.test.RecyclerGalleryActivity"/>
     </application>
     <!--添加权限-->
 

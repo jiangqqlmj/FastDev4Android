@@ -23,6 +23,7 @@ import com.chinaztt.fda.test.GalleryIndicatorActivity_;
 import com.chinaztt.fda.test.MVPTestActivity_;
 import com.chinaztt.fda.test.MainFrameActivity_;
 import com.chinaztt.fda.test.PullListviewActivity_;
+import com.chinaztt.fda.test.RecyclerDemoActivity_;
 import com.chinaztt.fda.test.RecyclerViewTestActivity;
 import com.chinaztt.fda.test.SPCacheActivity_;
 import com.chinaztt.fda.test.TextDrawablesTestActivity_;
@@ -58,7 +59,7 @@ public class MainActvity extends BaseActivity implements View.OnTouchListener {
                 EventBusTestActivity_.class, TextDrawablesTestActivity_.class,
                 HTML5WebViewCustomAD.class, BaseAdapterTestActivity_.class,
                 VolleyTestActivity_.class, MainFrameActivity_.class,
-                RecyclerViewTestActivity.class
+                RecyclerDemoActivity_.class
         };
 
         lv_main = (ListView) this.findViewById(R.id.lv_main);
