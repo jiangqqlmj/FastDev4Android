@@ -1,14 +1,15 @@
 package com.chinaztt.fda.adapter;
-
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
-import android.text.Layout;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.chinaztt.fda.ui.R;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * 当前类注释:RecyclerView 数据自定义Adapter
@@ -19,16 +20,21 @@ import com.chinaztt.fda.ui.R;
  * QQ： 781931404
  * 公司：江苏中天科技软件技术有限公司
  */
-public class TestRecyclerAdapter extends RecyclerView.Adapter<TestRecyclerAdapter.ViewHolder>{
+public class TestRecyclerAdapter extends RecyclerView.Adapter<TestRecyclerAdapter.ViewHolder> {
+    private  OnRecyclerItemClickListener onRecyclerItemClickListener;
+    public void setOnRecyclerItemClickListener(OnRecyclerItemClickListener onRecyclerItemClickListener) {
+        this.onRecyclerItemClickListener = onRecyclerItemClickListener;
+    }
     private LayoutInflater mInflater;
-    private String[] mTitles=null;
-    public  TestRecyclerAdapter(Context context){
+    private List<String> mTitles=null;
+    public  TestRecyclerAdapter(Context context,OnRecyclerItemClickListener onRecyclerItemClickListener){
         this.mInflater=LayoutInflater.from(context);
-        this.mTitles=new String[20];
+        this.mTitles=new ArrayList<String>();
         for (int i=0;i<20;i++){
             int index=i+1;
-            mTitles[i]="item"+index;
+            mTitles.add("item"+index);
         }
+        this.onRecyclerItemClickListener=onRecyclerItemClickListener;
     }
     /**
      * item显示类型
@@ -38,10 +44,21 @@ public class TestRecyclerAdapter extends RecyclerView.Adapter<TestRecyclerAdapte
      */
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View view=mInflater.inflate(R.layout.item_recycler_layout,null);
+        final View view=mInflater.inflate(R.layout.item_recycler_layout,parent,false);
+        //这边可以做一些属性设置，甚至事件监听绑定
+        //view.setBackgroundColor(Color.RED);
         ViewHolder viewHolder=new ViewHolder(view);
+        view.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(onRecyclerItemClickListener!=null){
+                    onRecyclerItemClickListener.onItemClick(view, (int)view.getTag());
+                }
+            }
+        });
         return viewHolder;
     }
+
     /**
      * 数据的绑定显示
      * @param holder
@@ -49,13 +66,16 @@ public class TestRecyclerAdapter extends RecyclerView.Adapter<TestRecyclerAdapte
      */
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
-        holder.item_tv.setText(mTitles[position]);
+        holder.item_tv.setText(mTitles.get(position));
+        holder.itemView.setTag(position);
     }
 
     @Override
     public int getItemCount() {
-        return mTitles.length;
+        return mTitles.size();
     }
+
+
 
     //自定义的ViewHolder，持有每个Item的的所有界面元素
     public static class ViewHolder extends RecyclerView.ViewHolder {
@@ -66,4 +86,24 @@ public class TestRecyclerAdapter extends RecyclerView.Adapter<TestRecyclerAdapte
         }
     }
 
+    public interface OnRecyclerItemClickListener {
+        /**
+         * item view 回调方法
+         * @param view  被点击的view
+         * @param position 点击索引
+         */
+        void onItemClick(View view, int position);
+    }
+
+    //添加数据
+    public void addItem(String data, int position) {
+        mTitles.add(position, data);
+        notifyItemInserted(position);
+    }
+    //删除数据
+    public void removeItem(String data) {
+        int position = mTitles.indexOf(data);
+        mTitles.remove(position);
+        notifyItemRemoved(position);
+    }
 }

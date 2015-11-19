@@ -34,7 +34,7 @@
         <activity android:name="com.chinaztt.fda.test.VolleyLoaderActivity_"/>
 
         <activity android:name="com.chinaztt.fda.test.MainFrameActivity_" android:theme="@style/MyTheme"/>
-        <activity android:name="com.chinaztt.fda.test.RecyclerViewTestActivity_"/>
+        <activity android:name="com.chinaztt.fda.test.RecyclerViewTestActivity"/>
     </application>
     <!--添加权限-->
 
