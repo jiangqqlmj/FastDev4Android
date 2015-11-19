@@ -7,11 +7,11 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.chinaztt.fda.adapter.GalleryRecyclerAdapter;
 import com.chinaztt.fda.ui.R;
 import com.chinaztt.fda.ui.base.BaseActivity;
-
 /**
  * 当前类注释:使用RecyclerView实现Gallery效果
  * 项目名：FastDev4Android
@@ -33,7 +33,6 @@ public class RecyclerGalleryActivity extends BaseActivity {
         top_bar_linear_back.setOnClickListener(new CustomOnClickListener());
         top_bar_title=(TextView)this.findViewById(R.id.top_bar_title);
         top_bar_title.setText("RecyclerView打造Gallery效果");
-
         //初始化RecyclerView控件
         gallery_recycler=(RecyclerView)this.findViewById(R.id.gallery_recycler);
         //固定高度
@@ -48,8 +47,13 @@ public class RecyclerGalleryActivity extends BaseActivity {
         GalleryRecyclerAdapter adapter=new GalleryRecyclerAdapter(this);
         //绑定适配器
         gallery_recycler.setAdapter(adapter);
+        adapter.setOnRecyclerViewItemClickListener(new GalleryRecyclerAdapter.OnRecyclerViewItemClickListener() {
+            @Override
+            public void onItemClick(View view, int position) {
+                Toast.makeText(RecyclerGalleryActivity.this,"您点击的Item的索引为:"+position,Toast.LENGTH_SHORT).show();
+            }
+        });
     }
-
     class CustomOnClickListener implements View.OnClickListener{
         @Override
         public void onClick(View v) {

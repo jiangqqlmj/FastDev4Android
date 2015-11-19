@@ -37,7 +37,6 @@ public class GalleryRecyclerAdapter extends RecyclerView.Adapter<GalleryRecycler
         }
         mInflater=LayoutInflater.from(context);
     }
-
     /**
      * 创建Item View  然后使用ViewHolder来进行承载
      * @param parent
@@ -46,11 +45,18 @@ public class GalleryRecyclerAdapter extends RecyclerView.Adapter<GalleryRecycler
      */
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View view=mInflater.inflate(R.layout.item_gallery_recycler,parent,false);
+        final View view=mInflater.inflate(R.layout.item_gallery_recycler,parent,false);
         ViewHolder viewHolder=new ViewHolder(view);
+        view.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(onRecyclerViewItemClickListener!=null){
+                    onRecyclerViewItemClickListener.onItemClick(view,(int)view.getTag());
+                }
+            }
+        });
         return viewHolder;
     }
-
     /**
      * 进行绑定数据
      * @param holder
@@ -60,6 +66,7 @@ public class GalleryRecyclerAdapter extends RecyclerView.Adapter<GalleryRecycler
     public void onBindViewHolder(ViewHolder holder, int position) {
         holder.item_img.setImageResource(models.get(position).getImgurl());
         holder.item_tv.setText(models.get(position).getTitle());
+        holder.itemView.setTag(position);
     }
 
     @Override
@@ -79,4 +86,23 @@ public class GalleryRecyclerAdapter extends RecyclerView.Adapter<GalleryRecycler
         }
     }
 
+    /**
+     * 类似ListView的 onItemClickListener接口
+     */
+    public interface OnRecyclerViewItemClickListener{
+        /**
+         * Item View发生点击回调的方法
+         * @param view   点击的View
+         * @param position  具体Item View的索引
+         */
+        void onItemClick(View view,int position);
+    }
+    private OnRecyclerViewItemClickListener onRecyclerViewItemClickListener;
+
+    public OnRecyclerViewItemClickListener getOnRecyclerViewItemClickListener() {
+        return onRecyclerViewItemClickListener;
+    }
+    public void setOnRecyclerViewItemClickListener(OnRecyclerViewItemClickListener onRecyclerViewItemClickListener) {
+        this.onRecyclerViewItemClickListener = onRecyclerViewItemClickListener;
+    }
 }
