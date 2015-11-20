@@ -105,4 +105,15 @@ public class GalleryRecyclerAdapter extends RecyclerView.Adapter<GalleryRecycler
     public void setOnRecyclerViewItemClickListener(OnRecyclerViewItemClickListener onRecyclerViewItemClickListener) {
         this.onRecyclerViewItemClickListener = onRecyclerViewItemClickListener;
     }
+
+    //添加数据
+    public void addItem(GalleryModel model, int position) {
+        models.add(position, model);
+        notifyItemInserted(position);
+    }
+    //删除数据
+    public void removeItem(int position) {
+        models.remove(position);
+        notifyItemRemoved(position);
+    }
 }
