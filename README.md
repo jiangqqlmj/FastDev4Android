@@ -40,6 +40,7 @@ Android在线学习网站(项目驱动学习)网站:<a href="http://www.cniao5.c
 <p><a href="http://blog.csdn.net/developer_jiangqq" style="text-decoration: none;"  target="_blank"><span style="color:blue;">20151119框架更新:</span></a></p>
 一.RecyclerView控件完全解析;<br/>
 <a href="http://blog.csdn.net/developer_jiangqq/article/details/49927631" target="_blank">RecyclerView完全解析,让你从此爱上它(二十八)</a></br>
+<a href="http://blog.csdn.net/developer_jiangqq/article/details/49946589" target="_blank">RecyclerView完全解析之打造新版类Gallery效果(二十九)</a></br>
 </br>
 <a href="http://blog.csdn.net/developer_jiangqq" target="_blank">更多项目内容请详见CSDN博客!</a></br>
 
