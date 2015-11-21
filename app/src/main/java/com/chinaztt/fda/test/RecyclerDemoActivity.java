@@ -50,7 +50,8 @@ public class RecyclerDemoActivity  extends BaseActivity{
                 openActivity(RecyclerGalleryActivity.class);
                 break;
             case R.id.btn_three:
-                Toast.makeText(this,"下一讲实现",Toast.LENGTH_SHORT).show();
+                Intent mIntent=new Intent(this,RecyclerViewAAActivity_.class);
+                this.startActivity(mIntent);
                 break;
         }
     }

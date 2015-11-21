@@ -24,7 +24,6 @@ import com.chinaztt.fda.test.MVPTestActivity_;
 import com.chinaztt.fda.test.MainFrameActivity_;
 import com.chinaztt.fda.test.PullListviewActivity_;
 import com.chinaztt.fda.test.RecyclerDemoActivity_;
-import com.chinaztt.fda.test.RecyclerViewTestActivity;
 import com.chinaztt.fda.test.SPCacheActivity_;
 import com.chinaztt.fda.test.TextDrawablesTestActivity_;
 import com.chinaztt.fda.test.TranslucentActivity_;
