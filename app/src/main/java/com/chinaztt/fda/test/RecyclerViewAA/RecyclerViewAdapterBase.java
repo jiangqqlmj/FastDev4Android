@@ -18,7 +18,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public abstract class  RecyclerViewAdapterBase<T,V extends View>extends RecyclerView.Adapter<ViewWrapper<V>>{
-
     /**
      * 存储需要绑定的数据
      */
