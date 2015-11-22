@@ -38,6 +38,9 @@
         <activity android:name="com.chinaztt.fda.test.RecyclerDemoActivity_"/>
         <activity android:name="com.chinaztt.fda.test.RecyclerGalleryActivity"/>
         <activity android:name="com.chinaztt.fda.test.RecyclerViewAAActivity_"/>
+        <activity android:name="com.chinaztt.fda.test.RecyclerViewRefresh.RecyclerRefreshActivity"/>
+        <activity android:name="com.chinaztt.fda.test.RecyclerViewRefresh.RecyclerFootActivity"/>
+        <activity android:name="com.chinaztt.fda.test.RecyclerViewRefresh.RecyclerCustomActivity"/>
     </application>
     <!--添加权限-->
 

@@ -22,4 +22,22 @@
         android:text="RecyclerView与AA(Android Annotations)注入结合实例"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
+    <Button
+        android:id="@+id/btn_four"
+        android:layout_marginLeft="5dp"
+        android:text="RecyclerView是实现下拉刷新,下拉加载更多_原始方式"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <Button
+        android:id="@+id/btn_five"
+        android:layout_marginLeft="5dp"
+        android:text="RecyclerView是实现下拉刷新,下拉加载更多_FootView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <Button
+        android:id="@+id/btn_six"
+        android:layout_marginLeft="5dp"
+        android:text="RecyclerView是实现下拉刷新,下拉加载更多_源码修改"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
 </LinearLayout>
