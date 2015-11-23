@@ -2,15 +2,10 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="45dp"
-   >
-    <ImageView
-    android:layout_width="fill_parent"
-    android:layout_height="1dp"
-    android:src="@drawable/line_read_option"
-    android:scaleType="fitXY"/>
+    >
     <LinearLayout
         android:layout_width="fill_parent"
-        android:layout_height="43dp"
+        android:layout_height="45dp"
         android:orientation="horizontal"
         android:gravity="center">
         <ProgressBar
@@ -23,10 +18,4 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
     </LinearLayout>
-    <ImageView
-        android:layout_gravity="bottom"
-        android:layout_width="fill_parent"
-        android:layout_height="1dp"
-        android:src="@drawable/line_read_option"
-        android:scaleType="fitXY"/>
 </LinearLayout>
