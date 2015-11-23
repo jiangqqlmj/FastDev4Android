@@ -13,7 +13,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.chinaztt.fda.adapter.RefreshFootAdapter;
-import com.chinaztt.fda.adapter.RefreshRecyclerAdapter;
 import com.chinaztt.fda.ui.R;
 import com.chinaztt.fda.ui.base.BaseActivity;
 import com.chinaztt.fda.utils.Log;
@@ -88,6 +87,7 @@ public class RecyclerFootActivity extends BaseActivity {
             public void onScrollStateChanged(RecyclerView recyclerView, int newState) {
                 super.onScrollStateChanged(recyclerView, newState);
                 if (newState == RecyclerView.SCROLL_STATE_IDLE && lastVisibleItem + 1 == adapter.getItemCount()) {
+                    adapter.changeMoreStatus(RefreshFootAdapter.LOADING_MORE);
                     new Handler().postDelayed(new Runnable() {
                         @Override
                         public void run() {
@@ -97,8 +97,9 @@ public class RecyclerFootActivity extends BaseActivity {
                                 newDatas.add("more item" + index);
                             }
                             adapter.addMoreItem(newDatas);
+                            adapter.changeMoreStatus(RefreshFootAdapter.PULLUP_LOAD_MORE);
                         }
-                    }, 1000);
+                    }, 2500);
                 }
             }
             @Override

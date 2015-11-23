@@ -13,8 +13,9 @@
             android:layout_height="25dp"
             />
         <TextView
+            android:id="@+id/foot_view_item_tv"
             android:layout_marginLeft="4dp"
-            android:text="正在加载..."
+            android:text="上拉加载更多..."
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
     </LinearLayout>

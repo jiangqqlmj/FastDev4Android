@@ -22,6 +22,12 @@ import java.util.List;
  * 公司：江苏中天科技软件技术有限公司
  */
 public class RefreshFootAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>{
+    //上拉加载更多
+    public static final int  PULLUP_LOAD_MORE=0;
+    //正在加载中
+    public static final int  LOADING_MORE=1;
+    //上拉加载更多状态-默认为0
+    private int load_more_status=0;
     private LayoutInflater mInflater;
     private List<String> mTitles=null;
     private static final int TYPE_ITEM = 0;  //普通Item View
@@ -67,6 +73,16 @@ public class RefreshFootAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
         if(holder instanceof ItemViewHolder) {
             ((ItemViewHolder)holder).item_tv.setText(mTitles.get(position));
             holder.itemView.setTag(position);
+        }else if(holder instanceof FootViewHolder){
+            FootViewHolder footViewHolder=(FootViewHolder)holder;
+            switch (load_more_status){
+                case PULLUP_LOAD_MORE:
+                    footViewHolder.foot_view_item_tv.setText("上拉加载更多...");
+                    break;
+                case LOADING_MORE:
+                    footViewHolder.foot_view_item_tv.setText("正在加载更多数据...");
+                    break;
+            }
         }
     }
 
@@ -77,14 +93,13 @@ public class RefreshFootAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
      */
     @Override
     public int getItemViewType(int position) {
-        // 最后一个item设置为footerView
-        if (position + 1 == getItemCount()) {
-            return TYPE_FOOTER;
-        } else {
-            return TYPE_ITEM;
+    // 最后一个item设置为footerView
+    if (position + 1 == getItemCount()) {
+                return TYPE_FOOTER;
+            } else {
+                return TYPE_ITEM;
+            }
         }
-    }
-
     @Override
     public int getItemCount() {
         return mTitles.size()+1;
@@ -101,9 +116,10 @@ public class RefreshFootAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
      * 底部FootView布局
      */
     public static class FootViewHolder extends  RecyclerView.ViewHolder{
-
-        public FootViewHolder(View itemView) {
-            super(itemView);
+        private TextView foot_view_item_tv;
+        public FootViewHolder(View view) {
+            super(view);
+            foot_view_item_tv=(TextView)view.findViewById(R.id.foot_view_item_tv);
         }
     }
 
@@ -119,6 +135,20 @@ public class RefreshFootAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
 
     public void addMoreItem(List<String> newDatas) {
         mTitles.addAll(newDatas);
+        notifyDataSetChanged();
+    }
+
+    /**
+     * //上拉加载更多
+     * PULLUP_LOAD_MORE=0;
+     *  //正在加载中
+     * LOADING_MORE=1;
+     * //加载完成已经没有更多数据了
+     * NO_MORE_DATA=2;
+     * @param status
+     */
+    public void changeMoreStatus(int status){
+        load_more_status=status;
         notifyDataSetChanged();
     }
 }

@@ -78,7 +78,7 @@ public class RecyclerRefreshActivity extends BaseActivity {
                         demo_swiperefreshlayout.setRefreshing(false);
                         Toast.makeText(RecyclerRefreshActivity.this, "更新了五条数据...", Toast.LENGTH_SHORT).show();
                     }
-                }, 5000);
+                }, 1500);
             }
         });
         //RecyclerView滑动监听
