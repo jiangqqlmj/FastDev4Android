@@ -43,6 +43,7 @@ Android在线学习网站(项目驱动学习)网站:<a href="http://www.cniao5.c
 <a href="http://blog.csdn.net/developer_jiangqq/article/details/49946589" target="_blank">RecyclerView完全解析之打造新版类Gallery效果(二十九)</a></br>
 <a href="http://blog.csdn.net/developer_jiangqq/article/details/49967587" target="_blank">RecyclerView完全解析之结合AA(Android Annotations)注入框架实例(三十)</a></br>
 <a href="http://blog.csdn.net/developer_jiangqq/article/details/49992269" target="_blank">RecyclerView完全解析之下拉刷新与上拉加载SwipeRefreshLayout(三十一)</a></br>
+<a href="http://blog.csdn.net/developer_jiangqq/article/details/50000733" target="_blank">CardView完全解析与RecyclerView结合使用(三十二)</a></br>
 </br>
 <a href="http://blog.csdn.net/developer_jiangqq" target="_blank">更多项目内容请详见CSDN博客!</a></br>
 
