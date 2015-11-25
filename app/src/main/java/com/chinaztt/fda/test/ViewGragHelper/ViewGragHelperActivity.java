@@ -1,4 +1,4 @@
-package com.chinaztt.fda.test;
+package com.chinaztt.fda.test.ViewGragHelper;
 
 import android.os.Bundle;
 import android.view.View;
@@ -29,7 +29,6 @@ public class ViewGragHelperActivity extends BaseActivity {
         top_bar_title=(TextView)findViewById(R.id.top_bar_title);
         top_bar_title.setText("ViewGragHelper使用详解");
     }
-
     class CustomOnClickListener implements View.OnClickListener{
         @Override
         public void onClick(View v) {
