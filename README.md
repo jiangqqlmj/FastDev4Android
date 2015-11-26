@@ -46,7 +46,8 @@ Android在线学习网站(项目驱动学习)网站:<a href="http://www.cniao5.c
 <a href="http://blog.csdn.net/developer_jiangqq/article/details/50000733" target="_blank">CardView完全解析与RecyclerView结合使用(三十二)</a></br>
 </br>
 二.ViewDragHelper控件完全解析;<br/>
-<a href="http://blog.csdn.net/developer_jiangqq/article/details/50033453" target="_blank">神器ViewGragHelper完全解析,妈妈再也不担心我自定义ViewGroup滑动View操作啦~(三十三)</a></br>
+<a href="http://blog.csdn.net/developer_jiangqq/article/details/50033453" target="_blank">神器ViewDragHelper完全解析,妈妈再也不担心我自定义ViewGroup滑动View操作啦~(三十三)</a></br>
+<a href="http://blog.csdn.net/developer_jiangqq/article/details/50043159" target="_blank">神器ViewDragHelper完全解析之详解实现QQ5.X侧滑酷炫效果(三十四)</a></br>
 </br>
 <a href="http://blog.csdn.net/developer_jiangqq" target="_blank">更多项目内容请详见CSDN博客!</a></br>
 
