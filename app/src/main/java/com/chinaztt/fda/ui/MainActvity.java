@@ -28,7 +28,7 @@ import com.chinaztt.fda.test.RecyclerDemoActivity_;
 import com.chinaztt.fda.test.SPCacheActivity_;
 import com.chinaztt.fda.test.TextDrawablesTestActivity_;
 import com.chinaztt.fda.test.TranslucentActivity_;
-import com.chinaztt.fda.test.ViewGragHelper.ViewGragHelperActivity;
+import com.chinaztt.fda.test.ViewDragHelper.ViewGragHelperActivity;
 import com.chinaztt.fda.test.VolleyTestActivity_;
 import com.chinaztt.fda.ui.base.BaseActivity;
 import org.androidannotations.annotations.EActivity;

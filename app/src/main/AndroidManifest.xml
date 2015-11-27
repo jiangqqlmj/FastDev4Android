@@ -42,7 +42,8 @@
         <activity android:name="com.chinaztt.fda.test.RecyclerViewRefresh.RecyclerFootActivity"/>
         <activity android:name="com.chinaztt.fda.test.CardView.CardViewActivity"/>
         <activity android:name="com.chinaztt.fda.test.CardView.CardViewRecyclerActivity"/>
-        <activity android:name="com.chinaztt.fda.test.ViewGragHelper.ViewGragHelperActivity"/>
+        <activity android:name="com.chinaztt.fda.test.ViewDragHelper.ViewGragHelperActivity"/>
+        <activity android:name="com.chinaztt.fda.test.ComInstance.ComInstanceActivity"/>
     </application>
     <!--添加权限-->
 

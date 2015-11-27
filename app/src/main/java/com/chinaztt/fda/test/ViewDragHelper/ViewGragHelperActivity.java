@@ -1,4 +1,4 @@
-package com.chinaztt.fda.test.ViewGragHelper;
+package com.chinaztt.fda.test.ViewDragHelper;
 
 import android.os.Bundle;
 import android.view.View;

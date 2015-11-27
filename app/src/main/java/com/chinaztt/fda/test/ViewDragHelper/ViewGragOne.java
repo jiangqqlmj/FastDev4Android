@@ -1,7 +1,6 @@
-package com.chinaztt.fda.test.ViewGragHelper;
+package com.chinaztt.fda.test.ViewDragHelper;
 
 import android.content.Context;
-import android.support.v4.view.MotionEventCompat;
 import android.support.v4.widget.ViewDragHelper;
 import android.support.v4.widget.ViewDragHelper.Callback;
 import android.util.AttributeSet;
