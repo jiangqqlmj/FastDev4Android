@@ -1,3 +1,12 @@
+本人CSDN博文地址<a href="http://blog.csdn.net/developer_jiangqq">http://blog.csdn.net/developer_jiangqq</a></br>
+###<a href="http://blog.csdn.net/developer_jiangqq">关于本人</a>
+邮箱:jiangqqlmj@163.com</br>
+本人微信/QQ:781931404</br>
+Android技术交流群:99787482</br>
+<img src="http://img.blog.csdn.net/20151121085753187"/></br>
+Android开发群1:107086751</br>
+Android开发群3:109244103</br>
+
 <p># FastDev4Android</p>
 本项目是Android快速开发框架，采用AndroidStudio进行开发。
 预想集成工具包,ORM,网络请求(HTTPClint,Volley,OkHttps),数据解析,依赖注入,xutils,图片异步加载，二维码扫描等等<br>
