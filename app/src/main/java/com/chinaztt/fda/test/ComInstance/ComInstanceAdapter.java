@@ -24,7 +24,6 @@ public class ComInstanceAdapter extends  RecyclerView.Adapter<RecyclerView.ViewH
     private Context mContext;
     private List<InstanceBean> mInstanceBeans;
     private LayoutInflater mInflater;
-
     //布局新增一项类别
     //普通ITEM
     private static final int ITEM_VIEW=1;
