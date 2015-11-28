@@ -11,7 +11,6 @@ import com.chinaztt.fda.ui.R;
 
 import java.util.ArrayList;
 import java.util.List;
-
 /**
  * 当前类注释:
  * 项目名：FastDev4Android

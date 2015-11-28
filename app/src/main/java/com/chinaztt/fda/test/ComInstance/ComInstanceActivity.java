@@ -9,13 +9,10 @@ import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import com.chinaztt.fda.ui.R;
 import com.chinaztt.fda.ui.base.BaseActivity;
-
 import java.util.ArrayList;
 import java.util.List;
-
 /**
  * 当前类注释:
  * 项目名：FastDev4Android
