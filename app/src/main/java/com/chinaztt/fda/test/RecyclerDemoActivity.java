@@ -6,6 +6,7 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.chinaztt.fda.test.ComInstance.AdvanceComInstanceActivity;
 import com.chinaztt.fda.test.ComInstance.ComInstanceActivity;
 import com.chinaztt.fda.test.RecyclerViewRefresh.RecyclerFootActivity;
 import com.chinaztt.fda.test.RecyclerViewRefresh.RecyclerRefreshActivity;
@@ -36,10 +37,9 @@ public class RecyclerDemoActivity  extends BaseActivity{
     @ViewById
     TextView top_bar_title;
     @ViewById
-    Button btn_one,btn_two,btn_three,btn_four,btn_five,btn_six;
-
+    Button btn_one,btn_two,btn_three,btn_four,btn_five,btn_six,btn_seven;
     @Click({R.id.top_bar_linear_back,R.id.btn_one,R.id.btn_two,R.id.btn_three,R.id.btn_four
-            ,R.id.btn_five,R.id.btn_six})
+            ,R.id.btn_five,R.id.btn_six,R.id.btn_seven})
     public void clickButton(View view){
         switch (view.getId()){
             case R.id.top_bar_linear_back:
@@ -66,6 +66,10 @@ public class RecyclerDemoActivity  extends BaseActivity{
             case R.id.btn_six:
                 Intent sixIntent=new Intent(this,ComInstanceActivity.class);
                 this.startActivity(sixIntent);
+                break;
+            case R.id.btn_seven:
+                Intent sevenIntent=new Intent(this,AdvanceComInstanceActivity.class);
+                this.startActivity(sevenIntent);
                 break;
         }
     }

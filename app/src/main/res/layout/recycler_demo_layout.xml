@@ -40,4 +40,10 @@
         android:text="SwipeRefreshLayout+RecyclerView+CardView综合实例"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
+    <Button
+        android:id="@+id/btn_seven"
+        android:layout_marginLeft="5dp"
+        android:text="SwipeRefreshLayout+RecyclerView+CardView综合实例升级版本"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
 </LinearLayout>

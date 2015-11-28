@@ -21,12 +21,10 @@
                 android:layout_width="150dp"
                 android:layout_height="150dp"
                 android:scaleType="fitXY"
-                android:src="@drawable/liuyan"
                 />
             <TextView
                 android:textSize="16sp"
                 android:layout_margin="3dp"
-                android:text="我是item标题..."
                 android:textColor="@color/white"
                 android:id="@+id/item_tv"
                 android:layout_width="wrap_content"

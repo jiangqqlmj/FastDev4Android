@@ -32,7 +32,6 @@ public class ComInstanceActivity extends BaseActivity {
     private ComInstanceAdapter adapter;
     private SwipeRefreshLayout instance_swiperefreshlayout;
     private int lastVisibleItem;
-    private GridLayoutManager gridLayoutManager;
     //是否正在加载更多的标志
     private boolean isMoreLoading=false;
     @Override

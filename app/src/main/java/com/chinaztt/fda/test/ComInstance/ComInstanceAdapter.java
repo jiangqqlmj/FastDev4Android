@@ -59,14 +59,19 @@ public class ComInstanceAdapter extends  RecyclerView.Adapter<RecyclerView.ViewH
     @Override
     public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
         if(holder instanceof ItemViewHolder){
-            ((ItemViewHolder)holder).item_img.setImageResource(mInstanceBeans.get(position).getImg());
-            ((ItemViewHolder)holder).item_tv.setText(mInstanceBeans.get(position).getTitle());
-            holder.itemView.setTag(position);
+            if(position<mInstanceBeans.size()){
+                ((ItemViewHolder) holder).item_img.setImageResource(mInstanceBeans.get(position).getImg());
+                ((ItemViewHolder)holder).item_tv.setText(mInstanceBeans.get(position).getTitle());
+                holder.itemView.setTag(position);
+                holder.itemView.setClickable(true);
+            }else {
+                ((ItemViewHolder) holder).item_img.setImageResource(R.drawable.moren);
+                ((ItemViewHolder)holder).item_tv.setText("");
+                holder.itemView.setClickable(false);
+            }
         }else if(holder instanceof FootViewHolder){
             //上拉加载更多布局数据绑定
         }
-
-
     }
 
     @Override
@@ -77,10 +82,14 @@ public class ComInstanceAdapter extends  RecyclerView.Adapter<RecyclerView.ViewH
             return ITEM_VIEW;
         }
     }
-
     @Override
     public int getItemCount() {
-        return mInstanceBeans!=null?mInstanceBeans.size()+1:0;
+        if(mInstanceBeans.size()%2==0){
+            //偶数
+            return mInstanceBeans.size()+1;
+        }else{
+            return mInstanceBeans.size()+2;
+        }
     }
 
     public static class ItemViewHolder extends RecyclerView.ViewHolder{

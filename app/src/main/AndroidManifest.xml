@@ -44,6 +44,7 @@
         <activity android:name="com.chinaztt.fda.test.CardView.CardViewRecyclerActivity"/>
         <activity android:name="com.chinaztt.fda.test.ViewDragHelper.ViewGragHelperActivity"/>
         <activity android:name="com.chinaztt.fda.test.ComInstance.ComInstanceActivity"/>
+        <activity android:name="com.chinaztt.fda.test.ComInstance.AdvanceComInstanceActivity"/>
     </application>
     <!--添加权限-->
 
