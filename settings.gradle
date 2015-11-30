@@ -1,4 +1,4 @@
-include ':app'
+include ':app', ':ViewPagerIndicator'
 include ':Volley'
 
 

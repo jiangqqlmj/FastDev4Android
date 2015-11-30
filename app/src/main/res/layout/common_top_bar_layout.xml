@@ -9,7 +9,8 @@
         android:layout_width="wrap_content"
         android:layout_height="50dip"
         android:gravity="center_vertical"
-        android:orientation="horizontal" >
+        android:orientation="horizontal"
+        >
 
         <ImageView
             android:id="@+id/top_bar_img_back"

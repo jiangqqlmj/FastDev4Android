@@ -32,8 +32,19 @@
         <activity android:name="com.chinaztt.fda.test.BaseAdapterTestActivity_"/>
         <activity android:name="com.chinaztt.fda.test.VolleyTestActivity_"/>
         <activity android:name="com.chinaztt.fda.test.VolleyLoaderActivity_"/>
-        <activity android:name="com.chinaztt.fda.test.MainFrameActivity_"/>
 
+        <activity android:name="com.chinaztt.fda.test.MainFrameActivity_" android:theme="@style/MyTheme"/>
+        <activity android:name="com.chinaztt.fda.test.RecyclerViewTestActivity"/>
+        <activity android:name="com.chinaztt.fda.test.RecyclerDemoActivity_"/>
+        <activity android:name="com.chinaztt.fda.test.RecyclerGalleryActivity"/>
+        <activity android:name="com.chinaztt.fda.test.RecyclerViewAAActivity_"/>
+        <activity android:name="com.chinaztt.fda.test.RecyclerViewRefresh.RecyclerRefreshActivity"/>
+        <activity android:name="com.chinaztt.fda.test.RecyclerViewRefresh.RecyclerFootActivity"/>
+        <activity android:name="com.chinaztt.fda.test.CardView.CardViewActivity"/>
+        <activity android:name="com.chinaztt.fda.test.CardView.CardViewRecyclerActivity"/>
+        <activity android:name="com.chinaztt.fda.test.ViewDragHelper.ViewGragHelperActivity"/>
+        <activity android:name="com.chinaztt.fda.test.ComInstance.ComInstanceActivity"/>
+        <activity android:name="com.chinaztt.fda.test.ComInstance.AdvanceComInstanceActivity"/>
     </application>
     <!--添加权限-->
 
@@ -64,5 +75,4 @@
     <uses-permission android:name="android.permission.CALL_PHONE" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-
 </manifest>

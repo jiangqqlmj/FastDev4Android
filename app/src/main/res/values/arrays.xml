@@ -15,5 +15,8 @@
         <item>BaseAdapter快速实例</item>
         <item>Volley网络框架测试实例</item>
         <item>Fragment嵌套Fragment,ViewPager实例</item>
+        <item>RecyclerView使用实例</item>
+        <item>CardView使用实例</item>
+        <item>ViewGragHelper使用实例</item>
     </array>
 </resources>
