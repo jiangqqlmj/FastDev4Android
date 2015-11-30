@@ -45,6 +45,9 @@
         <activity android:name="com.chinaztt.fda.test.ViewDragHelper.ViewGragHelperActivity"/>
         <activity android:name="com.chinaztt.fda.test.ComInstance.ComInstanceActivity"/>
         <activity android:name="com.chinaztt.fda.test.ComInstance.AdvanceComInstanceActivity"/>
+        <activity android:name="com.chinaztt.fda.test.MainInfoActivity" android:theme="@style/AppTheme"/>
+        <activity android:name="com.chinaztt.fda.test.TabLayoutActivity" android:theme="@style/APP_Theme"/>
+        <activity android:name="com.chinaztt.fda.test.okhttp.OkhttpDemoActivity"/>
     </application>
     <!--添加权限-->
 

@@ -2,6 +2,7 @@
 <resources>
     <color name="transparent">#00000000</color>
     <color name="white">#FFFFFF</color>
+    <color name="gray">#888888</color>
     <color name="blue">#0066FF</color>
     <color name="red">#FF0000</color>
     <color name="black">#000000</color>
@@ -29,4 +30,9 @@
     <color name="color_9">#00EE00</color>
     <color name="color_10">#708090</color>
 
+
+    <!--标签TAB未选中的颜色-->
+    <color name="color_unselected">#777777</color>
+    <!--标签Tab选中的颜色-->
+    <color name="color_selected">#1da8fe</color>
 </resources>

@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.chinaztt.fda.ui.R;
@@ -41,13 +42,6 @@ public class AdvanceComInstanceAdapter extends RecyclerView.Adapter<RecyclerView
     public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         if (viewType == ITEM_VIEW) {
             final View view = mInflater.inflate(R.layout.advance_com_instance_item_layout, parent, false);
-            view.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    if (onItemClickListener != null) {
-                    }
-                }
-            });
             return new ItemViewHolder(view);
         } else if (viewType == FOOT_VIEW) {
             View view = mInflater.inflate(R.layout.instance_load_more_layout, parent, false);
@@ -61,13 +55,28 @@ public class AdvanceComInstanceAdapter extends RecyclerView.Adapter<RecyclerView
         if(holder instanceof ItemViewHolder){
             AdvanceInstanceBean advanceInstanceBean=mAdvanceInstanceBeans.get(position);
             if(advanceInstanceBean!=null){
-                List<InstanceBean> instanceBeans=advanceInstanceBean.getInstanceBeans();
+                final List<InstanceBean> instanceBeans=advanceInstanceBean.getInstanceBeans();
                 if(instanceBeans.size()==2){
                     ((ItemViewHolder) holder).item_img_one.setImageResource(instanceBeans.get(0).getImg());
                     ((ItemViewHolder)holder).item_tv_one.setText(instanceBeans.get(0).getTitle());
                     ((ItemViewHolder) holder).item_img_two.setImageResource(instanceBeans.get(1).getImg());
                     ((ItemViewHolder)holder).item_tv_two.setText(instanceBeans.get(1).getTitle());
-                    holder.itemView.setTag(position);
+                            ((ItemViewHolder) holder).leftL.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            if (onItemClickListener != null) {
+                                onItemClickListener.onItemClick(instanceBeans.get(0));
+                            }
+                        }
+                    });
+                    ((ItemViewHolder) holder).rightL.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            if(onItemClickListener!=null){
+                                onItemClickListener.onItemClick(instanceBeans.get(1));
+                            }
+                        }
+                    });
                 }else {
                     ((ItemViewHolder) holder).item_img_one.setImageResource(instanceBeans.get(0).getImg());
                     ((ItemViewHolder)holder).item_tv_one.setText(instanceBeans.get(0).getTitle());
@@ -97,12 +106,12 @@ public class AdvanceComInstanceAdapter extends RecyclerView.Adapter<RecyclerView
      * Item 点击监听回调接口
      */
     public interface OnItemClickListener {
+
         /**
-         * Item 视图点击的回调方法
-         * @param position  点击的Item
-         * @param index     对于Item每一项 点击的左边的还是右边的索引
+         * item回调的数据
+         * @param instanceBean
          */
-        void onItemClick(int position,int index);
+        void onItemClick(InstanceBean instanceBean);
     }
     private OnItemClickListener onItemClickListener;
 
@@ -114,12 +123,15 @@ public class AdvanceComInstanceAdapter extends RecyclerView.Adapter<RecyclerView
     }
 
     public static class ItemViewHolder extends RecyclerView.ViewHolder{
+        private LinearLayout leftL,rightL;
         private ImageView item_img_one;
         private TextView item_tv_one;
         private ImageView item_img_two;
         private TextView item_tv_two;
         public ItemViewHolder(View itemView) {
             super(itemView);
+            leftL=(LinearLayout)itemView.findViewById(R.id.leftL);
+            rightL=(LinearLayout)itemView.findViewById(R.id.rightL);
             item_img_one=(ImageView)itemView.findViewById(R.id.item_img_one);
             item_tv_one=(TextView)itemView.findViewById(R.id.item_tv_one);
             item_img_two=(ImageView)itemView.findViewById(R.id.item_img_two);

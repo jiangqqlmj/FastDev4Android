@@ -2,6 +2,10 @@
 
     <!-- Base application theme. -->
     <style name="AppTheme" parent="android:Theme.Light">
+        <item name="android:windowNoTitle">true</item>
+    </style>
+    <style name="APP_Theme" parent="Theme.AppCompat">
+
     </style>
     <style name="style_textview_one">
         <item name="android:textSize">16sp</item>
