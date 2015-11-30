@@ -36,7 +36,7 @@ public class FlowIndicator extends View {
 		//每个小圆点间隔距离
 		space = a.getDimension(R.styleable.FlowIndicator_space, 4);
 		//小圆点半径
-		radius = a.getDimension(R.styleable.FlowIndicator_radius, 7);
+		radius = a.getDimension(R.styleable.FlowIndicator_indicator_radius, 7);
 		//正常 没有选中的图片
 		bmp_normal = BitmapFactory.decodeResource(getResources(),
 				R.drawable.hui);

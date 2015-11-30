@@ -4,7 +4,7 @@
     <declare-styleable name="FlowIndicator">
         <attr name="point_normal_color" format="color" /> <!--指示器小圆点正常颜色-->
         <attr name="point_seleted_color" format="color" /> <!--指示器小圆点选中颜色-->
-        <attr name="radius" format="dimension" />       <!--指示器原点的半径-->
+        <attr name="indicator_radius" format="dimension" />       <!--指示器原点的半径-->
         <attr name="count" format="integer" />          <!--指示器原点的数量-->
         <attr name="space" format="dimension" />      <!--每个指示器原点的间隔-->
     </declare-styleable>

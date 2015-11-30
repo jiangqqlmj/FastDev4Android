@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/holo_green_light"
+    >
+    <TextView
+        android:gravity="center"
+        android:id="@+id/item_tv"
+        android:textColor="@android:color/white"
+        android:padding="5dp"
+        android:textSize="16sp"
+        android:text="Text数据显示..."
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        />
+</LinearLayout>

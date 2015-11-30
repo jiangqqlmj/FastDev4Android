@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include layout="@layout/common_top_bar_layout"/>
+    <Button
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="5dp"
+        android:id="@+id/btn_one"
+        android:text="RecyclerView初识与进阶"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <Button
+        android:id="@+id/btn_two"
+        android:layout_marginLeft="5dp"
+        android:text="RecyclerView实例Gallery"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <Button
+        android:id="@+id/btn_three"
+        android:layout_marginLeft="5dp"
+        android:text="RecyclerView与AA(Android Annotations)注入结合实例"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <Button
+        android:id="@+id/btn_four"
+        android:layout_marginLeft="5dp"
+        android:text="RecyclerView是实现下拉刷新,下拉加载更多_原始方式"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <Button
+        android:id="@+id/btn_five"
+        android:layout_marginLeft="5dp"
+        android:text="RecyclerView是实现下拉刷新,下拉加载更多_FootView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <Button
+        android:id="@+id/btn_six"
+        android:layout_marginLeft="5dp"
+        android:text="SwipeRefreshLayout+RecyclerView+CardView综合实例"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <Button
+        android:id="@+id/btn_seven"
+        android:layout_marginLeft="5dp"
+        android:text="SwipeRefreshLayout+RecyclerView+CardView综合实例升级版本"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</LinearLayout>

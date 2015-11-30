@@ -1,7 +1,6 @@
 package com.chinaztt.fda.fragment;
 
 import android.os.Bundle;
-import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
 import android.util.Log;
@@ -11,6 +10,7 @@ import android.view.ViewGroup;
 
 import com.chinaztt.fda.adapter.base.FixedPagerAdapter;
 import com.chinaztt.fda.ui.R;
+import com.chinaztt.fda.viewpagerindicator.TabPageIndicator;
 
 import org.androidannotations.annotations.AfterViews;
 import org.androidannotations.annotations.EFragment;
@@ -32,6 +32,8 @@ import java.util.List;
 public class MainInfoFragment  extends Fragment implements ViewPager.OnPageChangeListener{
     @ViewById
     ViewPager info_viewpager;
+    @ViewById
+    TabPageIndicator id_indicator;
 
     private List<Fragment> fragments;
     private FixedPagerAdapter mPagerAdater;
@@ -52,6 +54,7 @@ public class MainInfoFragment  extends Fragment implements ViewPager.OnPageChang
         mPagerAdater=new FixedPagerAdapter(getChildFragmentManager());
         mPagerAdater.setFragments(fragments);
         info_viewpager.setAdapter(mPagerAdater);
+        id_indicator.setViewPager(info_viewpager,0);
     }
 
     @Override

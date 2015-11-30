@@ -26,6 +26,7 @@ import com.chinaztt.fda.ui.base.BaseActivity;
 import com.chinaztt.fda.utils.Log;
 import com.chinaztt.fdv.Fdv_CallBackListener;
 import com.chinaztt.fdv.Fdv_ImageCache;
+import com.chinaztt.fdv.Fdv_JsonObjectRequest;
 import com.chinaztt.fdv.Fdv_StringRequest;
 import com.google.gson.Gson;
 
@@ -78,7 +79,7 @@ public class VolleyTestActivity  extends BaseActivity {
             case R.id.btn_string:
                 //获取字符串
                 Log.d(TAG, "点击获取字符串...");
-                new Fdv_StringRequest<String>(VolleyTestActivity.this).get("http://www.baidu.com", new Fdv_CallBackListener<String>() {
+                new Fdv_StringRequest(VolleyTestActivity.this).get("http://www.baidu.com", new Fdv_CallBackListener<String>() {
                     @Override
                     public void onSuccessResponse(String response) {
                         tv_result.setVisibility(View.VISIBLE);
@@ -91,41 +92,24 @@ public class VolleyTestActivity  extends BaseActivity {
 
                     }
                 });
-//                StringRequest stringRequest=new StringRequest(Request.Method.GET, "http://www.baidu.com", new Response.Listener<String>() {
-//                    @Override
-//                    public void onResponse(String response) {
-//                        tv_result.setVisibility(View.VISIBLE);
-//                        img_result.setVisibility(View.GONE);
-//                        tv_result.setText(response.toString());
-//                    }
-//                }, new Response.ErrorListener() {
-//                    @Override
-//                    public void onErrorResponse(VolleyError error) {
-//
-//                    }
-//                });
-//                requestQueue.add(stringRequest);
                 break;
             case R.id.btn_json:
                 //获取json
                 Log.d(TAG, "点击获取json...");
-                JsonObjectRequest jsonObjectRequest=new JsonObjectRequest(Request.Method.GET
-                        , "http://interface.zttmall.com/update/mallUpdate", null,new Response.Listener<JSONObject>() {
+                new Fdv_JsonObjectRequest(VolleyTestActivity.this).get("http://interface.zttmall.com/update/mallUpdate", new Fdv_CallBackListener<JSONObject>() {
                     @Override
-                    public void onResponse(JSONObject response) {
+                    public void onSuccessResponse(JSONObject response) {
                         Gson gson=new Gson();
                         tv_result.setVisibility(View.VISIBLE);
                         img_result.setVisibility(View.GONE);
                         img_result_network.setVisibility(View.GONE);
                         tv_result.setText(gson.fromJson(response.toString(),UpdateBean.class).toString());
                     }
-                }, new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError error) {
 
                     }
                 });
-                requestQueue.add(jsonObjectRequest);
                 break;
             case R.id.btn_image_request:
                 //获取图片
@@ -218,7 +202,7 @@ public class VolleyTestActivity  extends BaseActivity {
                 Map<String,String> params_get=new HashMap<String,String>();
                 params_get.put("username","张三");
                 params_get.put("password","12345");
-                new Fdv_StringRequest<String>(this).get("http://10.18.3.123:8080/SalesWebTest/TestVolleyPost", new Fdv_CallBackListener<String>() {
+                new Fdv_StringRequest(this).get("http://10.18.3.123:8080/SalesWebTest/TestVolleyPost", new Fdv_CallBackListener<String>() {
                     @Override
                     public void onSuccessResponse(String response) {
                         tv_result.setVisibility(View.VISIBLE);
@@ -236,7 +220,7 @@ public class VolleyTestActivity  extends BaseActivity {
                 Map<String,String> params_post=new HashMap<String,String>();
                 params_post.put("username","张三");
                 params_post.put("password","12345");
-                new Fdv_StringRequest<String>(this).post("http://10.18.3.123:8080/SalesWebTest/TestVolleyPost", new Fdv_CallBackListener<String>() {
+                new Fdv_StringRequest(this).post("http://10.18.3.123:8080/SalesWebTest/TestVolleyPost", new Fdv_CallBackListener<String>() {
                     @Override
                     public void onSuccessResponse(String response) {
                         tv_result.setVisibility(View.VISIBLE);
