@@ -1,0 +1,16 @@
+Index: app/src/androidTest/java/com/chinaztt/fda/ui/ApplicationTest.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>GBK
+===================================================================
+--- app/src/androidTest/java/com/chinaztt/fda/ui/ApplicationTest.java	(revision 929b0acfb7d7c97263da6710ec97d7bffbe9e9e2)
++++ app/src/androidTest/java/com/chinaztt/fda/ui/ApplicationTest.java	(revision )
+@@ -10,4 +10,7 @@
+     public ApplicationTest() {
+         super(Application.class);
+     }
++    public tt(){
++
++    }
+ }
+\ No newline at end of file
