@@ -46,6 +46,13 @@ Android开发群3:109244103</br>
 <h3>广告一下:</h3>
 Android在线学习网站(项目驱动学习)网站:<a href="http://www.cniao5.com/">菜鸟窝</a>欢迎大家前往免费学习!<br><br>
 <a href="http://www.cniao5.com/clazz/yaya.html" target="_blank"><img src="http://img2.xxh.cc:8080/images/mall/yaya.png"/></a><br/>
+
+<p><a href="http://blog.csdn.net/developer_jiangqq" style="text-decoration: none;"  target="_blank"><span style="color:blue;">20151201框架更新:</span></a></p>
+一.返照网易新闻Tab标签和页面切换滑动;<br/>
+<a href="http://blog.csdn.net/developer_jiangqq/article/details/50145759" target="_blank">HorizontalScrollView,Fragment,FragmentStatePagerAdapter打造网易新闻Tab及滑动页面效果(三十六)</a></br>
+<a href="http://blog.csdn.net/developer_jiangqq" target="_blank">更多项目内容请详见CSDN博客!</a></br>
+</br>
+
 <p><a href="http://blog.csdn.net/developer_jiangqq" style="text-decoration: none;"  target="_blank"><span style="color:blue;">20151119框架更新:</span></a></p>
 一.RecyclerView控件完全解析;<br/>
 <a href="http://blog.csdn.net/developer_jiangqq/article/details/49927631" target="_blank">RecyclerView完全解析,让你从此爱上它(二十八)</a></br>
@@ -59,7 +66,7 @@ Android在线学习网站(项目驱动学习)网站:<a href="http://www.cniao5.c
 <a href="http://blog.csdn.net/developer_jiangqq/article/details/50033453" target="_blank">神器ViewDragHelper完全解析,妈妈再也不担心我自定义ViewGroup滑动View操作啦~(三十三)</a></br>
 <a href="http://blog.csdn.net/developer_jiangqq/article/details/50043159" target="_blank">神器ViewDragHelper完全解析之详解实现QQ5.X侧滑酷炫效果(三十四)</a></br>
 </br>
-<a href="http://blog.csdn.net/developer_jiangqq" target="_blank">更多项目内容请详见CSDN博客!</a></br>
+
 
 <p><a href="http://blog.csdn.net/developer_jiangqq" style="text-decoration: none;"  target="_blank"><span style="color:blue;">20151110框架更新:</span></a></p>
 一.Volley网络框架基本使用;<br/>
