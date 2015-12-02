@@ -34,15 +34,12 @@ public class MainInfoFragment  extends Fragment implements ViewPager.OnPageChang
     ViewPager info_viewpager;
     @ViewById
     TabPageIndicator id_indicator;
-
     private List<Fragment> fragments;
     private FixedPagerAdapter mPagerAdater;
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         return super.onCreateView(inflater, container, savedInstanceState);
     }
-
     @AfterViews
     public void initDatas(){
         fragments=new ArrayList<>();

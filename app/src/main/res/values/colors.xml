@@ -29,4 +29,9 @@
     <color name="color_9">#00EE00</color>
     <color name="color_10">#708090</color>
 
+
+    <!--标签TAB未选中的颜色-->
+    <color name="color_unselected">#777777</color>
+    <!--标签Tab选中的颜色-->
+    <color name="color_selected">#1da8fe</color>
 </resources>
