@@ -58,11 +58,11 @@ public class CNKFixedPagerAdapter extends FragmentStatePagerAdapter {
 
     }
     //此方法用来显示tab上的名字
-    @Override
-    public CharSequence getPageTitle(int position) {
-
-        return titles[position % titles.length];
-    }
+//    @Override
+//    public CharSequence getPageTitle(int position) {
+//
+//        return titles[position % titles.length];
+//    }
     public List<Fragment> getFragments() {
         return fragments;
     }

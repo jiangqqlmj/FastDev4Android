@@ -68,9 +68,9 @@ public class TabInfoFragment extends Fragment {
         //设置TabLayout模式 -该使用Tab数量比较多的情况
         tab_layout.setTabMode(TabLayout.MODE_SCROLLABLE);
         //设置自定义Tab--加入图标的demo
-//        for(int i=0;i<12;i++){
-//            TabLayout.Tab tab = tab_layout.getTabAt(i);
-//            tab.setCustomView(mPagerAdater.getTabView(i));
-//        }
+        for(int i=0;i<12;i++){
+            TabLayout.Tab tab = tab_layout.getTabAt(i);
+            tab.setCustomView(mPagerAdater.getTabView(i));
+        }
     }
 }
