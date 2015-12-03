@@ -50,6 +50,7 @@ Android在线学习网站(项目驱动学习)网站:<a href="http://www.cniao5.c
 <p><a href="http://blog.csdn.net/developer_jiangqq" style="text-decoration: none;"  target="_blank"><span style="color:blue;">20151201框架更新:</span></a></p>
 一.返照网易新闻Tab标签和页面切换滑动;<br/>
 <a href="http://blog.csdn.net/developer_jiangqq/article/details/50145759" target="_blank">HorizontalScrollView,Fragment,FragmentStatePagerAdapter打造网易新闻Tab及滑动页面效果(三十六)</a></br>
+<a href="http://blog.csdn.net/developer_jiangqq/article/details/50158985" target="_blank">Design支持库TabLayout打造仿网易新闻Tab标签效果(三十七)</a></br>
 <a href="http://blog.csdn.net/developer_jiangqq" target="_blank">更多项目内容请详见CSDN博客!</a></br>
 </br>
 
