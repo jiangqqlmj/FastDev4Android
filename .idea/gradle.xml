@@ -13,6 +13,7 @@
             <option value="$PROJECT_DIR$/ViewPagerIndicator" />
             <option value="$PROJECT_DIR$/Volley" />
             <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/fdv_okhttp" />
           </set>
         </option>
       </GradleProjectSettings>

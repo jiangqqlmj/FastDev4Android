@@ -20,5 +20,6 @@
         <item>ViewGragHelper使用实例</item>
         <item>Fragment+ViewPager+FragmentStatePagerAapter</item>
         <item>TabLayout实现仿网易新闻Tab标签以及页面滑动切换</item>
+        <item>Okhttp网络框架测试实例</item>
     </array>
 </resources>
