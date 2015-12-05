@@ -43,7 +43,6 @@ public class OkhttpDemoActivity extends BaseActivity {
         tv_result=(TextView)this.findViewById(R.id.tv_result);
         top_bar_title.setText("Okhttp实例");
         top_bar_linear_back=(LinearLayout)this.findViewById(R.id.top_bar_linear_back);
-
         top_bar_linear_back.setOnClickListener(new CustomOnClickListener());
         btn_one.setOnClickListener(new CustomOnClickListener());
         btn_two.setOnClickListener(new CustomOnClickListener());
