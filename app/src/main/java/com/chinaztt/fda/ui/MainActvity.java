@@ -32,6 +32,7 @@ import com.chinaztt.fda.test.TextDrawablesTestActivity_;
 import com.chinaztt.fda.test.TranslucentActivity_;
 import com.chinaztt.fda.test.ViewDragHelper.ViewGragHelperActivity;
 import com.chinaztt.fda.test.VolleyTestActivity_;
+import com.chinaztt.fda.test.okhttp.OkhttpDemoActivity;
 import com.chinaztt.fda.ui.base.BaseActivity;
 import org.androidannotations.annotations.EActivity;
 /**
@@ -63,7 +64,7 @@ public class MainActvity extends BaseActivity implements View.OnTouchListener {
                 HTML5WebViewCustomAD.class, BaseAdapterTestActivity_.class,
                 VolleyTestActivity_.class, MainFrameActivity_.class,
                 RecyclerDemoActivity_.class, CardViewActivity.class, ViewGragHelperActivity.class,
-                MainInfoActivity.class, TabLayoutActivity.class
+                MainInfoActivity.class, TabLayoutActivity.class, OkhttpDemoActivity.class
         };
 
         lv_main = (ListView) this.findViewById(R.id.lv_main);
