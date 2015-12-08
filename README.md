@@ -56,9 +56,6 @@ Android开发群3:109244103</br>
     <tr><td>crash</td><td>自定义崩溃异常处理</td></tr>
     <tr><td>receiver</td><td>广播通知处理</td></tr>
 </table>
-<h3>广告一下:</h3>
-Android在线学习网站(项目驱动学习)网站:<a href="http://www.cniao5.com/">菜鸟窝</a>欢迎大家前往免费学习!<br><br>
-<a href="http://www.cniao5.com/clazz/yaya.html" target="_blank"><img src="http://img2.xxh.cc:8080/images/mall/yaya.png"/></a><br/>
 
 <p><a href="http://blog.csdn.net/developer_jiangqq" style="text-decoration: none;"  target="_blank"><span style="color:blue;">20151201框架更新:</span></a></p>
 一.返照网易新闻Tab标签和页面切换滑动;<br/>
