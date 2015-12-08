@@ -10,6 +10,7 @@
 4.第三方集成登录与分享,消息推送数据统计集成。</br>
 5.掌握项目架构,开发流程</br>
 6.独立开发APP </br>
+<a href="http://www.cniao5.com/clazz/news.html">http://www.cniao5.com/clazz/news.html</a></br>
 <a href="http://www.cniao5.com/clazz/news.html"><img src="http://img.blog.csdn.net/20151208083154419"></a></br>
 
 ###<a href="http://blog.csdn.net/developer_jiangqq">关于本人</a>
