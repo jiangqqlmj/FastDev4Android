@@ -1,4 +1,18 @@
 本人CSDN博文地址<a href="http://blog.csdn.net/developer_jiangqq">http://blog.csdn.net/developer_jiangqq</a></br>
+###本人最新录制的实战项目视频-菜鸟新闻<a href="http://www.cniao5.com/clazz/news.html">点击进入</a>
+###简介如下:
+菜鸟新闻安卓客户端-是一个仿照36Kr官方App,实时抓取36Kr官网数据的资讯类新闻客户端</br>
+包括首页新闻,详情,发现,活动,实时数据抓取,侧滑效果,第三方登录以及分享,消息推送等相关功能客户端。</br>
+学习目标:</br>
+1.掌握Android 5.0以上的相关技术控件使用(RecyclerView,CardView);</br>
+2.熟悉目前主流开源框架的使用:Okhttp,Volley,UIL,Fresco,EventBus....</br>
+3.熟悉数据抓取爬虫技术;</br>
+4.第三方集成登录与分享,消息推送数据统计集成。</br>
+5.掌握项目架构,开发流程</br>
+6.独立开发APP </br>
+<a href="http://www.cniao5.com/clazz/news.html">http://www.cniao5.com/clazz/news.html</a></br>
+<a href="http://www.cniao5.com/clazz/news.html"><img src="http://img.blog.csdn.net/20151208083154419"></a></br>
+
 ###<a href="http://blog.csdn.net/developer_jiangqq">关于本人</a>
 邮箱:jiangqqlmj@163.com</br>
 本人微信/QQ:781931404</br>
@@ -43,9 +57,6 @@ Android开发群3:109244103</br>
     <tr><td>crash</td><td>自定义崩溃异常处理</td></tr>
     <tr><td>receiver</td><td>广播通知处理</td></tr>
 </table>
-<h3>广告一下:</h3>
-Android在线学习网站(项目驱动学习)网站:<a href="http://www.cniao5.com/">菜鸟窝</a>欢迎大家前往免费学习!<br><br>
-<a href="http://www.cniao5.com/clazz/yaya.html" target="_blank"><img src="http://img2.xxh.cc:8080/images/mall/yaya.png"/></a><br/>
 
 <p><a href="http://blog.csdn.net/developer_jiangqq" style="text-decoration: none;"  target="_blank"><span style="color:blue;">20151201框架更新:</span></a></p>
 一.返照网易新闻Tab标签和页面切换滑动;<br/>
