@@ -16,6 +16,7 @@
             android:layout_gravity="center_horizontal"
             >
             <LinearLayout
+                android:id="@+id/leftL"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
@@ -41,6 +42,7 @@
                     android:lines="2"/>
             </LinearLayout>
             <LinearLayout
+                android:id="@+id/rightL"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"

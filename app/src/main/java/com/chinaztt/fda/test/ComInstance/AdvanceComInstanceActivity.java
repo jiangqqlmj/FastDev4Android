@@ -128,6 +128,13 @@ public class AdvanceComInstanceActivity extends BaseActivity{
                     lastVisibleItem = linearLayoutManager.findLastVisibleItemPosition();
                 }
             });
+
+        adapter.setOnItemClickListener(new AdvanceComInstanceAdapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(InstanceBean instanceBean) {
+                Toast.makeText(AdvanceComInstanceActivity.this,"点击的Item数据为:"+instanceBean,Toast.LENGTH_SHORT).show();
+            }
+        });
     }
     class CustomOnClickListener implements View.OnClickListener{
         @Override
