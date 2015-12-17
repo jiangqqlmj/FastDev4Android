@@ -5,7 +5,7 @@
       <GradleProjectSettings>
         <option name="distributionType" value="LOCAL" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="gradleHome" value="D:\JASV1.3.2\Android\Android Studio\gradle\gradle-2.4" />
+        <option name="gradleHome" value="D:\JASV1.4.1\Android\Android Studio\gradle\gradle-2.4" />
         <option name="gradleJvm" value="1.7" />
         <option name="modules">
           <set>
@@ -13,6 +13,7 @@
             <option value="$PROJECT_DIR$/ViewPagerIndicator" />
             <option value="$PROJECT_DIR$/Volley" />
             <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/fdv_okhttp" />
           </set>
         </option>
       </GradleProjectSettings>

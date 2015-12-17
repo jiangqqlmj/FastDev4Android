@@ -26,8 +26,9 @@ repositories {
     jcenter()
 }
 android {
-    compileSdkVersion 22
-    buildToolsVersion = '22.0.1'
+    compileSdkVersion 23
+    buildToolsVersion = '23.0.1'
+    useLibrary 'org.apache.http.legacy'
 }
 apply from: 'rules.gradle'
 

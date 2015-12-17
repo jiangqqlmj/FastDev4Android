@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/FastDev4Android.iml" filepath="$PROJECT_DIR$/FastDev4Android.iml" />
+      <module fileurl="file://$PROJECT_DIR$/FastDev4Android-master.iml" filepath="$PROJECT_DIR$/FastDev4Android-master.iml" />
       <module fileurl="file://$PROJECT_DIR$/ViewPagerIndicator/ViewPagerIndicator.iml" filepath="$PROJECT_DIR$/ViewPagerIndicator/ViewPagerIndicator.iml" />
       <module fileurl="file://$PROJECT_DIR$/Volley/Volley.iml" filepath="$PROJECT_DIR$/Volley/Volley.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
