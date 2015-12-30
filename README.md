@@ -1,4 +1,6 @@
 本人CSDN博文地址<a href="http://blog.csdn.net/developer_jiangqq">http://blog.csdn.net/developer_jiangqq</a></br>
+本人维护的微信订阅号,欢迎大家微信关注一下!定期分享移动技术干活,项目管理和博客文章!</br>
+<img src="http://img.blog.csdn.net/20151229084251042"/>
 ###本人最新录制的实战项目视频-菜鸟新闻<a href="http://www.cniao5.com/clazz/news.html">点击进入</a>
 ###简介如下:
 菜鸟新闻安卓客户端-是一个仿照36Kr官方App,实时抓取36Kr官网数据的资讯类新闻客户端</br>
