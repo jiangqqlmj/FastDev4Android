@@ -1,5 +1,5 @@
 http://blog.csdn.net/developer_jiangqq</br>
-###最新录制的实战项目视频-菜鸟新闻<a href="http://www.cniao5.com/clazz/news.html">点击进入</a>
+###最新录制的实战项目视频-菜鸟新闻http://www.cniao5.com/clazz/news.html
 ###简介如下:
 菜鸟新闻安卓客户端-是一个仿照36Kr官方App,实时抓取36Kr官网数据的资讯类新闻客户端</br>
 包括首页新闻,详情,发现,活动,实时数据抓取,侧滑效果,第三方登录以及分享,消息推送等相关功能客户端。</br>
