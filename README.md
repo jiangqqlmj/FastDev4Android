@@ -1,6 +1,6 @@
 <span style={textcolor="#FF0000"}>【好消息】个人网站已经上线运行,后面博客以及技术干货等精彩文章会同步更新，请大家关注收藏:<a href="http://www.lcode.org">http://www.lcode.org</a></span></br>
 本人CSDN博文地址<a href="http://blog.csdn.net/developer_jiangqq">http://blog.csdn.net/developer_jiangqq</a></br>
-本人维护的微信订阅号,欢迎大家微信关注一下!定期分享移动技术干活,项目管理和博客文章!</br>
+本人维护的微信订阅号,欢迎大家微信关注一下!定期分享移动技术干货,项目管理和博客文章!</br>
 <img src="http://img.blog.csdn.net/20151229084251042"/>
 ###本人最新录制的实战项目视频-菜鸟新闻<a href="http://www.cniao5.com/clazz/news.html">点击进入</a>
 ###简介如下:
