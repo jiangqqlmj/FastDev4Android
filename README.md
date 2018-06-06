@@ -1,22 +1,22 @@
-<span style={textcolor="#FF0000"}>【好消息】个人网站已经上线运行,后面博客以及技术干货等精彩文章会同步更新，请大家关注收藏:<a href="http://www.lcode.org">http://www.lcode.org</a></span></br>
+<span style="textcolor=#FF0000">【好消息】个人网站已经上线运行,后面博客以及技术干货等精彩文章会同步更新，请大家关注收藏:<a href="http://www.lcode.org">http://www.lcode.org</a></span><br/>
 本人CSDN博文地址<a href="http://blog.csdn.net/developer_jiangqq">http://blog.csdn.net/developer_jiangqq</a></br>
 本人维护的微信订阅号,欢迎大家微信关注一下!定期分享移动技术干货,项目管理和博客文章!</br>
-<img src="http://img.blog.csdn.net/20151229084251042"/>
-###本人最新录制的实战项目视频-菜鸟新闻<a href="http://www.cniao5.com/clazz/news.html">点击进入</a>
-###简介如下:
+<img src="http://img.blog.csdn.net/20151229084251042"/><br/>
+本人最新录制的实战项目视频-菜鸟新闻<a href="http://www.cniao5.com/clazz/news.html">点击进入</a>
+### 简介如下:
 菜鸟新闻安卓客户端-是一个仿照36Kr官方App,实时抓取36Kr官网数据的资讯类新闻客户端</br>
 包括首页新闻,详情,发现,活动,实时数据抓取,侧滑效果,第三方登录以及分享,消息推送等相关功能客户端。</br>
 学习目标:</br>
-1.掌握Android 5.0以上的相关技术控件使用(RecyclerView,CardView);</br>
-2.熟悉目前主流开源框架的使用:Okhttp,Volley,UIL,Fresco,EventBus....</br>
-3.熟悉数据抓取爬虫技术;</br>
-4.第三方集成登录与分享,消息推送数据统计集成。</br>
-5.掌握项目架构,开发流程</br>
-6.独立开发APP </br>
+1. 掌握Android 5.0以上的相关技术控件使用(RecyclerView,CardView);</br>
+2. 熟悉目前主流开源框架的使用:Okhttp,Volley,UIL,Fresco,EventBus....</br>
+3. 熟悉数据抓取爬虫技术;</br>
+4. 第三方集成登录与分享,消息推送数据统计集成。</br>
+5. 掌握项目架构,开发流程</br>
+6. 独立开发APP </br>
 <a href="http://www.cniao5.com/clazz/news.html">http://www.cniao5.com/clazz/news.html</a></br>
 <a href="http://www.cniao5.com/clazz/news.html"><img src="http://img.blog.csdn.net/20151208083154419"></a></br>
 
-###<a href="http://blog.csdn.net/developer_jiangqq">关于本人</a>
+### <a href="http://blog.csdn.net/developer_jiangqq">关于本人</a>
 邮箱:jiangqqlmj@163.com</br>
 本人微信/QQ:781931404</br>
 Android技术交流群:99787482</br>
@@ -24,14 +24,13 @@ Android技术交流群:99787482</br>
 Android开发群1:107086751</br>
 Android开发群3:109244103</br>
 
-<p># FastDev4Android</p>
+# FastDev4Android
 本项目是Android快速开发框架，采用AndroidStudio进行开发。
 预想集成工具包,ORM,网络请求(HTTPClint,Volley,OkHttps),数据解析,依赖注入,xutils,图片异步加载，二维码扫描等等<br>
 同时会包括工作中自己封装的一些组件和控件.
 后续会进行逐步添加
 整体项目目录如下:
-<p>FastDev4Android</p>
-<table border="1" cellspacing="1" style="border-collapse:collapse">
+<table>
     <tr>
         <th>包名</th><th>描述</th>
     </tr>
